@@ -11,4 +11,12 @@
 6. View recycle bin.			VK
 	6.1. Remove e-mail.		VK
 	6.2. Recovery e-mail.		VK
-	
+4. View incoming by admin.			
+	4.1. Read other user's incoming e-mail.
+	4.3. Remove other user's incoming e-mail.
+5. View outgoing by admin.
+	5.1. Read other user's outgoing e-mail.
+	5.3. Remove other user's outgoing e-mail.
+6. View recycle bin by admin.			
+	6.1. Remove other user's e-mail.		
+	6.2. Recovery other user's e-mail.			
