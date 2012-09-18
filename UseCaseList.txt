@@ -1,0 +1,14 @@
+1. Registration.
+2. Edit contact-list.
+3. Authorization.
+	3.1. Recovery pass.
+4. View incoming.
+	4.1. Read incoming e-mail.
+	4.2. Remove incoming e-mail.
+5. View outgoing.
+	5.1. Read outgoing e-mail.
+	5.2. Remove outgoing e-mail.
+6. View recycle bin.
+	6.1. Remove e-mail.
+	6.2. Recovery e-mail.
+	
