@@ -1,4 +1,4 @@
-1. Registration.			VK
+1. Registration.			VK		+
 2. Edit contact-list.		PM
 3. Authorization.			PM
 	3.1. Recovery pass.		PM
