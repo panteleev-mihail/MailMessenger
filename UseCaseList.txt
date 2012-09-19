@@ -1,5 +1,7 @@
 1. Registration.			VK		+
-2. Edit contact-list.		PM
+2. View contact-list.		PM
+	2.1. Add new contact to contact-list.
+	2.2. Delete contact from the contact-list.
 3. Authorization.			PM
 	3.1. Recovery pass.		PM
 4. View incoming.			PM
