@@ -14,11 +14,11 @@
 	6.1. Remove e-mail.		VK		+
 	6.2. Recovery e-mail.		VK		+
 7. View other user's incoming by admin.		PE	+		
-	7.1. Read other user's incoming e-mail.
+	7.1. Read other user's incoming e-mail.   D     +
 	7.3. Remove other user's incoming e-mail. D     +
 8. View other user's outgoing by admin.		PE	+
-	8.1. Read other user's outgoing e-mail.
-	8.3. Remove other user's outgoing e-mail.
+	8.1. Read other user's outgoing e-mail.   D     +
+	8.3. Remove other user's outgoing e-mail. D     +
 9. View other user's recycle bin by admin. 	PE	+			
-	9.1. Remove other user's e-mail.		
-	9.2. Recovery other user's e-mail.			
+	9.1. Remove other user's e-mail.          D     +
+	9.2. Recovery other user's e-mail.        D     +	
