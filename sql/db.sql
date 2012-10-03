@@ -2,16 +2,16 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-DROP SCHEMA IF EXISTS `mydb` ;
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-USE `mydb` ;
+DROP SCHEMA IF EXISTS `messenger` ;
+CREATE SCHEMA IF NOT EXISTS `messenger` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+USE `messenger` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`RegistredUser`
+-- Table `messenger`.`RegistredUser`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`RegistredUser` ;
+DROP TABLE IF EXISTS `messenger`.`RegistredUser` ;
 
-CREATE  TABLE IF NOT EXISTS `mydb`.`RegistredUser` (
+CREATE  TABLE IF NOT EXISTS `messenger`.`RegistredUser` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `FIO` VARCHAR(45) NULL ,
   `telephone` VARCHAR(45) NULL ,
@@ -26,29 +26,29 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Administrator`
+-- Table `messenger`.`Administrator`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Administrator` ;
+DROP TABLE IF EXISTS `messenger`.`Administrator` ;
 
-CREATE  TABLE IF NOT EXISTS `mydb`.`Administrator` (
+CREATE  TABLE IF NOT EXISTS `messenger`.`Administrator` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `RegistredUser_id` INT NOT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `fk_Administrator_RegistredUser1_idx` (`RegistredUser_id` ASC) ,
   CONSTRAINT `fk_Administrator_RegistredUser1`
     FOREIGN KEY (`RegistredUser_id` )
-    REFERENCES `mydb`.`RegistredUser` (`id` )
+    REFERENCES `messenger`.`RegistredUser` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Letter`
+-- Table `messenger`.`Letter`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Letter` ;
+DROP TABLE IF EXISTS `messenger`.`Letter` ;
 
-CREATE  TABLE IF NOT EXISTS `mydb`.`Letter` (
+CREATE  TABLE IF NOT EXISTS `messenger`.`Letter` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `receiverEmail` VARCHAR(45) NULL ,
   `senderEmail` VARCHAR(45) NULL ,
@@ -60,11 +60,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Letter_Sender_Receiver`
+-- Table `messenger`.`Letter_Sender_Receiver`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Letter_Sender_Receiver` ;
+DROP TABLE IF EXISTS `messenger`.`Letter_Sender_Receiver` ;
 
-CREATE  TABLE IF NOT EXISTS `mydb`.`Letter_Sender_Receiver` (
+CREATE  TABLE IF NOT EXISTS `messenger`.`Letter_Sender_Receiver` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `isRead` BIT NULL DEFAULT 0 ,
   `idSender` INT NOT NULL ,
@@ -78,28 +78,28 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Letter_Sender_Receiver` (
   INDEX `fk_Letter_Sender_Receiver_RegistredUser2_idx` (`idReceiver` ASC) ,
   CONSTRAINT `fk_Letter_Sender_Receiver_RegistredUser1`
     FOREIGN KEY (`idSender` )
-    REFERENCES `mydb`.`RegistredUser` (`id` )
+    REFERENCES `messenger`.`RegistredUser` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Letter_Sender_Receiver_Letter1`
     FOREIGN KEY (`idLetter` )
-    REFERENCES `mydb`.`Letter` (`id` )
+    REFERENCES `messenger`.`Letter` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Letter_Sender_Receiver_RegistredUser2`
     FOREIGN KEY (`idReceiver` )
-    REFERENCES `mydb`.`RegistredUser` (`id` )
+    REFERENCES `messenger`.`RegistredUser` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Contact`
+-- Table `messenger`.`Contact`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Contact` ;
+DROP TABLE IF EXISTS `messenger`.`Contact` ;
 
-CREATE  TABLE IF NOT EXISTS `mydb`.`Contact` (
+CREATE  TABLE IF NOT EXISTS `messenger`.`Contact` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `idContactHolder` INT NOT NULL ,
   `idContactPerson` INT NOT NULL ,
@@ -108,12 +108,12 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Contact` (
   INDEX `fk_Contact_RegistredUser1_idx` (`idContactPerson` ASC) ,
   CONSTRAINT `fk_Contact_RegistredUser`
     FOREIGN KEY (`idContactHolder` )
-    REFERENCES `mydb`.`RegistredUser` (`id` )
+    REFERENCES `messenger`.`RegistredUser` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Contact_RegistredUser1`
     FOREIGN KEY (`idContactPerson` )
-    REFERENCES `mydb`.`RegistredUser` (`id` )
+    REFERENCES `messenger`.`RegistredUser` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

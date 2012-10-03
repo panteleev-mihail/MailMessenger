@@ -1,13 +1,42 @@
-package logic;
+package com.if30v.email.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="letter_sender_receiver")
 public class Letter_Sender_Receiver {
+	@Id
+	@GeneratedValue
+	@Column(name="id")
 	private int _id;
+	
+	@ManyToOne
+	@JoinColumn(name="idSender")
 	private RegistredUser _Sender;
+	
+	@ManyToOne
+	@JoinColumn(name="idReceiver")
 	private RegistredUser _Receiver;
+	
+	@ManyToOne
+	@JoinColumn(name="idLetter")
 	private Letter _Letter;
+	
+	@Column(name="isRead")
 	private boolean _isRead;
+	
+	@Column(name="isSenderTrash")
 	private boolean _isSenderTrash;
+	
+	@Column(name="isRecTrash")
 	private boolean _isRecTrash;
+	
 	public Letter_Sender_Receiver() {
 		super();
 		// TODO Auto-generated constructor stub

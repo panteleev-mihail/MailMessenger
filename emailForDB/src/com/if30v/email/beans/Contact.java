@@ -1,9 +1,29 @@
-package logic;
+package com.if30v.email.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="contact")
 public class Contact {
+	@Id
+	@GeneratedValue
+	@Column(name="id")
 	private int _id;
+	
+	@ManyToOne
+	@JoinColumn(name="idContactHolder")
 	private RegistredUser _ContactHolder;
+	
+	@ManyToOne
+	@JoinColumn(name="idContactPerson")
 	private RegistredUser _ContactPerson;
+	
 	public Contact() {
 		super();
 		// TODO Auto-generated constructor stub

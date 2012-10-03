@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MailMessanger</display-name>
+  
+  <servlet>
+  	<servlet-name>index</servlet-name>
+	<jsp-file>/index.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>account</servlet-name>
+	<jsp-file>/account.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>registration</servlet-name>
+	<jsp-file>/registration.jsp</jsp-file>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>index</servlet-name>
+  	<url-pattern>/index.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>account</servlet-name>
+  	<url-pattern>/account.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>registration</servlet-name>
+  	<url-pattern>/registration.jsp</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
