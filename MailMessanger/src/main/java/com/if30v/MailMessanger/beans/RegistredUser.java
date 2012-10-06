@@ -16,6 +16,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.if30v.MailMessanger.validators.Validator;
+
 @Entity
 @Table(name="registreduser")
 

@@ -14,6 +14,8 @@ import org.hibernate.Session;
 
 import com.if30v.MailMessanger.beans.RegistredUser;
 import com.if30v.MailMessanger.dao.HibernateUtil;
+import com.if30v.MailMessanger.validators.Validator;
+import com.if30v.MailMessanger.validators.ValidatorException;
 
 import java.text.DateFormat;
 
@@ -59,9 +61,17 @@ public class RegistrationService {
 		String dateFormat = "dd.MM.yyyy";
 		SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
 		Date date;
+				
 		try {
 			date = formatter.parse(dateOfBirth);
 			RegistredUser user = new RegistredUser();
+			if(controlEmail!=null && controlEmail!="")
+				Validator.validEmail(controlEmail);
+			Validator.validLogin(login);
+			Validator.validPassword(password);
+			if(telephone!=null && telephone!="")
+				Validator.validTelephone(telephone);
+			
 			user.setLogin(login);
 			user.setPassword_hash(password);
 			user.set_dateOfBirth(date);
@@ -79,7 +89,12 @@ public class RegistrationService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
-		} catch (Exception ex){
+		} 
+		catch (ValidatorException ex){
+			ex.printStackTrace();
+			return false;
+		}
+		catch (Exception ex){
 			ex.printStackTrace();
 			return false;
 		}

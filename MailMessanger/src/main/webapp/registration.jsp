@@ -7,6 +7,14 @@
 </head>
 <body>
 <%request.setCharacterEncoding("CP1251");  %>
+
+<% 
+	if ( (String)session.getAttribute("error")!=null )
+	{
+		response.getWriter().println(session.getAttribute("error"));
+		session.removeAttribute("error");
+	}
+%>
 	<h1>Персональные данные</h1>
 	<form action="registration" method="post">
 		Логин:<input name="login"/><br/>

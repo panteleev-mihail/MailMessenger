@@ -53,6 +53,7 @@ public class Registration extends HttpServlet {
 				response.sendRedirect("index.jsp");
 			}
 			else{
+				request.getSession().setAttribute("error", "Ошибка при регистрации. Проверьте валидность данных");
 				response.sendRedirect("registration.jsp");
 			}
 				
