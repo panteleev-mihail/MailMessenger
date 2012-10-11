@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 login: mailmessenger.if30v@gmail.com
 password: L1FwQcEQjw
 =======
