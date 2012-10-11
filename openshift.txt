@@ -1,3 +1,5 @@
+login: mailmessenger.if30v@gmail.com
+password: L1FwQcEQjw
 git repository:
 ssh://73af1d3dab2c4d92bab970281c93407d@messenger-if30v.rhcloud.com/~/git/messenger.git/
 
