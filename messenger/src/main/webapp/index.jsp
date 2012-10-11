@@ -8,7 +8,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-    <% HibernateUtil.configurate("127.0.0.1", "mydb", "root", "98979897"); %>
+    <% HibernateUtil.configurate("127.10.203.129", "messenger", "admin", "b6SCCIyt_dLa"); %>
     <% request.setCharacterEncoding("CP1251"); %>
         <h1>Авторизируйтесь!</h1>
         <form action="authentification" method = "post">
