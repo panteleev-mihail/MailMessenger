@@ -3,20 +3,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> Введите персональные данные</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Регистрация</title>
 </head>
 <body>
+<center>
 <%request.setCharacterEncoding("CP1251");  %>
 	<h1>Персональные данные</h1>
 	<form action="registration" method="post">
-		Логин:<input name="login"/><br/>
-		Пароль:<input name="password" type="password"/><br/>
-		Повторите пароль: <input name="password_check" type="password"/><br/>
-		ФИО: <input name="fio"/><br/>
-		Дата рождения: <input name="dateOfBirth"/><br/>
-		Телефон: <input name="telephone"/><br/>
-		Контрольный электронный адрес: <input name="controlEmail"/><br/>
+		<table border=0 height="100%">
+				  <tr><td>Логин:</td><td><input name="login"/></td></tr>
+					<tr><td>Пароль:</td><td><input name="password" type="password"/></td></tr>
+					<tr><td>Повторите пароль:</td><td><input name="password_check" type="password"/></td></tr>
+					<tr><td>ФИО:</td><td><input name="fio"/></td></tr>
+					<tr><td>Дата рождения:</td><td><input name="dateOfBirth"/></td></tr>
+					<tr><td>Телефон:</td><td><input name="telephone"/></td></tr>
+					<tr><td>Контрольный электронный адрес:</td><td><input name="controlEmail"/></td></tr>
+					</table>
 		<input type="submit" value="Зарегистрироваться"/>
 	</form>
+</center>
 </body>
 </html>
