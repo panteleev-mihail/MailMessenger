@@ -148,6 +148,4 @@ public class RegistredUser {
 	public void setIncludedInContacts(Collection<Contact> includedInContacts) {
 		this.includedInContacts = includedInContacts;
 	}
-	
-	
 }

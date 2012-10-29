@@ -6,20 +6,19 @@ import java.util.List;
 
 import org.hibernate.Session;
 
-import com.if30v.MailMessanger.beans.Administrator;
+import com.if30v.MailMessanger.beans.Letter_Sender_Receiver;
 import com.if30v.MailMessanger.dao.HibernateUtil;
 
-public class AdministratorDAO {
-	
-	public void addAdmin(Administrator admin) throws Exception {
+public class Letter_Sender_ReceiverDAO {
+	public void addLetter_Sender_Receiver(Letter_Sender_Receiver lsr) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
 	      session.beginTransaction();
-	      session.save(admin);
+	      session.save(lsr);
 	      session.getTransaction().commit();
 	    } catch (Exception e) {
-	    	throw new Exception("Error admin adding: "+e.getMessage());
+	    	throw new Exception("Error letter_sender_receiver adding: "+e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
@@ -27,16 +26,15 @@ public class AdministratorDAO {
 	    }
 	  }
 	
-	public void updateAdmin(Administrator admin) throws Exception{
+	public void updateLetter_Sender_Receiver(Letter_Sender_Receiver lsr) throws Exception{
 		Session session = null;
 		try {
 		      session = HibernateUtil.getSessionfactory().openSession();
 		      session.beginTransaction();
-		      session.update(admin);
+		      session.update(lsr);
 		      session.getTransaction().commit();
 		    } catch (Exception e) {
-		      //System.out.println("Error updating: "+e.getMessage());
-		      throw new Exception("Error admin updating: "+e.getMessage());
+		      throw new Exception("Error letter_sender_receiver updating: "+e.getMessage());
 		    } finally {
 		      if (session != null && session.isOpen()) {
 		        session.close();
@@ -44,48 +42,47 @@ public class AdministratorDAO {
 		    }
 	}
 	
-	public Administrator getAdminById(int id)throws Exception {
+	public Letter_Sender_Receiver getLetter_Sender_ReceiverById(int id)throws Exception {
 	    Session session = null;
-	    Administrator admin = null;
+	    Letter_Sender_Receiver lsr = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
-	      admin = (Administrator) session.load(Administrator.class, id);
+	      lsr = (Letter_Sender_Receiver) session.load(Letter_Sender_Receiver.class, id);
 	    } catch (Exception e) {
-	    	//System.out.println("Error getting by id: "+e.getMessage());
-	    	throw new Exception("Error getting admins by id: " + e.getMessage());
+	    	throw new Exception("Error getting letter_sender_receiver by id: " + e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
 	      }
 	    }
-	    return admin;
+	    return lsr;
 	  }
 	
-	public Collection getAllAdmins() throws Exception {
+	public Collection getAllLetter_Sender_Receivers() throws Exception {
 	    Session session = null;
-	    List admins = new ArrayList<Administrator>();
+	    List letter_Sender_Receivers = new ArrayList<Letter_Sender_Receiver>();
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
-	      admins = session.createCriteria(Administrator.class).list();
+	      letter_Sender_Receivers = session.createCriteria(Letter_Sender_Receiver.class).list();
 	    } catch (Exception e) {
-	      throw new Exception("Error getting admins" + e.getMessage());
+	      throw new Exception("Error getting letter_Sender_Receivers: " + e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
 	      }
 	    }
-	    return admins;
+	    return letter_Sender_Receivers;
 	  }
 	
-	public void deleteUser(Administrator admin) throws Exception {
+	public void deleteLetter_Sender_Receiver(Letter_Sender_Receiver letter_Sender_Receiver) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
 	      session.beginTransaction();
-	      session.delete(admin);
+	      session.delete(letter_Sender_Receiver);
 	      session.getTransaction().commit();
 	    } catch (Exception e) {
-	      throw new Exception("Errog deleting admin:" + e.getMessage());
+	      throw new Exception("Errog deleting letter_Sender_Receiver: " + e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();

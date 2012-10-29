@@ -6,20 +6,21 @@ import java.util.List;
 
 import org.hibernate.Session;
 
-import com.if30v.MailMessanger.beans.Contact;
+import com.if30v.MailMessanger.beans.Administrator;
 import com.if30v.MailMessanger.beans.RegistredUser;
 import com.if30v.MailMessanger.dao.HibernateUtil;
 
-public class ContactDAO {
-	public void addContact(Contact contact) throws Exception {
+public class AdministratorDAO {
+	
+	public void addAdmin(Administrator admin) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
 	      session.beginTransaction();
-	      session.save(contact);
+	      session.save(admin);
 	      session.getTransaction().commit();
 	    } catch (Exception e) {
-	    	throw new Exception("Error contact adding: "+e.getMessage());
+	    	throw new Exception("Error admin adding: "+e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
@@ -27,16 +28,16 @@ public class ContactDAO {
 	    }
 	  }
 	
-	public void updateContact(Contact contact) throws Exception{
+	public void updateAdmin(Administrator admin) throws Exception{
 		Session session = null;
 		try {
 		      session = HibernateUtil.getSessionfactory().openSession();
 		      session.beginTransaction();
-		      session.update(contact);
+		      session.update(admin);
 		      session.getTransaction().commit();
 		    } catch (Exception e) {
 		      //System.out.println("Error updating: "+e.getMessage());
-		      throw new Exception("Error contact updating: "+e.getMessage());
+		      throw new Exception("Error admin updating: "+e.getMessage());
 		    } finally {
 		      if (session != null && session.isOpen()) {
 		        session.close();
@@ -44,48 +45,50 @@ public class ContactDAO {
 		    }
 	}
 	
-	public Contact getContactById(int id)throws Exception {
+	public RegistredUser getAdminById(int id)throws Exception {
 	    Session session = null;
-	    Contact contact = null;
-	    try {
+	    Administrator admin = null;
+	    RegistredUser user = null;
+	    //try {
 	      session = HibernateUtil.getSessionfactory().openSession();
-	      contact = (Contact) session.load(Contact.class, id);
-	    } catch (Exception e) {
+	      admin = (Administrator) session.load(Administrator.class, id);
+	      user = (RegistredUser) session.load(RegistredUser.class, admin.get_id());
+	    //} catch (Exception e) {
 	    	//System.out.println("Error getting by id: "+e.getMessage());
-	    	throw new Exception("Error getting contacts by id: " + e.getMessage());
-	    } finally {
+	    	//throw new Exception("Error getting admins by id: " + e.getMessage());
+	    //} finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
-	      }
+	     // }
 	    }
-	    return contact;
+	    return new RegistredUser();
 	  }
 	
-	public Collection getAllContacts() throws Exception {
+	public Collection getAllAdmins() throws Exception {
 	    Session session = null;
-	    List contacts = new ArrayList<RegistredUser>();
+	    List admins = new ArrayList<Administrator>();
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
-	      contacts = session.createCriteria(Contact.class).list();
+	      admins = session.createCriteria(Administrator.class).list();
 	    } catch (Exception e) {
-	      throw new Exception("Error getting contacts" + e.getMessage());
+	      throw new Exception("Error getting admins " + e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
 	      }
 	    }
-	    return contacts;
+	    return admins;
 	  }
 	
-	public void deleteContact(Contact contact) throws Exception {
+	public void deleteAdmin(Administrator admin) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
 	      session.beginTransaction();
-	      session.delete(contact);
+	      session.delete(admin);
 	      session.getTransaction().commit();
 	    } catch (Exception e) {
-	      throw new Exception("Errog deleting contact:" + e.getMessage());
+	      throw new Exception("Errog deleting admin:" + e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();

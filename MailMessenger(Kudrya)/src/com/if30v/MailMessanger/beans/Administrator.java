@@ -24,5 +24,4 @@ public class Administrator extends RegistredUser {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 }

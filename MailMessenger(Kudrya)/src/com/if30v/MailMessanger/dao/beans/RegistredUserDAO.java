@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 
@@ -52,7 +55,6 @@ public class RegistredUserDAO {
 	      session = HibernateUtil.getSessionfactory().openSession();
 	      user = (RegistredUser) session.load(RegistredUser.class, id);
 	    } catch (Exception e) {
-	    	//System.out.println("Error getting by id: "+e.getMessage());
 	    	throw new Exception("Error getting user by id: " + e.getMessage());
 	    } finally {
 	      if (session != null && session.isOpen()) {
@@ -94,13 +96,12 @@ public class RegistredUserDAO {
 	    }
 	  }
 	
-	public Collection getUserContactList(RegistredUser user) throws Exception{
+	/*public Collection getUserContactList(RegistredUser user) throws Exception{
 		Session session = null;
 		List<RegistredUser> contacts = new ArrayList<RegistredUser>();
 		try{
 			session = HibernateUtil.getSessionfactory().openSession();
-			int id = user.get_id();
-			contacts = session.createSQLQuery("SELECT * FROM registreduser WHERE registreduser.id IN (SELECT idContactPerson FROM contact WHERE idContactHolder = :id))").list();
+			session.
 		}catch(Exception e){
 			throw new Exception("Error getting users contact-list: " + e.getMessage());
 		}
@@ -110,5 +111,5 @@ public class RegistredUserDAO {
 			}
 		}
 		return contacts;
-	}
+	}*/
 }
