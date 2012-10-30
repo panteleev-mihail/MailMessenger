@@ -96,12 +96,12 @@ public class RegistredUserDAO {
 	    }
 	  }
 	
-	/*public Collection getUserContactList(RegistredUser user) throws Exception{
+	public Collection getUserContactList(String id) throws Exception{
 		Session session = null;
 		List<RegistredUser> contacts = new ArrayList<RegistredUser>();
 		try{
-			session = HibernateUtil.getSessionfactory().openSession();
-			session.
+                    session = HibernateUtil.getSessionfactory().openSession();
+                    contacts = session.getNamedQuery("getUsersContacts").setParameter("id", id).list();
 		}catch(Exception e){
 			throw new Exception("Error getting users contact-list: " + e.getMessage());
 		}
@@ -111,5 +111,5 @@ public class RegistredUserDAO {
 			}
 		}
 		return contacts;
-	}*/
+	}
 }
