@@ -93,21 +93,4 @@ public class ContactDAO {
 	      }
 	    }
 	  }
-	
-	public Collection getUsersContact(RegistredUser user) throws Exception {
-	    Session session = null;
-	    int id = user.get_id();
-	    List contacts = new ArrayList<RegistredUser>();
-	    try {
-	      session = HibernateUtil.getSessionfactory().openSession();
-	      contacts = session.getNamedQuery("getUsersContacts").setParameter("id", 1).list();
-	    } catch (Exception e) {
-	      throw new Exception("Error getting contacts" + e.getMessage());
-	    } finally {
-	      if (session != null && session.isOpen()) {
-	        session.close();
-	      }
-	    }
-	    return contacts;
-	  }
 }

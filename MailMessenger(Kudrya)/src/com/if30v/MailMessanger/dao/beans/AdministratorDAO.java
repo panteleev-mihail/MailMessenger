@@ -45,23 +45,21 @@ public class AdministratorDAO {
 		    }
 	}
 	
-	public RegistredUser getAdminById(int id)throws Exception {
+	public Administrator getAdminById(int id)throws Exception {
 	    Session session = null;
 	    Administrator admin = null;
 	    RegistredUser user = null;
-	    //try {
+	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
 	      admin = (Administrator) session.load(Administrator.class, id);
-	      user = (RegistredUser) session.load(RegistredUser.class, admin.get_id());
-	    //} catch (Exception e) {
-	    	//System.out.println("Error getting by id: "+e.getMessage());
-	    	//throw new Exception("Error getting admins by id: " + e.getMessage());
-	    //} finally {
+	    } catch (Exception e) {
+	    	throw new Exception("Error getting admins by id: " + e.getMessage());
+            } finally {
 	      if (session != null && session.isOpen()) {
 	        session.close();
-	     // }
+              }
 	    }
-	    return new RegistredUser();
+	    return admin;
 	  }
 	
 	public Collection getAllAdmins() throws Exception {
