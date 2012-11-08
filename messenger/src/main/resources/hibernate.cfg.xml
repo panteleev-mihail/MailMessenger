@@ -39,14 +39,14 @@
         <!-- Disable the second-level cache  -->
         <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
- 		  <mapping class="com.if30v.MailMessanger.beans.Administrator"/>
- 		  <mapping class="com.if30v.MailMessanger.beans.Contact"/>
- 		  <mapping class="com.if30v.MailMessanger.beans.Letter_Sender_Receiver"/>
- 		  <mapping class="com.if30v.MailMessanger.beans.Letter"/>
- 		  <mapping class="com.if30v.MailMessanger.beans.RegistredUser"/>
-		  
+ 		  <mapping class="com.pehulja.messenger.pojo.Administrator"/>
+ 		  <mapping class="com.pehulja.messenger.pojo.Contact"/>
+ 		  <mapping class="com.pehulja.messenger.pojo.Letter_Sender_Receiver"/>
+ 		  <mapping class="com.pehulja.messenger.pojo.Letter"/>
+ 		  <mapping class="com.pehulja.messenger.pojo.RegistredUser"/>
+ 
     </session-factory>
 </hibernate-configuration>
