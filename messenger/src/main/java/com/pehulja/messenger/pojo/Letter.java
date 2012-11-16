@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="letter")
-public class Letter {
+public class Letter implements java.io.Serializable{
 	
 	@Id
 	@GeneratedValue

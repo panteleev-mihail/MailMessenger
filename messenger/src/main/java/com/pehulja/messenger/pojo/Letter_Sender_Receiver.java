@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="letter_sender_receiver")
-public class Letter_Sender_Receiver {
+public class Letter_Sender_Receiver implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")

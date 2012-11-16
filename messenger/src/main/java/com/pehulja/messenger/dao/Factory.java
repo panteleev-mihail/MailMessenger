@@ -15,9 +15,9 @@ public class Factory {
 	private static ContactDAO contactDAO = null;
 	private static Letter_Sender_ReceiverDAO letter_Sender_ReceiverDAO = null;
 	
-        static {
+        /*static {
             HibernateUtil.configurate("localhost", "mydb", "root", "98979897");
-        }
+        }*/
 	 public static synchronized Factory getInstance(){
 		 if (instance == null){
 			 instance = new Factory();

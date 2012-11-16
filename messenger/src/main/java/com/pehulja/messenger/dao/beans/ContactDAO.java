@@ -13,7 +13,7 @@ import com.pehulja.messenger.pojo.RegistredUser;
 import com.pehulja.messenger.dao.HibernateUtil;
 
 public class ContactDAO {
-	public void addContact(Contact contact) throws Exception {
+	/*public void addContact(Contact contact) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
@@ -109,5 +109,5 @@ public class ContactDAO {
 	      }
 	    }
 	    return contacts;
-	  }
+	  }*/
 }

@@ -10,7 +10,7 @@ import com.pehulja.messenger.pojo.Letter_Sender_Receiver;
 import com.pehulja.messenger.dao.HibernateUtil;
 
 public class Letter_Sender_ReceiverDAO {
-	public void addLetter_Sender_Receiver(Letter_Sender_Receiver lsr) throws Exception {
+	/*public void addLetter_Sender_Receiver(Letter_Sender_Receiver lsr) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
@@ -88,5 +88,5 @@ public class Letter_Sender_ReceiverDAO {
 	        session.close();
 	      }
 	    }
-	  }
+	  }*/
 }

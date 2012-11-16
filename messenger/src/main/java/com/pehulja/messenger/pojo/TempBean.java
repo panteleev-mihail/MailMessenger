@@ -14,7 +14,7 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean(name = "tempbean")
 @SessionScoped
-public class TempBean {
+public class TempBean implements java.io.Serializable{
     private String name;
 
     public String getName() {

@@ -10,7 +10,7 @@ import com.pehulja.messenger.dao.HibernateUtil;
 
 
 public class LetterDAO {
-	public void addLetter(Letter letter) throws Exception {
+	/*public void addLetter(Letter letter) throws Exception {
 	    Session session = null;
 	    try {
 	      session = HibernateUtil.getSessionfactory().openSession();
@@ -91,5 +91,5 @@ public class LetterDAO {
 	        session.close();
 	      }
 	    }
-	  }
+	  }*/
 }

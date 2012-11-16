@@ -17,8 +17,8 @@ public class UpdateService {
     public UpdateService(RegistredUser user) {
         this.user = user;
     }
-    public boolean update() throws Exception{
+    /*public boolean update() throws Exception{
          Factory.getInstance().getRegistredUserDAO().updateUser(user);
          return true;
-    }
+    }*/
 }

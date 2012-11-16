@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Table(name="registreduser")
 
 @Inheritance(strategy=InheritanceType.JOINED)
-public class RegistredUser {
+public class RegistredUser implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")

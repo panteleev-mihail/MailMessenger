@@ -11,7 +11,7 @@ import com.pehulja.messenger.pojo.RegistredUser;
 import com.pehulja.messenger.dao.HibernateUtil;
 
 public class AdministratorDAO {
-	
+	/*
 	public void addAdmin(Administrator admin) throws Exception {
 	    Session session = null;
 	    try {
@@ -94,5 +94,5 @@ public class AdministratorDAO {
 	        session.close();
 	      }
 	    }
-	  }
+	  }*/
 }

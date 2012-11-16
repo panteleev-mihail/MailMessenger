@@ -1,5 +1,6 @@
 package com.pehulja.messenger.pojo;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ import javax.persistence.InheritanceType;
 @Entity
 @Table(name="administrator")
 @PrimaryKeyJoinColumn(name="RegistredUser_id")
-public class Administrator extends RegistredUser {
+public class Administrator extends RegistredUser implements Serializable{
 	
 	public Administrator() {
 		super();
