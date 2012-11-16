@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+//Типа бизнесс слой приложения
 public class RegistrationService {
 	private String login;
 	private String password;

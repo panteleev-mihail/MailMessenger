@@ -23,6 +23,7 @@ import javax.faces.event.ActionEvent;
  *
  * @author Pehulya
  */
+//Бин представляет собой форму для регистрации и изменения личных данных
 @ManagedBean(name="regbean")
 @SessionScoped
 public class RegBean implements Serializable{

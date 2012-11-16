@@ -6,6 +6,7 @@ package com.pehulja.messenger.manbeans;
 
 import com.pehulja.messenger.pojo.RegistredUser;
 import com.pehulja.messenger.dao.Factory;
+import com.pehulja.messenger.dao.HibernateUtil;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -22,12 +23,18 @@ import javax.faces.validator.ValidatorException;
 /**
  *
  * @author Pehulya
+ * Класс, где хранится ссылка на текущего авторизованого пользователя
  */
+
 @ManagedBean (name = "userbean")
 @SessionScoped
 public class UserBean implements Serializable{
+    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger("errLogger");
+    
     private String login;
     private String password;
+    
+    //Сюда попадает объект на зарегистрированного пользователя
     private RegistredUser user;
     private UIComponent loginButton;
     private String loginStatus;
@@ -79,6 +86,8 @@ public class UserBean implements Serializable{
        
     public String loginUser() throws ValidatorException{
         
+        log.setLevel(org.apache.log4j.Level.ERROR);
+        log.error("JPA:entityManagerFactory has configurated");
         user = Factory.getInstance().getRegistredUserDAO().loginUser(login, password);
          if(user == null){
              FacesContext context = FacesContext.getCurrentInstance();
@@ -89,6 +98,7 @@ public class UserBean implements Serializable{
             context.addMessage(loginButton.getClientId(context), message); 
             return null;
          }else{
+             //Заполняем поля бина личных данных авторизованого пользхователя
             regBean.setUser(user);
             return "account";
         }
@@ -115,6 +125,5 @@ public class UserBean implements Serializable{
     public void setLoginStatus(String loginStatus) {
         this.loginStatus = loginStatus;
     }
-        
-    
+   
 }

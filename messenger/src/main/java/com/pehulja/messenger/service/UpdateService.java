@@ -11,6 +11,7 @@ import com.pehulja.messenger.pojo.RegistredUser;
  *
  * @author pehulja
  */
+//Типа бизнесс слой приложения
 public class UpdateService {
     private RegistredUser user;
 

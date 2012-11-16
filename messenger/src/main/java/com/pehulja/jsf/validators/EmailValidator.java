@@ -23,6 +23,7 @@ import org.hibernate.Session;
  * @author pehulja
  */
 public class EmailValidator implements Validator{
+    //Получаем ссыку на файл msds с локализоваными сообщениями
     @ManagedProperty("#{msgs}")
     private ResourceBundle bundle;
 
@@ -30,6 +31,7 @@ public class EmailValidator implements Validator{
         this.bundle = bundle;
     }
     
+    // Переопределяем метод для валидации поля
     @Override
     public void validate(FacesContext fc, UIComponent uic, Object o) throws ValidatorException {
         String email = (String) o;

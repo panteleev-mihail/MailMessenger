@@ -1,0 +1,14 @@
+Пример логирования в файлик err.log - туда только ошибки
+private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger("errLogger"); // Это как поле класса объявляем
+
+//Это уже непосредственно в методе
+log.setLevel(org.apache.log4j.Level.ERROR);
+log.error("JPA:entityManagerFactory has configurated");
+
+Пример логирования в файлик general.log - это самый общий лог на уровне INFO - он сделан корневым
+private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger("Имя класс".class);
+log.info("JPA:entityManagerFactory has configurated");
+
+Файлики логов размещаются в папке %Tomcat%/logs/email/
+
+Вся конфигурация меняется в файле src/main/resources/log4j.properties

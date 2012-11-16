@@ -9,7 +9,7 @@ import org.hibernate.criterion.Restrictions;
 
 import com.pehulja.messenger.pojo.RegistredUser;
 import com.pehulja.messenger.dao.HibernateUtil;
-
+//Типа бизнесс слой приложения
 public class AuthenticationService {
 	public RegistredUser  authenticate (String login, String password){
 		RegistredUser user = null;
