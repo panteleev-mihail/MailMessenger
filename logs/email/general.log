@@ -1,0 +1,5 @@
+22:59:10,050 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+22:59:10,137 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+22:59:10,160 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+22:59:10,162 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+22:59:10,441 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
