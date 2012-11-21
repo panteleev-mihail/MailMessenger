@@ -7,7 +7,7 @@
     <class>com.pehulja.messenger.pojo.Contact</class>
     <class>com.pehulja.messenger.pojo.Letter</class>
     <class>com.pehulja.messenger.pojo.Letter_Sender_Receiver</class>
-	<class>com.pehulja.messenger.pojo.RegistredUser</class>
+    <class>com.pehulja.messenger.pojo.RegistredUser</class>
     <!--<properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
       <property name="hibernate.hbm2ddl. auto" value="update"/>
