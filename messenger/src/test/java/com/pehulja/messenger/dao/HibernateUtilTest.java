@@ -5,7 +5,6 @@
 package com.pehulja.messenger.dao;
 
 import javax.persistence.EntityManager;
-import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,7 +17,6 @@ import static org.junit.Assert.*;
  * @author Victor
  */
 public class HibernateUtilTest {
-    private static final Logger log = Logger.getLogger(HibernateUtilTest.class);
     
     public HibernateUtilTest() {
     }
@@ -42,9 +40,13 @@ public class HibernateUtilTest {
     /**
      * Test of getEm method, of class HibernateUtil.
      */
-    @Test
+    //@Test
     public void testGetEm() {
-        log.info("Test of getEm method, of class HibernateUtilTest");
-        EntityManager expResult = HibernateUtil.getEm();
+        System.out.println("getEm");
+        EntityManager expResult = null;
+        EntityManager result = HibernateUtil.getEm();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 }

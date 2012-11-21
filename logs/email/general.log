@@ -228,3 +228,67 @@
 18:02:11,365 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
 18:02:11,374 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
 18:02:11,412 [main] INFO com.pehulja.messenger.dao.HibernateUtilTest - Test of getEm method, of class HibernateUtilTest
+18:38:08,831 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+18:38:08,920 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+18:38:08,945 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+18:38:08,947 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+18:38:09,175 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+18:38:09,176 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named item-manager-pu
+18:38:09,259 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+18:38:09,291 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+18:38:09,294 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+18:38:09,307 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+18:38:09,324 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+18:38:09,326 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+18:38:09,368 [main] INFO com.pehulja.messenger.dao.HibernateUtilTest - Test of getEm method, of class HibernateUtilTest
+18:43:46,811 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+18:43:46,863 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+18:43:46,872 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+18:43:46,874 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+18:43:46,967 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+18:43:46,968 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named item-manager-pu
+18:43:47,069 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+18:43:47,076 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+18:43:47,078 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+18:43:47,083 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+18:43:47,089 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+18:43:47,092 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+18:43:47,108 [main] INFO com.pehulja.messenger.dao.HibernateUtilTest - Test of getEm method, of class HibernateUtilTest
+18:46:18,724 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+18:46:18,779 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+18:46:18,788 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+18:46:18,790 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+18:46:18,964 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+18:46:18,965 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named item-manager-pu
+18:46:19,057 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+18:46:19,064 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+18:46:19,066 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+18:46:19,070 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+18:46:19,074 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+18:46:19,077 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+18:46:19,096 [main] INFO com.pehulja.messenger.dao.HibernateUtilTest - Test of getEm method, of class HibernateUtilTest
+18:47:15,418 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+18:47:15,518 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+18:47:15,529 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+18:47:15,530 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+18:47:15,626 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+18:47:15,626 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named item-manager-pu
+18:47:15,716 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+18:47:15,722 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+18:47:15,724 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+18:47:15,729 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+18:47:15,733 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+18:47:15,735 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+18:47:15,757 [main] INFO com.pehulja.messenger.dao.HibernateUtilTest - Test of getEm method, of class HibernateUtilTest
+18:53:43,881 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+18:53:43,924 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+18:53:43,930 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+18:53:43,934 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+18:53:43,939 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+18:53:43,941 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+18:58:42,889 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+18:58:42,990 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+18:58:42,993 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+18:58:42,998 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+18:58:43,002 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+18:58:43,006 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory

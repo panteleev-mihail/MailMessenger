@@ -40,7 +40,7 @@ public class RegistredUserDAOTest {
     /**
      * Test of addUser method, of class RegistredUserDAO.
      */
-    @Test
+    //@Test
     public void testAddUser() throws Exception {
         System.out.println("addUser");
         RegistredUser user = null;
@@ -53,7 +53,7 @@ public class RegistredUserDAOTest {
     /**
      * Test of getUserById method, of class RegistredUserDAO.
      */
-    @Test
+    //@Test
     public void testGetUserById() throws Exception {
         System.out.println("getUserById");
         int id = 0;
@@ -61,12 +61,14 @@ public class RegistredUserDAOTest {
         RegistredUser expResult = null;
         RegistredUser result = instance.getUserById(id);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
      * Test of deleteUser method, of class RegistredUserDAO.
      */
-    @Test
+    //@Test
     public void testDeleteUser() throws Exception {
         System.out.println("deleteUser");
         RegistredUser user = null;
@@ -79,7 +81,7 @@ public class RegistredUserDAOTest {
     /**
      * Test of loginUser method, of class RegistredUserDAO.
      */
-    @Test
+    //@Test
     public void testLoginUser() {
         System.out.println("loginUser");
         String login = "";
