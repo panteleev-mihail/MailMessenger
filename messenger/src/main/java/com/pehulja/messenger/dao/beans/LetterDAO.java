@@ -13,7 +13,9 @@ import javax.persistence.EntityManager;
 public class LetterDAO {
 	public void addLetter(Letter letter) throws Exception {
 	    EntityManager manager = HibernateUtil.getEm();
+            manager.getTransaction().begin();
             manager.persist(letter);
+            manager.getTransaction().commit();
             manager. close();
 	  }
         
