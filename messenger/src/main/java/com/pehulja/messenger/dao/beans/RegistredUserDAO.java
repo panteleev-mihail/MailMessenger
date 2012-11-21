@@ -6,7 +6,9 @@ import javax.persistence.EntityManager;
 public class RegistredUserDAO {
 	public void addUser(RegistredUser user) throws Exception {
 	    EntityManager manager = HibernateUtil.getEm();
+            manager.getTransaction().begin();
             manager.persist(user);
+            manager.getTransaction().commit();
             manager. close();
 	  }
         
