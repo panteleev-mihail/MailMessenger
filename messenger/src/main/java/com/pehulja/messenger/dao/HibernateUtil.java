@@ -13,14 +13,15 @@ public class HibernateUtil {
     private static final EntityManagerFactory emf;
     static {
         try {
-            emf = Persistence. createEntityManagerFactory(PERSISTENT_UNIT_NAME);
+            emf = Persistence.createEntityManagerFactory(PERSISTENT_UNIT_NAME);
         } catch (Throwable ex) {
+            log.error("JPA:entityManagerFactory has not configurated. "+ex);
             throw new ExceptionInInitializerError(ex);
         }
         log.info("JPA:entityManagerFactory has configurated");
     }
 
     public static EntityManager getEm() {
-        return emf. createEntityManager();
+        return emf.createEntityManager();
     }
 }

@@ -9,24 +9,7 @@ public class RegistredUserDAO {
             manager.persist(user);
             manager. close();
 	  }
-	
-	/*public void updateUser(RegistredUser user) throws Exception{
-		Session session = null;
-		try {
-		      session = HibernateUtil.getSessionfactory().openSession();
-		      session.beginTransaction();
-		      session.update(user);
-		      session.getTransaction().commit();
-		    } catch (Exception e) {
-		      //System.out.println("Error updating: "+e.getMessage());
-		      throw new Exception("Error user updating: "+e.getMessage());
-		    } finally {
-		      if (session != null && session.isOpen()) {
-		        session.close();
-		      }
-		    }
-	}*/
-	
+        
 	public RegistredUser getUserById(int id)throws Exception {
 	    RegistredUser user = null;
 	    EntityManager manager = HibernateUtil.getEm();
@@ -35,15 +18,6 @@ public class RegistredUserDAO {
 	    return user;
 	  }
 	
-	/*public Collection getAllUsers() throws Exception {
-	    Session session = null;
-	    List users = new ArrayList<RegistredUser>();
-	    EntityManager manager = HibernateUtil.getEm();
-            user = manager.find(RegistredUser.class, id);
-            manager. close();
-	    return users;
-	  }
-	*/
 	public void deleteUser(RegistredUser user) throws Exception {
 	    EntityManager manager = HibernateUtil.getEm();
             manager.remove(user);
@@ -59,20 +33,4 @@ public class RegistredUserDAO {
             manager. close();
             return user;
         }
-	/*public Collection getUserContactList(RegistredUser user) throws Exception{
-		Session session = null;
-		List<RegistredUser> contacts = new ArrayList<RegistredUser>();
-		try{
-			session = HibernateUtil.getSessionfactory().openSession();
-			session.
-		}catch(Exception e){
-			throw new Exception("Error getting users contact-list: " + e.getMessage());
-		}
-		finally{
-			if (session != null && session.isOpen()){
-				session.close();
-			}
-		}
-		return contacts;
-	}*/
 }

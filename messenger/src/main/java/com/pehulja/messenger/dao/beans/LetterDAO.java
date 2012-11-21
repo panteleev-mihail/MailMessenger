@@ -7,89 +7,27 @@ import org.hibernate.Session;
 
 import com.pehulja.messenger.pojo.Letter;
 import com.pehulja.messenger.dao.HibernateUtil;
+import javax.persistence.EntityManager;
 
 
 public class LetterDAO {
-	/*public void addLetter(Letter letter) throws Exception {
-	    Session session = null;
-	    try {
-	      session = HibernateUtil.getSessionfactory().openSession();
-	      session.beginTransaction();
-	      session.save(letter);
-	      session.getTransaction().commit();
-	    } catch (Exception e) {
-	      //System.out.println("Error adding: " + e.getMessage());
-	    	throw new Exception("Error user adding: "+e.getMessage());
-	    } finally {
-	      if (session != null && session.isOpen()) {
-	        session.close();
-	      }
-	    }
+	public void addLetter(Letter letter) throws Exception {
+	    EntityManager manager = HibernateUtil.getEm();
+            manager.persist(letter);
+            manager. close();
 	  }
-	
-	public void updateLetter(Letter letter) throws Exception{
-		Session session = null;
-		try {
-		      session = HibernateUtil.getSessionfactory().openSession();
-		      session.beginTransaction();
-		      session.update(letter);
-		      session.getTransaction().commit();
-		    } catch (Exception e) {
-		      //System.out.println("Error updating: "+e.getMessage());
-		      throw new Exception("Error user updating: "+e.getMessage());
-		    } finally {
-		      if (session != null && session.isOpen()) {
-		        session.close();
-		      }
-		    }
-	}
-	
+        
 	public Letter getLetterById(int id)throws Exception {
-	    Session session = null;
 	    Letter letter = null;
-	    try {
-	      session = HibernateUtil.getSessionfactory().openSession();
-	      letter = (Letter) session.load(Letter.class, id);
-	    } catch (Exception e) {
-	    	//System.out.println("Error getting by id: "+e.getMessage());
-	    	throw new Exception("Error getting user by id: " + e.getMessage());
-	    } finally {
-	      if (session != null && session.isOpen()) {
-	        session.close();
-	      }
-	    }
+	    EntityManager manager = HibernateUtil.getEm();
+            letter = manager.find(Letter.class, id);
+            manager. close();
 	    return letter;
 	  }
 	
-	public Collection getAllLetters() throws Exception {
-	    Session session = null;
-	    List letters = new ArrayList<Letter>();
-	    try {
-	      session = HibernateUtil.getSessionfactory().openSession();
-	      letters = session.createCriteria(Letter.class).list();
-	    } catch (Exception e) {
-	      throw new Exception("Error getting users" + e.getMessage());
-	    } finally {
-	      if (session != null && session.isOpen()) {
-	        session.close();
-	      }
-	    }
-	    return letters;
+	public void deleteLSR(Letter letter) throws Exception {
+	    EntityManager manager = HibernateUtil.getEm();
+            manager.remove(letter);
+            manager. close();
 	  }
-	
-	public void deleteLetter(Letter letter) throws Exception {
-	    Session session = null;
-	    try {
-	      session = HibernateUtil.getSessionfactory().openSession();
-	      session.beginTransaction();
-	      session.delete(letter);
-	      session.getTransaction().commit();
-	    } catch (Exception e) {
-	      throw new Exception("Errog deleting user:" + e.getMessage());
-	    } finally {
-	      if (session != null && session.isOpen()) {
-	        session.close();
-	      }
-	    }
-	  }*/
 }
