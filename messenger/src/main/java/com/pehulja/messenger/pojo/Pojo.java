@@ -4,10 +4,14 @@
  */
 package com.pehulja.messenger.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author Mihail
  */
 public abstract class Pojo {
-    
+      
 }

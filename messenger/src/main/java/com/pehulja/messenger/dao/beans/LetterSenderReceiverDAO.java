@@ -16,6 +16,7 @@ public class LetterSenderReceiverDAO extends DAO{
             List<LetterSenderReceiver> result = null;
             EntityManager manager = HibernateUtil.getEm();
             try{
+                
             result = manager.createQuery("SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr._Receiver=:id "
                     + "AND lsr._isRecTrash =:_isRecTrash")
                                      .setParameter("id", user).setParameter("_isRecTrash", false).getResultList();

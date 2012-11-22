@@ -7,13 +7,23 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+@NamedNativeQueries({
+	@NamedNativeQuery(
+            name="getLettersSenderReceiver",
+            query="SELECT *,1 as clazz_ " +
+            		"FROM letter_sender_receiver WHERE idLetter = :id)",
+            resultClass=RegistredUser.class
+            )
+    })
 
 @Entity
 @Table(name="letter")
-public class Letter extends Pojo implements java.io.Serializable{
+public class Letter extends Pojo  implements java.io.Serializable{
 	
 	@Id
 	@GeneratedValue

@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pehulja.messenger.dao;
+package com.pehulja.messenger.dao.beans;
 
-import javax.persistence.EntityManager;
+import com.pehulja.messenger.pojo.LetterSenderReceiver;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,9 +16,17 @@ import static org.junit.Assert.*;
  *
  * @author Victor
  */
-public class HibernateUtilTest {
+public class LetterSenderReceiverDAOTest {
+    private static LetterSenderReceiver lsr = null;
     
-    public HibernateUtilTest() {
+    static{
+        lsr = new LetterSenderReceiver();
+        lsr.set_isRead(false);
+        lsr.set_isRecTrash(false);
+        lsr.set_isSenderTrash(false);
+    }
+    
+    public LetterSenderReceiverDAOTest() {
     }
     
     @BeforeClass
@@ -37,12 +45,4 @@ public class HibernateUtilTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getEm method, of class HibernateUtil.
-     */
-    @Test
-    public void testGetEm() {
-        EntityManager result = HibernateUtil.getEm();
-        assertNotNull(result);
-    }
 }

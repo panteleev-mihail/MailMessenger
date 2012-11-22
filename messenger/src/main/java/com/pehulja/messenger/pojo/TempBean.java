@@ -14,7 +14,7 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean(name = "tempbean")
 @SessionScoped
-public class TempBean extends Pojo implements java.io.Serializable{
+public class TempBean extends Pojo  implements java.io.Serializable{
     private String name;
 
     public String getName() {

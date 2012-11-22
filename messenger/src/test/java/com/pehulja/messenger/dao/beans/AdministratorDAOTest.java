@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pehulja.messenger.dao;
+package com.pehulja.messenger.dao.beans;
 
-import javax.persistence.EntityManager;
+import com.pehulja.messenger.pojo.Administrator;
+import com.pehulja.messenger.pojo.RegistredUser;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,9 +17,10 @@ import static org.junit.Assert.*;
  *
  * @author Victor
  */
-public class HibernateUtilTest {
+public class AdministratorDAOTest {
+    private static Administrator admin = new Administrator();
     
-    public HibernateUtilTest() {
+    public AdministratorDAOTest() {
     }
     
     @BeforeClass
@@ -37,12 +39,5 @@ public class HibernateUtilTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of getEm method, of class HibernateUtil.
-     */
-    @Test
-    public void testGetEm() {
-        EntityManager result = HibernateUtil.getEm();
-        assertNotNull(result);
-    }
+    
 }

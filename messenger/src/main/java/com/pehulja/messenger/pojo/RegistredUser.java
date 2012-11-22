@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Table(name="registreduser")
 
 @Inheritance(strategy=InheritanceType.JOINED)
-public class RegistredUser extends Pojo implements java.io.Serializable{
+public class RegistredUser extends Pojo  implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")

@@ -598,3 +598,9 @@
 04:01:21,845 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
 04:01:21,845 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
 04:01:21,846 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:05:37,055 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+00:05:37,139 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:05:37,175 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+00:05:37,177 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+00:05:37,178 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+00:05:37,181 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory

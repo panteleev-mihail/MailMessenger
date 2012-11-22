@@ -5,6 +5,7 @@
 package com.pehulja.messenger.dao.beans;
 
 import com.pehulja.messenger.pojo.RegistredUser;
+import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,6 +18,14 @@ import static org.junit.Assert.*;
  * @author Victor
  */
 public class RegistredUserDAOTest {
+    private static RegistredUser user = null;
+    
+    static{
+        user = new RegistredUser();
+        user.setLogin("gigk");
+        user.setPassword_hash("98979897");
+        
+    }
     
     public RegistredUserDAOTest() {
     }
@@ -37,60 +46,4 @@ public class RegistredUserDAOTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of addUser method, of class RegistredUserDAO.
-     */
-    //@Test
-   /* public void testAddUser() throws Exception {
-        System.out.println("addUser");
-        RegistredUser user = null;
-        RegistredUserDAO instance = new RegistredUserDAO();
-        instance.addUser(user);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
-
-    /**
-     * Test of getUserById method, of class RegistredUserDAO.
-     */
-    //@Test
-    /*public void testGetUserById() throws Exception {
-        System.out.println("getUserById");
-        int id = 0;
-        RegistredUserDAO instance = new RegistredUserDAO();
-        RegistredUser expResult = null;
-        RegistredUser result = instance.getUserById(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
-
-    /**
-     * Test of deleteUser method, of class RegistredUserDAO.
-     */
-    //@Test
-    /*public void testDeleteUser() throws Exception {
-        System.out.println("deleteUser");
-        RegistredUser user = null;
-        RegistredUserDAO instance = new RegistredUserDAO();
-        instance.deleteUser(user);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
-
-    /**
-     * Test of loginUser method, of class RegistredUserDAO.
-     */
-    //@Test
-    public void testLoginUser() {
-        System.out.println("loginUser");
-        String login = "";
-        String password = "";
-        RegistredUserDAO instance = new RegistredUserDAO();
-        RegistredUser expResult = null;
-        RegistredUser result = instance.loginUser(login, password);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 }
