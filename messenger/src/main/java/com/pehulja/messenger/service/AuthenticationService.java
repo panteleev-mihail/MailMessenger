@@ -13,7 +13,7 @@ import com.pehulja.messenger.dao.HibernateUtil;
 public class AuthenticationService {
 	public RegistredUser  authenticate (String login, String password){
 		RegistredUser user = null;
-		user = Factory.getInstance().getRegistredUserDAO().loginUser(login, password);
+                user = Factory.getInstance().getRegistredUserDAO().loginUser(login, password);
                 return user;
 	}
 }

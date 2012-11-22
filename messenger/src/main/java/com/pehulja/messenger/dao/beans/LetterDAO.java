@@ -10,26 +10,6 @@ import com.pehulja.messenger.dao.HibernateUtil;
 import javax.persistence.EntityManager;
 
 
-public class LetterDAO {
-	public void addLetter(Letter letter) throws Exception {
-	    EntityManager manager = HibernateUtil.getEm();
-            manager.getTransaction().begin();
-            manager.persist(letter);
-            manager.getTransaction().commit();
-            manager. close();
-	  }
-        
-	public Letter getLetterById(int id)throws Exception {
-	    Letter letter = null;
-	    EntityManager manager = HibernateUtil.getEm();
-            letter = manager.find(Letter.class, id);
-            manager. close();
-	    return letter;
-	  }
+public class LetterDAO extends DAO{
 	
-	public void deleteLSR(Letter letter) throws Exception {
-	    EntityManager manager = HibernateUtil.getEm();
-            manager.remove(letter);
-            manager. close();
-	  }
 }

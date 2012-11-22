@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="letter_sender_receiver")
-public class Letter_Sender_Receiver implements java.io.Serializable{
+public class LetterSenderReceiver extends Pojo implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")
@@ -37,7 +37,7 @@ public class Letter_Sender_Receiver implements java.io.Serializable{
 	@Column(name="isRecTrash")
 	private boolean _isRecTrash;
 	
-	public Letter_Sender_Receiver() {
+	public LetterSenderReceiver() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

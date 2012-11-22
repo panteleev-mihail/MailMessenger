@@ -10,7 +10,7 @@ import com.pehulja.messenger.pojo.Administrator;
 import com.pehulja.messenger.dao.HibernateUtil;
 import javax.persistence.EntityManager;
 
-public class AdministratorDAO {
+public class AdministratorDAO extends DAO{
 	public void addAdministrator(Administrator admin) throws Exception {
 	    EntityManager manager = HibernateUtil.getEm();
             manager.persist(admin);

@@ -23,7 +23,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="contact")
-public class Contact implements java.io.Serializable{
+public class Contact extends Pojo implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")

@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Table(name="registreduser")
 
 @Inheritance(strategy=InheritanceType.JOINED)
-public class RegistredUser implements java.io.Serializable{
+public class RegistredUser extends Pojo implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")
@@ -55,10 +55,10 @@ public class RegistredUser implements java.io.Serializable{
 	
 	
 	@OneToMany(mappedBy="_Sender" /*,fetch=FetchType.EAGER*/ )
-	Collection<Letter_Sender_Receiver> sendedMails =new ArrayList<Letter_Sender_Receiver>();
+	Collection<LetterSenderReceiver> sendedMails =new ArrayList<LetterSenderReceiver>();
 	
 	@OneToMany(mappedBy="_Receiver" /*,fetch=FetchType.EAGER*/ )
-	Collection<Letter_Sender_Receiver> receivedMails =new ArrayList<Letter_Sender_Receiver>();
+	Collection<LetterSenderReceiver> receivedMails =new ArrayList<LetterSenderReceiver>();
 	
 	@OneToMany(mappedBy="_ContactHolder" /*,fetch=FetchType.EAGER*/ )
 	Collection<Contact> holdedContacts =new ArrayList<Contact>();
@@ -124,16 +124,16 @@ public class RegistredUser implements java.io.Serializable{
 	public void setPassword_salt(String password_salt) {
 		this.password_salt = password_salt;
 	}
-	public Collection<Letter_Sender_Receiver> getSendedMails() {
+	public Collection<LetterSenderReceiver> getSendedMails() {
 		return sendedMails;
 	}
-	public void setSendedMails(Collection<Letter_Sender_Receiver> sendedMails) {
+	public void setSendedMails(Collection<LetterSenderReceiver> sendedMails) {
 		this.sendedMails = sendedMails;
 	}
-	public Collection<Letter_Sender_Receiver> getReceivedMails() {
+	public Collection<LetterSenderReceiver> getReceivedMails() {
 		return receivedMails;
 	}
-	public void setReceivedMails(Collection<Letter_Sender_Receiver> receivedMails) {
+	public void setReceivedMails(Collection<LetterSenderReceiver> receivedMails) {
 		this.receivedMails = receivedMails;
 	}
 	public Collection<Contact> getHoldedContacts() {

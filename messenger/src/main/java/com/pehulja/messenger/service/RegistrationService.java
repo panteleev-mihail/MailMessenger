@@ -38,7 +38,7 @@ public class RegistrationService {
             user.set_fIO(fio);
             user.set_dateOfBirth(dateOfBirth);
             user.set_dateOfREgistration(new Date());
-            Factory.getInstance().getRegistredUserDAO().addUser(user);
+            Factory.getInstance().getRegistredUserDAO().add(user);
             return true;
 	}
 	public String getFio() {

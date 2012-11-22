@@ -6,7 +6,7 @@ package com.pehulja.messenger.service;
 
 import com.pehulja.messenger.dao.Factory;
 import com.pehulja.messenger.pojo.Letter;
-import com.pehulja.messenger.pojo.Letter_Sender_Receiver;
+import com.pehulja.messenger.pojo.LetterSenderReceiver;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,7 +21,7 @@ public class LetterService {
     {
         Letter letter=null;
         try {
-            letter = Factory.getInstance().getLetterDAO().getLetterById(id);
+            letter = (Letter)Factory.getInstance().getLetterDAO().getById(id, Letter.class);
         } catch (Exception ex) {
             Logger.getLogger(LetterService.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -31,7 +31,7 @@ public class LetterService {
     
     public void addLetter(Letter letter){
         try {
-            Factory.getInstance().getLetterDAO().addLetter(letter);
+            Factory.getInstance().getLetterDAO().add(letter);
         } catch (Exception ex) {
             Logger.getLogger(LetterService.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -43,13 +43,13 @@ public class LetterService {
         
         Letter letter=null;
         try {
-            letter = Factory.getInstance().getLetterDAO().getLetterById(id);
+            letter = (Letter)Factory.getInstance().getLetterDAO().getById(id, Letter.class);
         } catch (Exception ex) {
             Logger.getLogger(LetterService.class.getName()).log(Level.SEVERE, null, ex);
         }
         data[1]=letter;
         
-        Letter_Sender_Receiver lsr=null;
+        LetterSenderReceiver lsr=null;
         
         
         return null;    

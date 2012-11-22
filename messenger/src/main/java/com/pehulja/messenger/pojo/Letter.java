@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="letter")
-public class Letter implements java.io.Serializable{
+public class Letter extends Pojo implements java.io.Serializable{
 	
 	@Id
 	@GeneratedValue
@@ -34,7 +34,7 @@ public class Letter implements java.io.Serializable{
 	
 	
 	@OneToMany(mappedBy="_Letter" /*,fetch=FetchType.EAGER*/ )
-	Collection<Letter_Sender_Receiver> letter_Sender_Receivers =new ArrayList<Letter_Sender_Receiver>();
+	Collection<LetterSenderReceiver> letter_Sender_Receivers =new ArrayList<LetterSenderReceiver>();
 	
 	public Letter() {
 		super();
@@ -70,11 +70,11 @@ public class Letter implements java.io.Serializable{
 	public void set_receiverEmail(String _receiverEmail) {
 		this._receiverEmail = _receiverEmail;
 	}
-	public Collection<Letter_Sender_Receiver> getLetter_Sender_Receivers() {
+	public Collection<LetterSenderReceiver> getLetter_Sender_Receivers() {
 		return letter_Sender_Receivers;
 	}
 	public void setLetter_Sender_Receivers(
-			Collection<Letter_Sender_Receiver> letter_Sender_Receivers) {
+			Collection<LetterSenderReceiver> letter_Sender_Receivers) {
 		this.letter_Sender_Receivers = letter_Sender_Receivers;
 	}
 	

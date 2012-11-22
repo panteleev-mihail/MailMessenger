@@ -3,7 +3,7 @@ package com.pehulja.messenger.dao;
 import com.pehulja.messenger.dao.beans.AdministratorDAO;
 import com.pehulja.messenger.dao.beans.ContactDAO;
 import com.pehulja.messenger.dao.beans.LetterDAO;
-import com.pehulja.messenger.dao.beans.Letter_Sender_ReceiverDAO;
+import com.pehulja.messenger.dao.beans.LetterSenderReceiverDAO;
 import com.pehulja.messenger.dao.beans.RegistredUserDAO;
 
 public class Factory {
@@ -13,7 +13,7 @@ public class Factory {
 	private static AdministratorDAO adminDAO = null;
 	private static LetterDAO letterDAO = null;
 	private static ContactDAO contactDAO = null;
-	private static Letter_Sender_ReceiverDAO letter_Sender_ReceiverDAO = null;
+	private static LetterSenderReceiverDAO letter_Sender_ReceiverDAO = null;
 	
         /*static {
             HibernateUtil.configurate("localhost", "mydb", "root", "98979897");
@@ -49,9 +49,9 @@ public class Factory {
 		 return contactDAO;
 	 }
 	 
-	 public Letter_Sender_ReceiverDAO getLetter_Sender_ReceiverDAO(){
+	 public LetterSenderReceiverDAO getLetter_Sender_ReceiverDAO(){
 		 if (letter_Sender_ReceiverDAO == null)
-			 letter_Sender_ReceiverDAO = new Letter_Sender_ReceiverDAO();
+			 letter_Sender_ReceiverDAO = new LetterSenderReceiverDAO();
 		 return letter_Sender_ReceiverDAO;
 	 }
 }

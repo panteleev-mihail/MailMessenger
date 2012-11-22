@@ -7,7 +7,7 @@ package com.pehulja.messenger.dao;
 import com.pehulja.messenger.dao.beans.AdministratorDAO;
 import com.pehulja.messenger.dao.beans.ContactDAO;
 import com.pehulja.messenger.dao.beans.LetterDAO;
-import com.pehulja.messenger.dao.beans.Letter_Sender_ReceiverDAO;
+import com.pehulja.messenger.dao.beans.LetterSenderReceiverDAO;
 import com.pehulja.messenger.dao.beans.RegistredUserDAO;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -109,8 +109,8 @@ public class FactoryTest {
     public void testGetLetter_Sender_ReceiverDAO() {
         log.info("Test of getLetter_Sender_ReceiverDAO method, of class Factory");
         Factory instance = new Factory();
-        Letter_Sender_ReceiverDAO expResult = instance.getLetter_Sender_ReceiverDAO();
-        Letter_Sender_ReceiverDAO result = instance.getLetter_Sender_ReceiverDAO();
+        LetterSenderReceiverDAO expResult = instance.getLetter_Sender_ReceiverDAO();
+        LetterSenderReceiverDAO result = instance.getLetter_Sender_ReceiverDAO();
         assertEquals(expResult, result);
     }
 }
