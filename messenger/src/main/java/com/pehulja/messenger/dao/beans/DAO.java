@@ -5,54 +5,77 @@
 package com.pehulja.messenger.dao.beans;
 
 import com.pehulja.messenger.dao.HibernateUtil;
-import com.pehulja.messenger.pojo.Letter;
-import com.pehulja.messenger.pojo.LetterSenderReceiver;
-import javax.persistence.EntityManager;
 import com.pehulja.messenger.pojo.Pojo;
-import com.pehulja.messenger.pojo.RegistredUser;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
 /**
- *
+ * 
  * @author Mihail
  */
 public abstract class DAO {
-    public static int i = 0;
-    public void add(Pojo obj) throws Exception {
-            if(i==1){
-                int a = 5;
-            }
-	    EntityManager manager = HibernateUtil.getEm();
-            manager.getTransaction().begin();
-            manager.persist(obj);
-            manager.getTransaction().commit();
-            manager.close();
-            i++;
-	  }
-    public Pojo getById(int id, Class<?> cl) throws Exception {
-	    Pojo obj = null;
-	    EntityManager manager = HibernateUtil.getEm();
-            obj = (Pojo) manager.find(cl, id);
-            manager.close();
-	    return obj;
-	  }
-	
+	public void add(Pojo obj) {
+		EntityManager manager = HibernateUtil.getEm();
+		EntityTransaction tx = manager.getTransaction();
+		try {
+			tx.begin();
+			manager.persist(obj);
+			tx.commit();
+		} catch (Exception e) {
+			if (tx != null && tx.isActive()) {
+                        tx.rollback();
+                    }
+		} finally {
+			manager.close();
+		}
+	}
+
+	public Pojo getById(int id, Class<?> cl) {
+		Pojo obj = null;
+		EntityManager manager = HibernateUtil.getEm();
+                try{
+                    obj = (Pojo) manager.find(cl, id);
+                }
+                catch(Exception e) {
+                    
+                }
+		finally {
+                    manager.close();
+                }
+		return obj;
+	}
+
 	public void delete(Pojo obj) throws Exception {
-	    EntityManager manager = HibernateUtil.getEm();
-            manager.getTransaction().begin();
-            Integer index = ((RegistredUser)obj).get_id();
-            Pojo obj1 = manager.find(RegistredUser.class, index);
-            manager.remove(obj1);
-            
-            manager.getTransaction().commit();
-            manager.close();
-	  }
-        
-        public void update (Pojo obj) throws Exception{
-            EntityManager manager = HibernateUtil.getEm();
-            manager.getTransaction().begin();
-           
-            manager.merge(obj);
-            manager.getTransaction().commit();
-            manager.close();
-        }
-       
+		EntityManager manager = HibernateUtil.getEm();
+		EntityTransaction tx = manager.getTransaction();
+		try {
+			tx.begin();
+                        obj = manager.merge(obj);
+			manager.remove(obj);
+			tx.commit();
+		} catch (Exception e) {
+			if (tx != null && tx.isActive()) {
+                        tx.rollback();
+                    }
+		} finally {
+			manager.close();
+		}
+	}
+
+	public void update(Pojo obj) {
+		EntityManager manager = HibernateUtil.getEm();
+		EntityTransaction tx = manager.getTransaction();
+		try {
+			tx.begin();
+			manager.merge(obj);
+			tx.commit();
+		} catch (Exception e) {
+			if (tx != null && tx.isActive()) {
+                        tx.rollback();
+                    }
+		} finally {
+			manager.close();
+		}
+	}
+
 }
