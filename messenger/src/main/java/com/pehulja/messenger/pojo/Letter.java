@@ -29,19 +29,14 @@ public class Letter extends Pojo  implements java.io.Serializable{
 	@GeneratedValue
 	@Column(name="id")
 	private int _id;
-	
-	@Column(name="senderEmail")
-	private String _senderEmail;
-	
+		
 	@Column(name="content")
 	private String _content;
 	
 	@Column(name="theme")
 	private String _theme;
 	
-	@Column(name="receiverEmail")
-	private String _receiverEmail;
-	
+		
 	
 	@OneToMany(mappedBy="_Letter" /*,fetch=FetchType.EAGER*/ )
 	Collection<LetterSenderReceiver> letter_Sender_Receivers =new ArrayList<LetterSenderReceiver>();
@@ -56,12 +51,6 @@ public class Letter extends Pojo  implements java.io.Serializable{
 	public void set_id(int _id) {
 		this._id = _id;
 	}
-	public String get_senderEmail() {
-		return _senderEmail;
-	}
-	public void set_senderEmail(String _senderEmail) {
-		this._senderEmail = _senderEmail;
-	}
 	public String get_content() {
 		return _content;
 	}
@@ -73,12 +62,6 @@ public class Letter extends Pojo  implements java.io.Serializable{
 	}
 	public void set_theme(String _theme) {
 		this._theme = _theme;
-	}
-	public String get_receiverEmail() {
-		return _receiverEmail;
-	}
-	public void set_receiverEmail(String _receiverEmail) {
-		this._receiverEmail = _receiverEmail;
 	}
 	public Collection<LetterSenderReceiver> getLetter_Sender_Receivers() {
 		return letter_Sender_Receivers;

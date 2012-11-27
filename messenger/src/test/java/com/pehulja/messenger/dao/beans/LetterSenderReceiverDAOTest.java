@@ -21,9 +21,9 @@ public class LetterSenderReceiverDAOTest {
     
     static{
         lsr = new LetterSenderReceiver();
-        lsr.set_isRead(false);
-        lsr.set_isRecTrash(false);
-        lsr.set_isSenderTrash(false);
+        //lsr.set_isRead(false);
+        //lsr.set_isRecTrash(false);
+        //lsr.set_isSenderTrash(false);
     }
     
     public LetterSenderReceiverDAOTest() {

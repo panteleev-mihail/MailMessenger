@@ -11,22 +11,16 @@
 	<h:form>
             <h:inputHidden value="#{userbean.loginStatus}"/>
             <h:panelGrid columns="3">
-                #{msgs.regLoginLabel}
-                <h:inputText label ="sdfsd" id="login" value ="#{regbean.login}" > 
-                        <f:validateLength minimum="5"/>
-                </h:inputText>
-                <h:message for="login"/>
-                
                 #{msgs.regPassLabel}
-                <h:inputText  id="pass" value ="#{regbean.password}">
+                <h:inputSecret  id="pass" value ="#{regbean.password}">
                     <f:validator validatorId="messenger.passwordValidator"/>
-                </h:inputText>
+                </h:inputSecret>
                 <h:message for="pass"/>
                 
                 #{msgs.regPassCheckLabel} 
-                <h:inputText id="checkpass" value ="#{regbean.passwordCheck}">
+                <h:inputSecret id="checkpass" value ="#{regbean.passwordCheck}">
                     <f:validator validatorId="messenger.passwordValidator"/>
-                </h:inputText>
+                </h:inputSecret>
                 <h:message for="checkpass"/>
                 
                 #{msgs.regFioLabel} 

@@ -94,8 +94,8 @@ public class LetterBean implements Serializable{
         LetterService ls= new LetterService();
         this.letter = ls.showLetter(id);
         this.content=letter.get_content();
-        this.receiverEmail=letter.get_receiverEmail();
-        this.senderEmail=letter.get_senderEmail();
+        this.receiverEmail="NULL"; // Заменить
+        this.senderEmail="NULL"; // Заменить
         this.subject=letter.get_theme();
         
         
@@ -134,8 +134,8 @@ public class LetterBean implements Serializable{
     public String send(){
         
         Letter temp=new Letter();
-        temp.set_receiverEmail(this.receiverEmail);
-        temp.set_senderEmail(this.senderEmail);
+       // temp.set_receiverEmail(this.receiverEmail); // Заменить
+       // temp.set_senderEmail(this.senderEmail); // 
         temp.set_theme(this.subject);
         temp.set_content(this.content);
         

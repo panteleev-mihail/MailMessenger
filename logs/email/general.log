@@ -604,3 +604,118 @@
 00:05:37,177 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
 00:05:37,178 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
 00:05:37,181 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+00:21:31,927 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+00:21:32,467 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:21:32,487 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+00:21:32,497 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+00:21:32,497 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:21:33,477 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:21:33,487 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+00:21:33,487 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+00:21:33,487 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+00:21:33,487 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+00:21:34,047 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+00:21:34,107 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+00:21:34,117 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+00:21:35,007 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+00:21:35,627 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+00:21:35,767 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+00:21:35,897 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+00:21:35,997 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+00:21:36,007 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+00:21:36,007 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+00:21:36,007 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:21:36,027 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+00:21:36,027 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+00:23:14,977 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+00:23:15,777 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:23:15,797 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+00:23:15,807 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+00:23:15,807 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:23:16,917 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:23:16,947 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+00:23:16,947 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+00:23:16,947 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+00:23:16,947 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+00:23:17,947 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+00:23:18,047 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+00:23:18,067 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+00:23:19,527 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+00:23:20,377 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+00:23:20,447 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+00:23:20,587 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+00:23:20,677 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+00:23:20,687 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+00:23:20,687 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+00:23:20,687 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+00:23:20,687 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:23:20,687 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+00:24:53,087 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+00:24:53,617 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:24:53,637 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+00:24:53,637 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+00:24:53,647 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:24:55,087 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:24:55,107 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+00:24:55,107 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+00:24:55,107 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+00:24:55,107 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+00:24:56,127 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+00:24:56,227 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+00:24:56,247 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+00:24:57,697 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+00:24:58,597 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+00:24:58,697 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+00:24:58,797 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+00:24:58,977 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+00:24:58,987 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+00:24:58,987 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+00:24:58,997 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+00:24:58,997 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:24:58,997 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+00:25:23,097 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+00:25:23,877 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:25:23,897 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+00:25:23,907 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+00:25:23,907 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:25:25,057 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:25:25,077 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+00:25:25,077 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+00:25:25,077 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+00:25:25,077 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+00:25:26,077 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+00:25:26,167 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+00:25:26,187 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+00:25:27,647 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+00:25:28,787 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+00:25:28,967 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+00:25:29,167 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+00:25:29,307 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+00:25:29,317 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+00:25:29,317 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+00:25:29,327 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:25:29,327 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+00:25:29,327 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+00:37:52,022 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+00:37:52,619 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+00:37:52,629 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+00:37:52,639 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+00:37:52,639 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+00:37:53,819 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+00:37:53,839 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+00:37:53,839 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+00:37:53,839 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+00:37:53,839 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+00:37:54,829 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+00:37:54,929 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+00:37:54,949 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+00:37:56,357 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+00:37:57,332 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+00:37:57,427 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+00:37:57,517 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+00:37:57,672 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+00:37:57,672 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+00:37:57,682 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+00:37:57,682 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+00:37:57,682 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+00:37:57,692 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory

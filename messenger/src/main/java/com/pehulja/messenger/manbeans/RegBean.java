@@ -115,14 +115,14 @@ public class RegBean implements Serializable{
         }
     }
     public String update(){
-         user.setLogin(login);
+         
          user.setPassword_hash(password);
          user.set_fIO(fio);
          user.set_telephone(telephone);
          user.set_secondMailAdress(email);
          user.set_dateOfBirth(dateOfBirth);
         UpdateService service = new UpdateService(user);
-        /*try{
+        try{
             boolean flag = service.update();
             if(flag)
                 return "account";
@@ -131,8 +131,7 @@ public class RegBean implements Serializable{
         }catch(Exception ex){
             ex.getMessage();
             return "registration";
-        }*/
-        return "userData";
-    }
+        }
+   }
   
 }

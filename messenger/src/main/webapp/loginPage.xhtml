@@ -15,7 +15,7 @@
                     #{msgs.loginLoginLabel} <h:inputText id = "inputLogin" value="#{userbean.login}"/>
                     #{msgs.loginPasswordLabel}<h:inputSecret id ="inputPassword" value="#{userbean.password}"/>
                     <h:commandButton value="#{msgs.loginLoginAction}" action="#{userbean.loginUser}" id="loginAction" binding="#{userbean.loginButton}"/><h:message for="loginAction"/>
-                    <h:commandButton value="#{msgs.loginRegAction}" action="registration" id="registration"/><h:message for="loginAction"/>
+                    <h:commandButton value="#{msgs.loginRegAction}" action="registration" id="registration"/>
                     <br/>#{msgs.localeHeader}
                     <h:selectOneMenu value="#{localeBean.localeCode}" onchange="submit()" valueChangeListener="#{localeBean.localeListener}">
                         <f:selectItems value="#{localeBean.locales}" /> 
