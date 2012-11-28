@@ -65,5 +65,10 @@
             <to-view-id>/contacts.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>writeLetter</from-outcome>
+            <to-view-id>/letterWrite.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
     </navigation-rule>
 </faces-config>

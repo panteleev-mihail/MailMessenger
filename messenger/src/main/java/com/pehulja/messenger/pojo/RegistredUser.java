@@ -155,4 +155,32 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
 	public void setIncludedInContacts(Collection<Contact> includedInContacts) {
 		this.includedInContacts = includedInContacts;
 	}
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 61 * hash + this._id;
+        hash = 61 * hash + (this.login != null ? this.login.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final RegistredUser other = (RegistredUser) obj;
+        if (this._id != other._id) {
+            return false;
+        }
+        if ((this.login == null) ? (other.login != null) : !this.login.equals(other.login)) {
+            return false;
+        }
+        return true;
+    }
+        
+        
 }

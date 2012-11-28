@@ -1,18 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-       <h:form>
-           <h:inputText value="#{letterBean.senderEmail}" /> <br />
-           <h:inputText value="#{letterBean.receiverEmail}" /> <br />
-           <h:inputText value="#{letterBean.subject}" /> <br />
-           <h:inputTextarea value="#{letterBean.content}" /> <br />
-            <h:commandButton value="Send" action="#{letterBean.send}" id="sendBtn"/>
-        </h:form>
+       <table border="0" width="700px"><tr>
+            <td>
+                
+                <h:form>
+                    <h:inputText value="#{letterBean.senderEmail}" /> <br />
+                    <h:inputText value="#{letterBean.receiverEmail}" /> <br />
+                    <h:inputText value="#{letterBean.subject}" /> <br />
+                    <h:inputTextarea value="#{letterBean.content}" /> <br />
+                    <h:commandButton value="Send" action="#{letterBean.send}" id="sendBtn"/>
+                </h:form>
+                
+            </td>
+            <td>
+                #{msgs.contactsHeader}
+                <h:form rendered="#{not empty letterBean.listContacts}">
+                    <h:dataTable value="#{letterBean.listContacts}" var="item" >
+                        <h:column><h:selectBooleanCheckbox value="#{letterBean.checked[item._id]}" /></h:column>
+                        <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.get_fIO()}</h:column>
+                        <h:column><f:facet name="header">#{msgs.contactLoginTitle}</f:facet>#{item.login}</h:column>
+                    </h:dataTable>
+                    <h:commandButton value="#{msgs.letterAddContactsToReceiversButton}" action="#{letterBean.addUsersToReceivers()}" />
+                </h:form>
+            </td>
+        </tr></table>
     </h:body>
+        
 </html>
 

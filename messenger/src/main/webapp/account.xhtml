@@ -15,6 +15,7 @@
             </h:panelGrid>
             <h:commandButton id ="logout" value="#{msgs.accountViewContacts}" action="contacts"/><br/>
             <h:commandButton id ="contacts" value="#{msgs.loginLogout}" action="#{userbean.logout}"/>
+            <br/><h:commandButton id="writeLetter" value="#{msgs.letterWriteButton}" action="writeLetter"/>
             <br/>#{msgs.localeHeader}
             <h:selectOneMenu value="#{localeBean.localeCode}" onchange="submit()" valueChangeListener="#{localeBean.localeListener}">
                         <f:selectItems value="#{localeBean.locales}" /> 

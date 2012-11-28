@@ -34,7 +34,7 @@ import javax.persistence.NoResultException;
 public class ContactBean implements Serializable{
  
     private static final long serialVersionUID = 1L;
- 	private static List<RegistredUser> list;
+ 	private List<RegistredUser> list;
         private RegistredUser item = new RegistredUser();
         private boolean edit;
         private ContactService mc;
