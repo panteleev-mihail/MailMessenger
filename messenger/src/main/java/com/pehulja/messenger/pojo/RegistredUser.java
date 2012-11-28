@@ -13,14 +13,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 //import com.if30v.MailMessanger.validators.Validator;
-
+@NamedQueries({
+    @NamedQuery(
+        name="getUserByLogin",
+        query="SELECT user FROM RegistredUser user WHERE user.login=:user_login")
+})
 @Entity
 @Table(name="registreduser")
-
 @Inheritance(strategy=InheritanceType.JOINED)
 public class RegistredUser extends Pojo  implements java.io.Serializable{
 	@Id

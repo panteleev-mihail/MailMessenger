@@ -60,5 +60,10 @@
             <to-view-id>/registration.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>contacts</from-outcome>
+            <to-view-id>/contacts.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
     </navigation-rule>
 </faces-config>

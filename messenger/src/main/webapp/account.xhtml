@@ -13,12 +13,15 @@
             <h:panelGrid columns="2">
                  <h:commandButton id="changeUserData" value="#{msgs.accountUserDataChengeAction}" action="userData" /> <h:message for="changeUserData"/>
             </h:panelGrid>
-            <h:commandButton id ="logout" value="#{msgs.loginLogout}" action="#{userbean.logout}"/>
+            <h:commandButton id ="logout" value="#{msgs.accountViewContacts}" action="contacts"/><br/>
+            <h:commandButton id ="contacts" value="#{msgs.loginLogout}" action="#{userbean.logout}"/>
             <br/>#{msgs.localeHeader}
             <h:selectOneMenu value="#{localeBean.localeCode}" onchange="submit()" valueChangeListener="#{localeBean.localeListener}">
                         <f:selectItems value="#{localeBean.locales}" /> 
             </h:selectOneMenu>
         </h:form>
+            
+            <!--
         <h:dataTable value="#{mail.getIncome(userbean.user)}" var="o">
  
     			<h:column>
@@ -36,6 +39,7 @@
     				#{o._Letter._content}
     			</h:column>
     		</h:dataTable>
+                    -->
     </h:body>
 </html>
 

@@ -18,9 +18,19 @@ import javax.persistence.Table;
             query="SELECT *,1 as clazz_ " +
             		"FROM registreduser WHERE registreduser.id IN (SELECT idContactPerson FROM contact WHERE idContactHolder = :id)",
             resultClass=RegistredUser.class
-            )
+            ),
+        @NamedNativeQuery(
+            name="deleteUserContact",
+            query="DELETE FROM contact WHERE contact.idContactPerson = :idContactPerson AND contact.idContactHolder = :idContactHolder",
+            resultClass=RegistredUser.class
+        )    
+        
     })
-
+@NamedQueries({
+    @NamedQuery(
+        name="getContactRepeats",
+        query="SELECT contact FROM Contact contact WHERE contact._ContactHolder.id=:idHolder AND contact._ContactPerson.id=:idPerson")
+})
 @Entity
 @Table(name="contact")
 public class Contact extends Pojo  implements java.io.Serializable{

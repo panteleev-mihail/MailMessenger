@@ -96,7 +96,7 @@ public class UserBean implements Serializable{
                         
             FacesMessage message = new FacesMessage(msgStr);
             context.addMessage(loginButton.getClientId(context), message); 
-            return null;
+            return "login";
          }else{
              //Заполняем поля бина личных данных авторизованого пользхователя
             regBean.setUser(user);
