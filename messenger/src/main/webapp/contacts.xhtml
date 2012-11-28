@@ -7,8 +7,11 @@
         <title>#{msgs.contactsHeader}</title>
     </h:head>
     <h:body >
+        <h:form>
+            <h:commandButton value="#{msgs.globalBackRedirect}" action ="account"/>
+        </h:form>
+        <br/>
         #{msgs.contactsHeader}
-        
         <h:form rendered="#{not empty contact.list}">
             <h:dataTable value="#{contact.list}" var="item">
                 <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.get_fIO()}</h:column>
@@ -27,8 +30,8 @@
         <h:panelGroup rendered="#{contact.edit}">
             <h3>#{msgs.contactsEditContactHeader}</h3>
             <h:form>
-                <p>#{msgs.regLoginLabel}<h:inputText value="#{contact.item.login}" /></p>
-                <p><h:commandButton value="#{msgs.regLoginLabel}" action="#{contact.save}" /></p>
+                <p>#{msgs.regLoginLabel}<h:inputText value="#{contact.tempLogin}" /></p>
+                <p><h:commandButton value="#{msgs.contactsSaveButtonHader}" action="#{contact.save}" /></p>
             </h:form>
         </h:panelGroup>
     </h:body>

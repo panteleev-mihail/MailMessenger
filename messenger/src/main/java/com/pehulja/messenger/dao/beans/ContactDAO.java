@@ -14,6 +14,7 @@ import com.pehulja.messenger.dao.HibernateUtil;
 import com.pehulja.messenger.pojo.LetterSenderReceiver;
 import com.pehulja.messenger.pojo.RegistredUser;
 import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
 public class ContactDAO extends DAO{
@@ -50,24 +51,18 @@ public class ContactDAO extends DAO{
             }
         }
         
-        public boolean hasUserSuchContact(Contact contact){
+        public boolean hasUserSuchContact(Contact contact) throws NoResultException{
             List<RegistredUser> result = null;
             EntityManager manager = HibernateUtil.getEm();
             EntityTransaction tx = manager.getTransaction();
-            try{
+            
                tx.begin();
                result = manager.createNamedQuery("getContactRepeats")
                        .setParameter("idHolder", contact.get_ContactHolder().get_id())
                        .setParameter("idPerson", contact.get_ContactPerson().get_id())
                        .getResultList();
                tx.commit();
-            }
-            catch(javax.persistence.NoResultException e){
-                
-            }
-            finally{
-                manager.close();
-            }
+               manager.close();
             if(result != null && result.size() != 0){
                 return true;
             }else{

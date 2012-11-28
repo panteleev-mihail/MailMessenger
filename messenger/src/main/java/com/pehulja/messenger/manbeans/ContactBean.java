@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ViewScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -40,6 +41,7 @@ public class ContactBean implements Serializable{
         private RegistredUser user = null;
         private String tempLogin = null;
         private UIComponent addContactButton;
+        
     @PostConstruct
     public void init() {
         user = ((UserBean)FacesContext.getCurrentInstance() 
@@ -52,6 +54,7 @@ public class ContactBean implements Serializable{
         //item.setLogin( list.isEmpty() ? "" : list.get(list.size() - 1).getLogin() + 1);
         try{
             mc.addContact(tempLogin, user);
+            tempLogin = "";
             confContacts(user);
         }catch(NoResultException ex){
              FacesContext context = FacesContext.getCurrentInstance();
@@ -70,14 +73,15 @@ public class ContactBean implements Serializable{
     }
 
     public void save() {
-        // dao.update(item);
+        this.delete(item);
+        System.err.println(item.getLogin());
+        this.add();
         item = new RegistredUser(); // Reset placeholder.
         edit = false;
     }
 
     public void delete(RegistredUser item) {
-        // dao.delete(item);
-         mc.deleteContact(user, item);
+        mc.deleteContact(user, item);
         list.remove(item);
     }
 
