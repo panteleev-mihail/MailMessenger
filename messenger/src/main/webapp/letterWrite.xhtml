@@ -23,8 +23,8 @@
                 #{msgs.contactsHeader}
                 <h:form rendered="#{not empty letterBean.listContacts}">
                     <h:dataTable value="#{letterBean.listContacts}" var="item" >
-                        <h:column><h:selectBooleanCheckbox value="#{letterBean.checked[item._id]}" /></h:column>
-                        <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.get_fIO()}</h:column>
+                        <h:column><h:selectBooleanCheckbox value="#{letterBean.checked[item.id]}" /></h:column>
+                        <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.getfIO()}</h:column>
                         <h:column><f:facet name="header">#{msgs.contactLoginTitle}</f:facet>#{item.login}</h:column>
                     </h:dataTable>
                     <h:commandButton value="#{msgs.letterAddContactsToReceiversButton}" action="#{letterBean.addUsersToReceivers()}" />

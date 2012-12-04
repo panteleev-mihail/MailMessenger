@@ -43,8 +43,8 @@ public class ContactTest {
     public void testGet_id() {
         Contact instance = new Contact();
         int expResult = 0;
-        instance.set_id(expResult);
-        int result = instance.get_id();
+        instance.setId(expResult);
+        int result = instance.getId();
         assertEquals(expResult, result);
     }
 
@@ -55,7 +55,7 @@ public class ContactTest {
     public void testSet_id() {
         int _id = 0;
         Contact instance = new Contact();
-        instance.set_id(_id);
+        instance.setId(_id);
     }
 
     /**
@@ -65,8 +65,8 @@ public class ContactTest {
     public void testGet_ContactHolder() {
         Contact instance = new Contact();
         RegistredUser expResult = new RegistredUser();
-        instance.set_ContactHolder(expResult);
-        RegistredUser result = instance.get_ContactHolder();
+        instance.setContactHolder(expResult);
+        RegistredUser result = instance.getContactHolder();
         assertEquals(expResult, result);
     }
 
@@ -77,7 +77,7 @@ public class ContactTest {
     public void testSet_ContactHolder() {
         RegistredUser _ContactHolder = null;
         Contact instance = new Contact();
-        instance.set_ContactHolder(_ContactHolder);
+        instance.setContactHolder(_ContactHolder);
     }
 
     /**
@@ -87,8 +87,8 @@ public class ContactTest {
     public void testGet_ContactPerson() {
         Contact instance = new Contact();
         RegistredUser expResult = new RegistredUser();
-        instance.set_ContactPerson(expResult);
-        RegistredUser result = instance.get_ContactPerson();
+        instance.setContactPerson(expResult);
+        RegistredUser result = instance.getContactPerson();
         assertEquals(expResult, result);
     }
 
@@ -99,6 +99,6 @@ public class ContactTest {
     public void testSet_ContactPerson() {
         RegistredUser _ContactPerson = null;
         Contact instance = new Contact();
-        instance.set_ContactPerson(_ContactPerson);
+        instance.setContactPerson(_ContactPerson);
     }
 }

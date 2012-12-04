@@ -67,8 +67,8 @@ public class DAOTest {
         DAO instance = new DAOImpl();
         RegistredUser temp = getNewOne();
         instance.add(temp);
-        RegistredUser result = (RegistredUser) instance.getById(temp.get_id(), cl);
-        assertEquals(temp.get_id(), result.get_id());
+        RegistredUser result = (RegistredUser) instance.getById(temp.getId(), cl);
+        assertEquals(temp.getId(), result.getId());
         instance.delete(temp);
     }
     

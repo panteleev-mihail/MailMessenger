@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 public class RegistrationService {
 	private String login;
 	private String password;
-        private String passwordCheck;
+    private String passwordCheck;
 	private String telephone;
 	private Date dateOfBirth;
 	private String controlEmail;
@@ -34,10 +34,10 @@ public class RegistrationService {
             }else{
                 return false;
             }
-            user.set_telephone(telephone);
-            user.set_fIO(fio);
-            user.set_dateOfBirth(dateOfBirth);
-            user.set_dateOfREgistration(new Date());
+            user.setTelephone(telephone);
+            user.setfIO(fio);
+            user.setDateOfBirth(dateOfBirth);
+            user.setDateOfREgistration(new Date());
             Factory.getInstance().getRegistredUserDAO().add(user);
             return true;
 	}

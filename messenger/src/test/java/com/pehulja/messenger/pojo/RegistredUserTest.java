@@ -47,7 +47,7 @@ public class RegistredUserTest {
     public void testSet_id() {
         int _id = 0;
         RegistredUser instance = new RegistredUser();
-        instance.set_id(_id);
+        instance.setId(_id);
     }
 
     /**
@@ -56,8 +56,8 @@ public class RegistredUserTest {
     @Test
     public void testGet_id() {
         int expResult = 0;
-        instance.set_id(expResult);
-        int result = instance.get_id();
+        instance.setId(expResult);
+        int result = instance.getId();
         assertEquals(expResult, result);
     }
 
@@ -68,8 +68,8 @@ public class RegistredUserTest {
     public void testGet_fIO() {
         RegistredUser instance = new RegistredUser();
         String expResult = "";
-        instance.set_fIO("");
-        String result = instance.get_fIO();
+        instance.setfIO("");
+        String result = instance.getfIO();
         assertEquals(expResult, result);
     }
 
@@ -80,7 +80,7 @@ public class RegistredUserTest {
     public void testSet_fIO() {
         String _fIO = "";
         RegistredUser instance = new RegistredUser();
-        instance.set_fIO(_fIO);
+        instance.setfIO(_fIO);
     }
 
     /**
@@ -90,8 +90,8 @@ public class RegistredUserTest {
     public void testGet_telephone() {
         RegistredUser instance = new RegistredUser();
         String expResult = "";
-        instance.set_telephone("");
-        String result = instance.get_telephone();
+        instance.setTelephone("");
+        String result = instance.getTelephone();
         assertEquals(expResult, result);
     }
 
@@ -102,7 +102,7 @@ public class RegistredUserTest {
     public void testSet_telephone() {
         String _telephone = "";
         RegistredUser instance = new RegistredUser();
-        instance.set_telephone(_telephone);
+        instance.setTelephone(_telephone);
     }
 
     /**
@@ -112,8 +112,8 @@ public class RegistredUserTest {
     public void testGet_dateOfBirth() {
         RegistredUser instance = new RegistredUser();
         Date expResult = new Date();
-        instance.set_dateOfBirth(expResult);
-        Date result = instance.get_dateOfBirth();
+        instance.setDateOfBirth(expResult);
+        Date result = instance.getDateOfBirth();
         assertEquals(expResult, result);
     }
 
@@ -124,7 +124,7 @@ public class RegistredUserTest {
     public void testSet_dateOfBirth() {
         Date _dateOfBirth = null;
         RegistredUser instance = new RegistredUser();
-        instance.set_dateOfBirth(_dateOfBirth);
+        instance.setDateOfBirth(_dateOfBirth);
     }
 
     /**
@@ -134,8 +134,8 @@ public class RegistredUserTest {
     public void testGet_dateOfREgistration() {
         RegistredUser instance = new RegistredUser();
         Date expResult = new Date();
-        instance.set_dateOfREgistration(expResult);
-        Date result = instance.get_dateOfREgistration();
+        instance.setDateOfREgistration(expResult);
+        Date result = instance.getDateOfREgistration();
         assertEquals(expResult, result);
     }
 
@@ -146,7 +146,7 @@ public class RegistredUserTest {
     public void testSet_dateOfREgistration() {
         Date _dateOfREgistration = null;
         RegistredUser instance = new RegistredUser();
-        instance.set_dateOfREgistration(_dateOfREgistration);
+        instance.setDateOfREgistration(_dateOfREgistration);
     }
 
     /**
@@ -156,8 +156,8 @@ public class RegistredUserTest {
     public void testGet_secondMailAdress() {
         RegistredUser instance = new RegistredUser();
         String expResult = "";
-        instance.set_secondMailAdress("");
-        String result = instance.get_secondMailAdress();
+        instance.setSecondMailAdress("");
+        String result = instance.getSecondMailAdress();
         assertEquals(expResult, result);
     }
 
@@ -168,7 +168,7 @@ public class RegistredUserTest {
     public void testSet_secondMailAdress() {
         String _secondMailAdress = "";
         RegistredUser instance = new RegistredUser();
-        instance.set_secondMailAdress(_secondMailAdress);
+        instance.setSecondMailAdress(_secondMailAdress);
     }
 
     /**

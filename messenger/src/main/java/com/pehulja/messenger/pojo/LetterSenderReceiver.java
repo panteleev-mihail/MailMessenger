@@ -6,7 +6,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
+@NamedQueries({
+		@NamedQuery(name = "getIncome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Receiver=:id " +
+				"AND lsr.isRecTrash =:isRecTrash"),
+		@NamedQuery(name = "getOutcome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Sender=:id " +
+				"AND lsr.isSenderTrash =:isSenderTrash"),
+		@NamedQuery(name = "getTrash", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE (lsr.Receiver=:id " +
+				"AND lsr.isRecTrash =:isRecTrash) OR (lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash)")
+})
 
 @Entity
 @Table(name="letter_sender_receiver")
@@ -14,34 +25,34 @@ public class LetterSenderReceiver extends Pojo implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")
-	private int _id;
+	private int id;
 	
 	@ManyToOne
 	@JoinColumn(name="idSender")
-	private RegistredUser _Sender;
+	private RegistredUser Sender;
 	
 	@ManyToOne
 	@JoinColumn(name="idReceiver")
-	private RegistredUser _Receiver;
+	private RegistredUser Receiver;
 	
 	@ManyToOne
 	@JoinColumn(name="idLetter")
-	private Letter _Letter;
+	private Letter letter;
 	
 	@Column(name="isRead")
-	private boolean _isRead;
+	private boolean isRead;
 	
 	@Column(name="isSenderTrash")
-	private boolean _isSenderTrash;
+	private boolean isSenderTrash;
 	
 	@Column(name="isRecTrash")
-	private boolean _isRecTrash;
+	private boolean isRecTrash;
         
         @Column(name="isSenderDel")
-	private boolean _isSenderDel;
+	private boolean isSenderDel;
 	
 	@Column(name="isRecDel")
-	private boolean _isRecDel;
+	private boolean isRecDel;
 	
 	public LetterSenderReceiver() {
 		super();
@@ -49,75 +60,75 @@ public class LetterSenderReceiver extends Pojo implements java.io.Serializable{
 	}
 
     public int getId() {
-        return _id;
+        return id;
     }
 
     public void setId(int _id) {
-        this._id = _id;
+        this.id = _id;
     }
 
     public RegistredUser getSender() {
-        return _Sender;
+        return Sender;
     }
 
     public void setSender(RegistredUser _Sender) {
-        this._Sender = _Sender;
+        this.Sender = _Sender;
     }
 
     public RegistredUser getReceiver() {
-        return _Receiver;
+        return Receiver;
     }
 
     public void setReceiver(RegistredUser _Receiver) {
-        this._Receiver = _Receiver;
+        this.Receiver = _Receiver;
     }
 
     public Letter getLetter() {
-        return _Letter;
+        return letter;
     }
 
     public void setLetter(Letter _Letter) {
-        this._Letter = _Letter;
+        this.letter = _Letter;
     }
 
     public boolean isIsRead() {
-        return _isRead;
+        return isRead;
     }
 
     public void setIsRead(boolean _isRead) {
-        this._isRead = _isRead;
+        this.isRead = _isRead;
     }
 
     public boolean isIsSenderTrash() {
-        return _isSenderTrash;
+        return isSenderTrash;
     }
 
     public void setIsSenderTrash(boolean _isSenderTrash) {
-        this._isSenderTrash = _isSenderTrash;
+        this.isSenderTrash = _isSenderTrash;
     }
 
     public boolean isIsRecTrash() {
-        return _isRecTrash;
+        return isRecTrash;
     }
 
     public void setIsRecTrash(boolean _isRecTrash) {
-        this._isRecTrash = _isRecTrash;
+        this.isRecTrash = _isRecTrash;
     }
 
     public boolean isIsSenderDel() {
-        return _isSenderDel;
+        return isSenderDel;
     }
 
     public void setIsSenderDel(boolean _isSenderDel) {
-        this._isSenderDel = _isSenderDel;
+        this.isSenderDel = _isSenderDel;
     }
 
     public boolean isIsRecDel() {
-        return _isRecDel;
+        return isRecDel;
     }
 
     public void setIsRecDel(boolean _isRecDel) {
-        this._isRecDel = _isRecDel;
+        this.isRecDel = _isRecDel;
     }
 	
         

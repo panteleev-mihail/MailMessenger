@@ -33,22 +33,22 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")
-	private int _id;
+	private int id;
 	
 	@Column(name="FIO")
-	private String _fIO;
+	private String fIO;
 	
 	@Column(name="telephone")
-	private String _telephone;
+	private String telephone;
 
 	@Column(name="dateOfBirth")
-	private Date _dateOfBirth;
+	private Date dateOfBirth;
 	
 	@Column(name="dateOfRegistration")
-	private Date _dateOfREgistration;
+	private Date dateOfREgistration;
 	
 	@Column(name="secondMailAdress")
-	private String _secondMailAdress;
+	private String secondMailAdress;
 	
 	@Column(name="login")
 	private String login;
@@ -61,105 +61,158 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
 	
 	
 	
-	@OneToMany(mappedBy="_Sender" /*,fetch=FetchType.EAGER*/ )
+	@OneToMany(mappedBy="Sender" /*,fetch=FetchType.EAGER*/ )
 	Collection<LetterSenderReceiver> sendedMails =new ArrayList<LetterSenderReceiver>();
 	
-	@OneToMany(mappedBy="_Receiver" /*,fetch=FetchType.EAGER*/ )
+	@OneToMany(mappedBy="Receiver" /*,fetch=FetchType.EAGER*/ )
 	Collection<LetterSenderReceiver> receivedMails =new ArrayList<LetterSenderReceiver>();
 	
-	@OneToMany(mappedBy="_ContactHolder" /*,fetch=FetchType.EAGER*/ )
+	@OneToMany(mappedBy="ContactHolder" /*,fetch=FetchType.EAGER*/ )
 	Collection<Contact> holdedContacts =new ArrayList<Contact>();
 	
-	@OneToMany(mappedBy="_ContactPerson" /*,fetch=FetchType.EAGER*/ )
+	@OneToMany(mappedBy="ContactPerson" /*,fetch=FetchType.EAGER*/ )
 	Collection<Contact> includedInContacts =new ArrayList<Contact>();
 	
 	public RegistredUser() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public int get_id() {
-		return _id;
+
+
+    public int getId() {
+		return id;
 	}
-	public void set_id(int _id) {
-		this._id = _id;
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String get_fIO() {
-		return _fIO;
+
+
+	public String getfIO() {
+		return fIO;
 	}
-	public void set_fIO(String _fIO) {
-		this._fIO = _fIO;
+
+
+	public void setfIO(String fIO) {
+		this.fIO = fIO;
 	}
-	public String get_telephone() {
-		return _telephone;
+
+
+	public String getTelephone() {
+		return telephone;
 	}
-	public void set_telephone(String _telephone) {
-		this._telephone = _telephone;
+
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
-	public Date get_dateOfBirth() {
-		return _dateOfBirth;
+
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
-	public void set_dateOfBirth(Date _dateOfBirth) {
-		this._dateOfBirth = _dateOfBirth;
+
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
-	public Date get_dateOfREgistration() {
-		return _dateOfREgistration;
+
+
+	public Date getDateOfREgistration() {
+		return dateOfREgistration;
 	}
-	public void set_dateOfREgistration(Date _dateOfREgistration) {
-		this._dateOfREgistration = _dateOfREgistration;
+
+
+	public void setDateOfREgistration(Date dateOfREgistration) {
+		this.dateOfREgistration = dateOfREgistration;
 	}
-	public String get_secondMailAdress() {
-		return _secondMailAdress;
+
+
+	public String getSecondMailAdress() {
+		return secondMailAdress;
 	}
-	public void set_secondMailAdress(String _secondMailAdress) {
-		this._secondMailAdress = _secondMailAdress;
+
+
+	public void setSecondMailAdress(String secondMailAdress) {
+		this.secondMailAdress = secondMailAdress;
 	}
+
+
 	public String getLogin() {
 		return login;
 	}
+
+
 	public void setLogin(String login) {
 		this.login = login;
 	}
+
+
 	public String getPassword_hash() {
 		return password_hash;
 	}
+
+
 	public void setPassword_hash(String password_hash) {
 		this.password_hash = password_hash;
 	}
+
+
 	public String getPassword_salt() {
 		return password_salt;
 	}
+
+
 	public void setPassword_salt(String password_salt) {
 		this.password_salt = password_salt;
 	}
+
+
 	public Collection<LetterSenderReceiver> getSendedMails() {
 		return sendedMails;
 	}
+
+
 	public void setSendedMails(Collection<LetterSenderReceiver> sendedMails) {
 		this.sendedMails = sendedMails;
 	}
+
+
 	public Collection<LetterSenderReceiver> getReceivedMails() {
 		return receivedMails;
 	}
+
+
 	public void setReceivedMails(Collection<LetterSenderReceiver> receivedMails) {
 		this.receivedMails = receivedMails;
 	}
+
+
 	public Collection<Contact> getHoldedContacts() {
 		return holdedContacts;
 	}
+
+
 	public void setHoldedContacts(Collection<Contact> holdedContacts) {
 		this.holdedContacts = holdedContacts;
 	}
+
+
 	public Collection<Contact> getIncludedInContacts() {
 		return includedInContacts;
 	}
+
+
 	public void setIncludedInContacts(Collection<Contact> includedInContacts) {
 		this.includedInContacts = includedInContacts;
 	}
 
-    @Override
+
+	@Override
     public int hashCode() {
         int hash = 5;
-        hash = 61 * hash + this._id;
+        hash = 61 * hash + this.id;
         hash = 61 * hash + (this.login != null ? this.login.hashCode() : 0);
         return hash;
     }
@@ -173,7 +226,7 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
             return false;
         }
         final RegistredUser other = (RegistredUser) obj;
-        if (this._id != other._id) {
+        if (this.id != other.id) {
             return false;
         }
         if ((this.login == null) ? (other.login != null) : !this.login.equals(other.login)) {

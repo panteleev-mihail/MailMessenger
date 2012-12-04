@@ -28,47 +28,55 @@ public class Letter extends Pojo  implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")
-	private int _id;
+	private int id;
 		
 	@Column(name="content")
-	private String _content;
+	private String content;
 	
 	@Column(name="theme")
-	private String _theme;
+	private String theme;
 	
 		
 	
-	@OneToMany(mappedBy="_Letter" /*,fetch=FetchType.EAGER*/ )
-	Collection<LetterSenderReceiver> letter_Sender_Receivers =new ArrayList<LetterSenderReceiver>();
+	@OneToMany(mappedBy="letter" /*,fetch=FetchType.EAGER*/ )
+	Collection<LetterSenderReceiver> letterSenderReceivers =new ArrayList<LetterSenderReceiver>();
 	
 	public Letter() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public int get_id() {
-		return _id;
+
+	public int getId() {
+		return id;
 	}
-	public void set_id(int _id) {
-		this._id = _id;
+
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String get_content() {
-		return _content;
+
+	public String getContent() {
+		return content;
 	}
-	public void set_content(String _content) {
-		this._content = _content;
+
+	public void setContent(String content) {
+		this.content = content;
 	}
-	public String get_theme() {
-		return _theme;
+
+	public String getTheme() {
+		return theme;
 	}
-	public void set_theme(String _theme) {
-		this._theme = _theme;
+
+	public void setTheme(String theme) {
+		this.theme = theme;
 	}
-	public Collection<LetterSenderReceiver> getLetter_Sender_Receivers() {
-		return letter_Sender_Receivers;
+
+	public Collection<LetterSenderReceiver> getLetterSenderReceivers() {
+		return letterSenderReceivers;
 	}
-	public void setLetter_Sender_Receivers(
-			Collection<LetterSenderReceiver> letter_Sender_Receivers) {
-		this.letter_Sender_Receivers = letter_Sender_Receivers;
+
+	public void setLetterSenderReceivers(
+			Collection<LetterSenderReceiver> letterSenderReceivers) {
+		this.letterSenderReceivers = letterSenderReceivers;
 	}
 	
 }

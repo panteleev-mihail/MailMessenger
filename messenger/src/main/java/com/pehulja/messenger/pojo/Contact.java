@@ -29,7 +29,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
         name="getContactRepeats",
-        query="SELECT contact FROM Contact contact WHERE contact._ContactHolder.id=:idHolder AND contact._ContactPerson.id=:idPerson")
+        query="SELECT contact FROM Contact contact WHERE contact.ContactHolder.id=:idHolder AND contact.ContactPerson.id=:idPerson")
 })
 @Entity
 @Table(name="contact")
@@ -37,36 +37,43 @@ public class Contact extends Pojo  implements java.io.Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="id")
-	private int _id;
+	private int id;
 	
 	@ManyToOne
 	@JoinColumn(name="idContactHolder")
-	private RegistredUser _ContactHolder;
+	private RegistredUser ContactHolder;
 	
 	@ManyToOne
 	@JoinColumn(name="idContactPerson")
-	private RegistredUser _ContactPerson;
+	private RegistredUser ContactPerson;
 	
 	public Contact() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public int get_id() {
-		return _id;
+
+	public int getId() {
+		return id;
 	}
-	public void set_id(int _id) {
-		this._id = _id;
+
+	public void setId(int id) {
+		this.id = id;
 	}
-	public RegistredUser get_ContactHolder() {
-		return _ContactHolder;
+
+	public RegistredUser getContactHolder() {
+		return ContactHolder;
 	}
-	public void set_ContactHolder(RegistredUser _ContactHolder) {
-		this._ContactHolder = _ContactHolder;
+
+	public void setContactHolder(RegistredUser contactHolder) {
+		ContactHolder = contactHolder;
 	}
-	public RegistredUser get_ContactPerson() {
-		return _ContactPerson;
+
+	public RegistredUser getContactPerson() {
+		return ContactPerson;
 	}
-	public void set_ContactPerson(RegistredUser _ContactPerson) {
-		this._ContactPerson = _ContactPerson;
+
+	public void setContactPerson(RegistredUser contactPerson) {
+		ContactPerson = contactPerson;
 	}
+
 }

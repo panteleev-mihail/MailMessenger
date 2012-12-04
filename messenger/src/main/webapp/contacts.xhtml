@@ -14,7 +14,7 @@
         #{msgs.contactsHeader}
         <h:form rendered="#{not empty contact.list}">
             <h:dataTable value="#{contact.list}" var="item">
-                <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.get_fIO()}</h:column>
+                <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.getfIO()}</h:column>
                 <h:column><f:facet name="header">#{msgs.contactLoginTitle}</f:facet>#{item.login}</h:column>
                 <h:column><h:commandButton value="#{msgs.contactsEditContactHeader}" action="#{contact.edit(item)}" /></h:column>
                 <h:column><h:commandButton value="#{msgs.contactsDeleteContactHeader}" action="#{contact.delete(item)}" /></h:column>

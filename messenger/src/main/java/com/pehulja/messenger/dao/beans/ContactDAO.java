@@ -22,7 +22,7 @@ public class ContactDAO extends DAO{
             List<RegistredUser> result = null;
             EntityManager manager = HibernateUtil.getEm();
             try{
-               result = manager.createNamedQuery("getUsersContacts").setParameter("id", user.get_id()).getResultList();
+               result = manager.createNamedQuery("getUsersContacts").setParameter("id", user.getId()).getResultList();
             }
             catch(javax.persistence.NoResultException e){
                 
@@ -39,8 +39,8 @@ public class ContactDAO extends DAO{
             try{
                tx.begin();
                Query query = manager.createNamedQuery("deleteUserContact")
-                       .setParameter("idContactPerson", contact.get_id())
-                       .setParameter("idContactHolder", holder.get_id());
+                       .setParameter("idContactPerson", contact.getId())
+                       .setParameter("idContactHolder", holder.getId());
                query.executeUpdate();
                tx.commit();
             }
@@ -58,8 +58,8 @@ public class ContactDAO extends DAO{
             
                tx.begin();
                result = manager.createNamedQuery("getContactRepeats")
-                       .setParameter("idHolder", contact.get_ContactHolder().get_id())
-                       .setParameter("idPerson", contact.get_ContactPerson().get_id())
+                       .setParameter("idHolder", contact.getContactHolder().getId())
+                       .setParameter("idPerson", contact.getContactPerson().getId())
                        .getResultList();
                tx.commit();
                manager.close();

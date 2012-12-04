@@ -39,8 +39,8 @@ public class ContactService {
         ContactDAO contactDAO = Factory.getInstance().getContactDAO();
         RegistredUser contactPerson = (RegistredUser) userDAO.getByLogin(login);
         Contact contact = new Contact();
-        contact.set_ContactHolder(user);
-        contact.set_ContactPerson(contactPerson);
+        contact.setContactHolder(user);
+        contact.setContactPerson(contactPerson);
         if(!contactDAO.hasUserSuchContact(contact)){
         userDAO.add(contact);
         userDAO.update(user);

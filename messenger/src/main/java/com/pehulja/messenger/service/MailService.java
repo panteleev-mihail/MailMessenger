@@ -16,17 +16,17 @@ import java.util.List;
 public class MailService {
     public List<LetterSenderReceiver> getIncome (RegistredUser user){
 		List<LetterSenderReceiver> result = null;
-                result = Factory.getInstance().getLetter_Sender_ReceiverDAO().getIncome(user);
+                result = Factory.getInstance().getLetterSenderReceiverDAO().getIncome(user);
                 return result;
 	}
     public List<LetterSenderReceiver> getOutcome (RegistredUser user){
 		List<LetterSenderReceiver> result = null;
-                result = Factory.getInstance().getLetter_Sender_ReceiverDAO().getOutcome(user);
+                result = Factory.getInstance().getLetterSenderReceiverDAO().getOutcome(user);
                 return result;
     }
     public List<LetterSenderReceiver> getTrash (RegistredUser user){
 		List<LetterSenderReceiver> result = null;
-                result = Factory.getInstance().getLetter_Sender_ReceiverDAO().getTrash(user);
+                result = Factory.getInstance().getLetterSenderReceiverDAO().getTrash(user);
                 return result;
 	}
                 

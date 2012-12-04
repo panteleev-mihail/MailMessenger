@@ -13,7 +13,7 @@ public class Factory {
 	private static AdministratorDAO adminDAO = null;
 	private static LetterDAO letterDAO = null;
 	private static ContactDAO contactDAO = null;
-	private static LetterSenderReceiverDAO letter_Sender_ReceiverDAO = null;
+	private static LetterSenderReceiverDAO letterSenderReceiverDAO = null;
 	
         /*static {
             HibernateUtil.configurate("localhost", "mydb", "root", "98979897");
@@ -49,9 +49,9 @@ public class Factory {
 		 return contactDAO;
 	 }
 	 
-	 public LetterSenderReceiverDAO getLetter_Sender_ReceiverDAO(){
-		 if (letter_Sender_ReceiverDAO == null)
-			 letter_Sender_ReceiverDAO = new LetterSenderReceiverDAO();
-		 return letter_Sender_ReceiverDAO;
+	public LetterSenderReceiverDAO getLetterSenderReceiverDAO(){
+		 if (letterSenderReceiverDAO == null)
+			 letterSenderReceiverDAO = new LetterSenderReceiverDAO();
+		 return letterSenderReceiverDAO;
 	 }
 }

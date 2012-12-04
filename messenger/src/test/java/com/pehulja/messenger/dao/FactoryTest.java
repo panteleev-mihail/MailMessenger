@@ -109,8 +109,8 @@ public class FactoryTest {
     public void testGetLetter_Sender_ReceiverDAO() {
         log.info("Test of getLetter_Sender_ReceiverDAO method, of class Factory");
         Factory instance = new Factory();
-        LetterSenderReceiverDAO expResult = instance.getLetter_Sender_ReceiverDAO();
-        LetterSenderReceiverDAO result = instance.getLetter_Sender_ReceiverDAO();
+        LetterSenderReceiverDAO expResult = instance.getLetterSenderReceiverDAO();
+        LetterSenderReceiverDAO result = instance.getLetterSenderReceiverDAO();
         assertEquals(expResult, result);
     }
 }
