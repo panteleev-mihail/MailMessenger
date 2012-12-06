@@ -8,10 +8,28 @@ import org.hibernate.Session;
 
 import com.pehulja.messenger.pojo.LetterSenderReceiver;
 import com.pehulja.messenger.dao.HibernateUtil;
+import com.pehulja.messenger.pojo.Letter;
 import com.pehulja.messenger.pojo.RegistredUser;
 import javax.persistence.EntityManager;
 
 public class LetterSenderReceiverDAO extends DAO {
+    
+    
+    public List<LetterSenderReceiver> getByLetter(Letter letter) {
+        
+        List<LetterSenderReceiver> result = null;
+		EntityManager manager = HibernateUtil.getEm();
+		try {
+			result = manager.createNamedQuery("getByLetter")
+					.setParameter("letter", letter).getResultList();
+		} catch (javax.persistence.NoResultException e) {
+
+		} finally {
+			manager.close();
+		}
+		return result;
+        
+    }
 	public List<LetterSenderReceiver> getIncome(RegistredUser user) {
 		List<LetterSenderReceiver> result = null;
 		EntityManager manager = HibernateUtil.getEm();

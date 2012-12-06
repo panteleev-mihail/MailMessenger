@@ -4,30 +4,32 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>#{msgs.headerLetterWrite}</title>
     </h:head>
     <h:body>
        <table border="0" width="700px"><tr>
             <td>
-                
                 <h:form>
-                    <h:inputText value="#{letterBean.senderEmail}" /> <br />
-                    <h:inputText value="#{letterBean.receiverEmail}" /> <br />
-                    <h:inputText value="#{letterBean.subject}" /> <br />
-                    <h:inputTextarea value="#{letterBean.content}" /> <br />
-                    <h:commandButton value="Send" action="#{letterBean.send}" id="sendBtn"/>
+                    <h:commandButton value="#{msgs.globalBackRedirect}" action ="account"/>
+                </h:form>
+                <h:form>
+
+                    #{msgs.receiver}<h:inputText value="#{letterWriteBean.receiverEmail}" /> <br />
+                    #{msgs.Title}<h:inputText value="#{letterWriteBean.subject}" /> <br />
+                    #{msgs.Content}<br/><h:inputTextarea value="#{letterWriteBean.content}" rows="15" cols="40"/> <br />
+                    <h:commandButton value="#{msgs.letterSend}" action="#{letterWriteBean.send}" id="sendBtn"/>
                 </h:form>
                 
             </td>
             <td>
                 #{msgs.contactsHeader}
-                <h:form rendered="#{not empty letterBean.listContacts}">
-                    <h:dataTable value="#{letterBean.listContacts}" var="item" >
-                        <h:column><h:selectBooleanCheckbox value="#{letterBean.checked[item.id]}" /></h:column>
+                <h:form rendered="#{not empty letterWriteBean.listContacts}">
+                    <h:dataTable value="#{letterWriteBean.listContacts}" var="item" >
+                        <h:column><h:selectBooleanCheckbox value="#{letterWriteBean.checked[item.id]}" /></h:column>
                         <h:column><f:facet name="header">#{msgs.contactFioTitle}</f:facet>#{item.getfIO()}</h:column>
                         <h:column><f:facet name="header">#{msgs.contactLoginTitle}</f:facet>#{item.login}</h:column>
                     </h:dataTable>
-                    <h:commandButton value="#{msgs.letterAddContactsToReceiversButton}" action="#{letterBean.addUsersToReceivers()}" />
+                    <h:commandButton value="#{msgs.letterAddContactsToReceiversButton}" action="#{letterWriteBean.addUsersToReceivers()}" />
                 </h:form>
             </td>
         </tr></table>

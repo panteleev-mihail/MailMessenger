@@ -50,9 +50,13 @@
 			<f:facet name="header">#{msgs.Content}</f:facet>
     				#{o.letter.content}
     			</h:column>
+            <h:column>
+                <h:commandButton value="#{msgs.letterOpen}" action="#{letterBean.showLetter( o.letter.id ) }" />
+            </h:column>
 	</h:dataTable>
+        <h:commandButton value="#{msgs.toTrash}" action="#{income.toTrash}" />
 	</h:form>
-	<h:commandButton value="#{msgs.toTrash}" action="#{income.toTrash}" />
+	
 </h:body>
 </html>
 

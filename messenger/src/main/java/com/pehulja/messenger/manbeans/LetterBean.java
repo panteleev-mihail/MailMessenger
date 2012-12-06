@@ -4,20 +4,16 @@
  */
 package com.pehulja.messenger.manbeans;
 
+
 import com.pehulja.messenger.pojo.Letter;
-import com.pehulja.messenger.pojo.RegistredUser;
-import com.pehulja.messenger.service.ContactService;
+import com.pehulja.messenger.pojo.LetterSenderReceiver;
 import com.pehulja.messenger.service.LetterService;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
-import javax.faces.bean.ViewScoped;
-import javax.faces.component.UIComponent;
+import javax.faces.component.UICommand;
 import javax.faces.context.FacesContext;
 
 /**
@@ -25,87 +21,27 @@ import javax.faces.context.FacesContext;
  * @author I
  */
 @ManagedBean(name="letterBean")
-@ViewScoped
+@SessionScoped
 public class LetterBean implements Serializable{
     
     Letter letter;
     
-    private String receiverEmail;
-    private String senderEmail;
-    private String content;
-    private String subject;
+    private String receiverEmail="";
+    private String senderEmail="";
+    private String content="";
+    private String subject="";
     
-    private UIComponent replyButton;
-    private UIComponent deleteButton;
-    private UIComponent restoreButton;
     
-    //////
-    private List<RegistredUser> listContacts;
-    private List<RegistredUser> receivers;
-    private RegistredUser user = null;
-    private ContactService mc;
-    private Map<Integer, Boolean> checked = new HashMap<Integer, Boolean>();
-    //////
+    private LetterService ls;
     
-    @PostConstruct
-    public void init() {
-        user = ((UserBean)FacesContext.getCurrentInstance() 
-			.getExternalContext().getSessionMap().get("userbean")).getUser();
-        confContacts(user);
-        receivers = new ArrayList<RegistredUser>();
-    }
-    public void confContacts(RegistredUser u) {
-        mc = new ContactService();
-        listContacts = mc.getContact(u);
-    }
+    private UICommand replyButton;
+    private UICommand deleteButton;
+    private UICommand restoreButton;
     
-    public void addUsersToReceivers(){
-        StringBuilder builder = new StringBuilder();
-        if(receiverEmail!=null){
-            builder.append(receiverEmail);
-        }
-        for (RegistredUser item : listContacts) {
-            if (checked.get(item.getId())) {
-                boolean contains = false;
-                for(RegistredUser item2 : receivers){
-                    if(item.equals(item2)){
-                        contains = true;
-                    }
-                }
-                if(!contains){
-                    receivers.add(item);
-                    builder.append(item.getLogin()+", ");
-                }
-            }
-        }
-        receiverEmail = builder.toString();
-        checked.clear(); // If necessary.
-    }
+    @ManagedProperty(value="#{letterWriteBean}")
+    private LetterWriteBean letterWriteBean;
     
-    public UIComponent getReplyButton() {
-        return replyButton;
-    }
-
-    public void setReplyButton(UIComponent replyButton) {
-        this.replyButton = replyButton;
-    }
-
-    public UIComponent getDeleteButton() {
-        return deleteButton;
-    }
-
-    public void setDeleteButton(UIComponent deleteButton) {
-        this.deleteButton = deleteButton;
-    }
-
-    public UIComponent getRestoreButton() {
-        return restoreButton;
-    }
-
-    public void setRestoreButton(UIComponent restoreButton) {
-        this.restoreButton = restoreButton;
-    }
-    
+  
     public String getReceiverEmail() {
         return receiverEmail;
     }
@@ -139,59 +75,57 @@ public class LetterBean implements Serializable{
         this.subject = subject;
     }
 
-    public List<RegistredUser> getListContacts() {
-        return listContacts;
+    public LetterWriteBean getLetterWriteBean() {
+        return letterWriteBean;
     }
 
-    public void setListContacts(List<RegistredUser> list) {
-        this.listContacts = list;
+    public void setLetterWriteBean(LetterWriteBean letterWriteBean) {
+        this.letterWriteBean = letterWriteBean;
     }
 
-    public List<RegistredUser> getReceivers() {
-        return receivers;
-    }
-
-    public void setReceivers(List<RegistredUser> receivers) {
-        this.receivers = receivers;
-    }
-
-    public Map<Integer, Boolean> getChecked() {
-        return checked;
-    }
-
-    public void setChecked(Map<Integer, Boolean> checked) {
-        this.checked = checked;
-    }
+   
             
     public String showLetter(int id)
     {
-        LetterService ls= new LetterService();
-        this.letter = ls.showLetter(id);
+        ls= new LetterService();
+        List<LetterSenderReceiver> lsr = ls.showLetter(id);
+        this.letter = lsr.get(0).getLetter();
         this.content=letter.getContent();
-        this.receiverEmail="NULL"; // Заменить
-        this.senderEmail="NULL"; // Заменить
         this.subject=letter.getTheme();
-        
-        
-        
+        this.senderEmail=lsr.get(0).getSender().getLogin();
+        this.receiverEmail="";
+        for(LetterSenderReceiver temp:lsr)
+            this.receiverEmail+=temp.getReceiver().getLogin()+", ";
+       
+        /*FacesContext context = FacesContext.getCurrentInstance();
+        this.deleteButton=context.getViewRoot().findComponent("letterViewForm:dBtn");
+        this.replyButton=context.getViewRoot().findComponent("letterViewForm:rBtn");
+        this.restoreButton=context.getViewRoot().findComponent("letterViewForm:rsBtn"); */
+        System.out.println(this.deleteButton.getId());
+ 
         return "letterView";
     }
     
     public String newLetter() {
     
-        clear();
+
         return "letterWrite";
     }
     public String reply(){
+
+               
+
+        letterWriteBean.setReceiverEmail(this.senderEmail);
+        letterWriteBean.setSubject("Re: "+this.subject);
+        /* lb = (LetterBean) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("bean");
         
-        this.subject="Re: "+this.subject;
-        String temp=this.senderEmail;
-        this.senderEmail=this.receiverEmail;
-        this.receiverEmail=temp;
-        this.content="";
-       
         
+        this.senderEmail=this.user.getLogin();
+        this.receiverEmail = lb.getSenderEmail();
+        this.subject="Re: "+lb.getSubject();
+        */
         return "letterWrite";
+        
        }
     
     public String delete(){
@@ -205,26 +139,7 @@ public class LetterBean implements Serializable{
         return "letters";
     }
     
-    public String send(){
-        
-        Letter temp=new Letter();
-       // temp.set_receiverEmail(this.receiverEmail); // Заменить
-       // temp.set_senderEmail(this.senderEmail); // 
-        temp.setTheme(this.subject);
-        temp.setContent(this.content);
-        
-        LetterService ls= new LetterService();
-        ls.addLetter(temp);
-        clear();
-        return "letters";
-    }
     
-    private void clear(){
-        this.content="";
-        this.letter=null;
-        this.receiverEmail="";
-        this.senderEmail="";
-        this.subject="";
-        
-    }
+
+    
 }

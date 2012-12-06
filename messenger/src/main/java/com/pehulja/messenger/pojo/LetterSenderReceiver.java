@@ -16,7 +16,8 @@ import javax.persistence.Table;
 		@NamedQuery(name = "getOutcome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Sender=:id " +
 				"AND lsr.isSenderTrash =:isSenderTrash"),
 		@NamedQuery(name = "getTrash", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE (lsr.Receiver=:id " +
-				"AND lsr.isRecTrash =:isRecTrash) OR (lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash)")
+				"AND lsr.isRecTrash =:isRecTrash) OR (lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash)"),
+                @NamedQuery(name = "getByLetter", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.letter=:letter ")
 })
 
 @Entity

@@ -3,17 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>#{msgs.headerLetterView}</title>
     </h:head>
     <h:body>
-        <h:form>
-            <h:outputLabel value="#{letterBean.senderEmail}" /> <br />
-            <h:outputLabel value="#{letterBean.receiverEmail}" /> <br />
-            <h:outputLabel value="#{letterBean.subject}" /> <br />
-            <h:outputLabel value="#{letterBean.content}" /> <br />
-            <h:commandButton value="Reply" action="#{letterBean.reply}" id="rBtn" binding="#{letterBean.replyButton}"/>
-            <h:commandButton value="Delete" action="#{letterBean.reply}" id="dBtn" binding="#{letterBean.deleteButton}"/>
-            <h:commandButton value="Restore" action="#{letterBean.reply}" id="rsBtn" binding="#{letterBean.restoreButton}"/>
+        <h:form id="letterViewForm">
+            #{msgs.Sender}<h:outputLabel value="#{letterBean.senderEmail}" /> <br />
+            #{msgs.receiver}<h:outputLabel value="#{letterBean.receiverEmail}" /> <br />
+            #{msgs.Title}<h:outputLabel value="#{letterBean.subject}" /> <br />
+            #{msgs.Content}<br/><h:outputLabel value="#{letterBean.content}" /> <br />
+            <h:commandButton value="#{msgs.letterReply}" action="#{letterBean.reply}" id="rBtn" binding="#{letterBean.replyButton}"/>
+            <h:commandButton value="#{msgs.letterDelete}" action="#{letterBean.reply}" id="dBtn" binding="#{letterBean.deleteButton}"/>
+            <h:commandButton value="#{msgs.letterRestore}" action="#{letterBean.reply}" id="rsBtn" binding="#{letterBean.restoreButton}"/>
         </h:form>
     </h:body>
 </html>

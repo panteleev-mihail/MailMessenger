@@ -731,3 +731,9 @@
 17:55:27,121 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
 17:55:27,221 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
 17:55:27,221 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named itemManagerPu
+16:45:08,999 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+16:45:09,024 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+16:45:09,028 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+16:45:09,029 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+16:45:09,074 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
+16:45:09,075 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named itemManagerPu
