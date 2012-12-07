@@ -22,7 +22,7 @@ public class RegistredUserDAO extends DAO{
                               .getSingleResult(); 
             }
             catch(javax.persistence.NoResultException e){
-                System.err.println("asdfasasdfasdfasdfasdfafgsfghsfghsfgdfgsdfgzdfgsdfgadfgadfgadf");
+                
             }
             finally{
                 manager.close();

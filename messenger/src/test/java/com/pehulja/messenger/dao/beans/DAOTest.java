@@ -50,10 +50,11 @@ public class DAOTest {
      */
     @Test
     public void testAdd() throws Exception {
-        log.error("test Add ");
+        log.info("test Add ");
         DAO instance = new DAOImpl();
         RegistredUser temp = getNewOne();
         instance.add(temp);
+        assertNotNull(instance.getById(temp.getId(), temp.getClass()));
         instance.delete(temp);
     }
 
@@ -62,7 +63,7 @@ public class DAOTest {
      */
     @Test
     public void testGetById() throws Exception {
-        log.error("test getById ");
+        log.info("test getById ");
         Class<?> cl = RegistredUser.class;
         DAO instance = new DAOImpl();
         RegistredUser temp = getNewOne();
@@ -78,13 +79,17 @@ public class DAOTest {
      */
     @Test
     public void testUpdate() throws Exception {
-        log.error("test upd ");
+        log.info("test upd ");
         DAO instance = new DAOImpl();
         RegistredUser temp = getNewOne();
         instance.add(temp);
-        temp.setPassword_hash("9135435432484");
+        String pass = "9135435432484";
+        temp.setPassword_hash(pass);
         instance.update(temp);
+        RegistredUser user = (RegistredUser) instance.getById(temp.getId(), temp.getClass());
+        assertEquals(pass, user.getPassword_hash());
         instance.delete(temp);
+		
     }
 
     /**
@@ -92,13 +97,12 @@ public class DAOTest {
      */
     @Test
     public void testDelete() throws Exception {
-        log.error("test del ");
-        
+        log.info("test del ");
         DAO instance = new DAOImpl();
         RegistredUser temp = getNewOne();
         instance.add(temp);
         instance.delete(temp);
-        
+        assertNull(instance.getById(temp.getId(), temp.getClass()));
     }
           
     private RegistredUser getNewOne(){

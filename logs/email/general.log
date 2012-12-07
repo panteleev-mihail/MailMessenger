@@ -737,3 +737,647 @@
 16:45:09,029 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
 16:45:09,074 [main] INFO org.hibernate.ejb.Ejb3Configuration - HHH000318: Could not find any META-INF/persistence.xml file in the classpath
 16:45:09,075 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: No Persistence provider for EntityManager named itemManagerPu
+09:49:36,659 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+09:49:36,725 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+09:49:36,794 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+09:49:36,796 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+09:49:40,010 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+09:49:40,050 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+09:49:40,051 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+09:49:40,051 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+09:49:40,052 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+09:49:41,551 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+09:49:41,628 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+09:49:41,682 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+09:49:41,754 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+09:49:41,824 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+09:49:44,477 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+09:49:44,729 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:44,730 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:44,769 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:44,769 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:44,854 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+09:49:44,883 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:44,883 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,283 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,283 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,284 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+09:49:45,286 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+09:49:45,310 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,311 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,336 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,336 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,385 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,385 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,387 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+09:49:45,406 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,406 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,440 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,440 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,442 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+09:49:45,458 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,458 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,478 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+09:49:45,478 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+09:49:45,487 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+09:49:45,507 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+09:49:45,680 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+09:49:45,722 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+09:49:45,738 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+09:49:45,739 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:02:26,104 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:02:26,300 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:02:26,330 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:02:26,332 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:02:38,818 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:02:39,026 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:02:39,027 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:02:39,028 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:02:39,028 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:02:45,484 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:02:45,811 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:02:45,914 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:02:46,008 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:02:46,035 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:02:51,986 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:02:52,334 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:52,334 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:52,398 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:52,399 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:52,714 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:02:52,729 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:52,729 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:52,992 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:52,993 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:52,994 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:02:52,998 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:02:53,026 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,026 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,070 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,070 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,114 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,114 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,148 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:02:53,174 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,174 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,196 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,196 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,199 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:02:53,218 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,218 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,242 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:02:53,242 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:02:53,387 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:02:53,393 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:02:53,397 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:02:53,401 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:02:53,405 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+10:02:53,406 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:05:03,779 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:05:03,919 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:05:03,963 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:05:03,964 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:05:09,104 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:05:09,197 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:05:09,198 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:05:09,198 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:05:09,199 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:05:11,394 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:05:11,470 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:05:11,571 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:05:11,638 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:05:11,703 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:05:15,760 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:05:16,189 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:05:16,189 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:05:16,227 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:05:16,227 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:08:44,206 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:08:44,289 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:08:44,533 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:08:44,534 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:08:52,155 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:08:52,243 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:08:52,243 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:08:52,244 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:08:52,244 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:08:55,873 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:08:55,992 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:08:56,106 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:08:56,438 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:08:56,518 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:09:01,075 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:09:01,744 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:09:01,745 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:09:01,817 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:09:01,817 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:09:09,535 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:09:09,535 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:12:04,994 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:12:05,093 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:12:05,125 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:12:05,126 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:12:09,716 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:12:09,792 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:12:09,793 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:12:09,793 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:12:09,795 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:12:11,517 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:12:11,602 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:12:11,663 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:12:11,751 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:12:11,807 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:12:15,741 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:12:16,334 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:12:16,335 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:12:16,379 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:12:16,379 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:12:22,935 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:12:22,935 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:04,049 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:15:04,087 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:15:04,102 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:15:04,104 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:15:07,260 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:15:07,307 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:15:07,307 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:15:07,308 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:15:07,308 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:15:08,133 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:15:08,172 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:15:08,202 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:15:08,259 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:15:08,277 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:15:10,430 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:15:10,647 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:10,647 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:10,684 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:10,684 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:10,816 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:10,816 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,040 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:15:11,079 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,079 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,137 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,137 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,138 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:15:11,141 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:15:11,159 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,159 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,205 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,205 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,228 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,228 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,232 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:15:11,254 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,254 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,272 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,273 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,275 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:15:11,291 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,291 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,308 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:15:11,308 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:15:11,501 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:15:11,569 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:15:11,588 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:15:11,596 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:15:11,620 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+10:15:11,621 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:16:39,988 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:16:40,094 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:16:40,108 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:16:40,109 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:16:42,054 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:16:42,080 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:16:42,081 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:16:42,081 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:16:42,082 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:16:42,735 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:16:42,766 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:16:42,797 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:16:42,854 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:16:42,872 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:16:44,689 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:16:44,888 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:44,888 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:44,922 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:44,922 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:44,939 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:44,939 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:44,977 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:44,977 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,046 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:16:45,072 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,072 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,167 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,168 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,168 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:16:45,180 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:16:45,201 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,201 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,227 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,227 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,248 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,248 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,251 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:16:45,270 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,271 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,289 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,289 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,291 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:16:45,307 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,307 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,326 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:16:45,326 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:16:45,546 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:16:45,553 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:16:45,560 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:16:45,564 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:16:45,570 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+10:16:45,572 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:17:50,371 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:17:51,662 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:17:51,706 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:17:51,777 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:17:51,778 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:17:56,078 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:17:56,106 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:17:56,107 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:17:56,107 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:17:56,108 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:17:56,919 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:17:56,954 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:17:57,024 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:17:57,081 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:17:57,111 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:18:00,410 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:18:00,735 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:18:00,735 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:18:00,988 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:18:00,989 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:18:09,359 [main] ERROR com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:18:18,243 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:18:18,244 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:16,242 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:37:16,287 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:37:16,298 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:37:16,300 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:37:19,458 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:37:19,553 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:37:19,554 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:37:19,554 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:37:19,555 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:37:20,638 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+10:37:20,662 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:37:20,706 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+10:37:20,750 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:37:20,778 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:37:22,934 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:37:23,155 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,156 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,187 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,187 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,203 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,204 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,224 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,224 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,273 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:37:23,296 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,296 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,422 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,422 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,423 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:37:23,431 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:37:23,452 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,452 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,484 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,484 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,504 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,505 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,505 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:37:23,507 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:37:23,523 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,524 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,538 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,539 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,556 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,556 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,557 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:37:23,558 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:37:23,575 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,575 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,592 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,593 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,593 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+10:37:23,601 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - getIncome
+10:37:23,629 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,629 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,644 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,645 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,659 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,659 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,681 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,687 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,728 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,728 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,755 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - getOutcome
+10:37:23,768 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,768 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,782 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,782 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,797 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,797 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,815 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,816 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,834 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,834 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,839 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - getTrash
+10:37:23,853 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,854 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,868 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,868 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,882 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,882 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,896 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,896 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,911 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,911 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,916 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:37:23,930 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,930 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,967 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+10:37:23,967 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+10:37:23,974 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:37:23,977 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:37:23,978 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+10:37:23,979 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:37:23,980 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:37:23,983 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:39:16,969 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:39:16,997 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:39:17,009 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:39:17,010 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:39:18,644 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:39:18,673 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:39:18,673 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:39:18,674 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:39:18,675 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:39:20,072 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:39:20,185 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:39:20,203 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:39:22,181 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:39:23,811 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:39:24,537 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:39:25,050 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:39:25,308 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:39:25,546 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - getIncome
+10:39:26,408 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+10:39:26,408 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'isRecDel' in 'field list'
+10:39:26,483 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+10:39:26,483 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'lettersend0_.isRecDel' in 'field list'
+10:39:26,495 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - getOutcome
+10:39:26,710 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+10:39:26,710 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'isRecDel' in 'field list'
+10:39:26,720 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+10:39:26,720 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'lettersend0_.isRecDel' in 'field list'
+10:39:26,726 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - getTrash
+10:39:27,136 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+10:39:27,136 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'isRecDel' in 'field list'
+10:39:27,146 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1054, SQLState: 42S22
+10:39:27,146 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Unknown column 'lettersend0_.isRecDel' in 'field list'
+10:39:27,151 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:39:27,350 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:39:27,354 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:39:27,355 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+10:39:27,356 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:39:27,357 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:39:27,361 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:45:49,583 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:45:49,715 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:45:49,728 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:45:49,730 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:45:54,027 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:45:54,096 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:45:54,097 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:45:54,097 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:45:54,098 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:45:56,416 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:45:56,611 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:45:56,656 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:46:00,140 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:46:01,663 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:46:02,083 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:46:02,293 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:46:02,385 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:46:03,165 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:46:03,649 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:46:03,668 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:46:03,671 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:46:03,688 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:46:03,705 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+10:46:03,707 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:49:47,684 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:49:48,269 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:49:48,461 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:49:48,478 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:50:37,569 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+10:50:37,599 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+10:50:37,609 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+10:50:37,610 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+10:50:39,966 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+10:50:40,044 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+10:50:40,044 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+10:50:40,045 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+10:50:40,046 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+10:50:42,091 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+10:50:42,220 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+10:50:42,246 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+10:50:45,874 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+10:50:47,174 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:50:47,937 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+10:50:48,294 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+10:50:48,859 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+10:50:49,209 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+10:50:49,542 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+10:50:49,546 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+10:50:49,547 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+10:50:49,551 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+10:50:49,554 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+10:50:49,557 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:00:53,521 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:00:53,588 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:00:53,600 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:00:53,602 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:00:56,987 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+11:00:57,062 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+11:00:57,063 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+11:00:57,063 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+11:00:57,064 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+11:00:58,635 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+11:00:58,745 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+11:00:58,795 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:01:01,391 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+11:01:01,757 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:01:03,133 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:01:03,535 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:01:03,944 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:01:04,574 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:01:05,002 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:01:05,005 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:01:05,006 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:01:05,009 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:01:05,012 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:01:05,016 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:05:25,135 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:05:25,176 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:05:25,188 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:05:25,189 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:05:27,168 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: [PersistenceUnit: itemManagerPu] Unable to build EntityManagerFactory
+11:05:27,996 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:05:28,001 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:05:28,004 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:05:28,008 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:05:28,447 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:05:28,456 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:05:28,462 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:05:28,464 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:05:28,467 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:05:28,472 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:05:28,494 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:06:55,247 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:06:55,363 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:06:55,373 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:06:55,374 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:06:56,853 [main] ERROR com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has not configurated. javax.persistence.PersistenceException: [PersistenceUnit: itemManagerPu] Unable to build EntityManagerFactory
+11:06:57,652 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:06:57,664 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:06:57,668 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:06:57,743 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:06:58,437 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:06:58,451 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:06:58,456 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:06:58,460 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:06:58,899 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:06:58,904 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:06:58,908 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:08:49,352 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:08:49,382 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:08:49,393 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:08:49,394 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:08:51,484 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+11:08:51,515 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+11:08:51,516 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+11:08:51,517 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+11:08:51,517 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+11:08:52,977 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+11:08:53,074 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+11:08:53,089 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:08:54,898 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+11:08:55,305 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:08:56,413 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:08:57,131 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:08:57,659 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:08:58,024 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:08:58,524 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:08:58,528 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:08:58,530 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:08:58,533 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:08:58,537 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:08:58,541 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:12:12,888 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:12:12,916 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:12:12,926 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:12:12,927 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:12:14,613 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+11:12:14,639 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+11:12:14,639 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+11:12:14,640 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+11:12:14,640 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+11:12:15,469 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+11:12:15,638 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+11:12:15,655 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:12:17,608 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+11:12:18,511 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:12:19,270 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:12:19,651 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:12:20,115 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:12:20,445 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:12:20,938 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:12:20,942 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:12:20,943 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:12:20,946 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:12:20,948 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:12:20,951 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:13:01,376 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:13:01,429 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:13:01,440 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:13:01,441 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:13:03,319 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+11:13:03,358 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+11:13:03,358 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+11:13:03,359 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+11:13:03,359 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+11:13:04,580 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+11:13:04,671 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+11:13:04,692 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:13:06,804 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+11:13:07,519 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:13:08,532 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:13:08,923 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:13:09,373 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:13:09,658 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:13:09,825 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:13:09,829 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:13:09,830 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:13:09,833 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:13:09,836 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:13:09,838 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:37:04,719 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:37:04,773 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:37:04,788 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:37:04,789 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:37:08,420 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+11:37:08,463 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+11:37:08,464 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+11:37:08,464 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+11:37:08,465 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+11:37:10,049 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+11:37:10,221 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+11:37:10,245 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:37:12,665 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+11:37:13,601 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:37:13,884 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:37:14,054 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:37:14,308 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:37:14,602 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:37:14,794 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:37:14,802 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:37:14,803 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:37:14,807 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:37:14,810 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:37:14,817 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+11:39:47,964 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+11:39:48,133 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+11:39:48,145 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+11:39:48,150 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:39:52,582 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+11:39:52,619 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+11:39:52,619 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+11:39:52,620 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+11:39:52,620 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+11:39:58,268 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+11:39:58,621 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+11:39:58,838 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:40:06,114 [main] INFO com.pehulja.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+11:40:08,618 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test del 
+11:40:08,844 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test upd 
+11:40:09,362 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test getById 
+11:40:09,652 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:40:09,872 [main] INFO com.pehulja.messenger.dao.beans.DAOTest - test Add 
+11:40:10,126 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+11:40:10,130 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+11:40:10,132 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+11:40:10,137 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+11:40:10,140 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+11:40:10,144 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory

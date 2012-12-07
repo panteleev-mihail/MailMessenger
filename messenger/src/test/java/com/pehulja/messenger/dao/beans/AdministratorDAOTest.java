@@ -6,6 +6,7 @@ package com.pehulja.messenger.dao.beans;
 
 import com.pehulja.messenger.pojo.Administrator;
 import com.pehulja.messenger.pojo.RegistredUser;
+import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -39,5 +40,33 @@ public class AdministratorDAOTest {
     public void tearDown() {
     }
 
+    /**
+     * Test of isCurrentUserIsAdmin method, of class AdministratorDAO.
+     */
+    @Test
+    public void testIsCurrentUserIsAdmin() throws Exception{
+        RegistredUserDAO userInstance = new RegistredUserDAO();
+        AdministratorDAO adminInstance = new AdministratorDAO();
+        RegistredUser user = new RegistredUser();
+        user = getNewOne();
+        Administrator admin = new Administrator();
+        admin.set_User(user);
+        userInstance.add(user);
+        adminInstance.add(admin);
+        assertTrue(adminInstance.isCurrentUserIsAdmin(user));
+        userInstance.delete(user);
+        adminInstance.delete(admin);
+    }
+
+    private RegistredUser getNewOne(){
+        RegistredUser obj = new  RegistredUser();
+        Random r = new Random();
+        obj.setLogin( (new Integer(r.nextInt())).toString() );
+        obj.setPassword_hash("98979897");
+        return obj;
+    }
+
+    public class DAOImpl extends DAO {
+    }
     
 }

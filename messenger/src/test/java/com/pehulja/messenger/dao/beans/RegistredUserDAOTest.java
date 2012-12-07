@@ -6,6 +6,8 @@ package com.pehulja.messenger.dao.beans;
 
 import com.pehulja.messenger.pojo.RegistredUser;
 import java.util.Date;
+import java.util.Random;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,15 +20,8 @@ import static org.junit.Assert.*;
  * @author Victor
  */
 public class RegistredUserDAOTest {
-    private static RegistredUser user = null;
-    
-    static{
-        user = new RegistredUser();
-        user.setLogin("gigk");
-        user.setPassword_hash("98979897");
-        
-    }
-    
+    private static final Logger log = Logger.getLogger(DAOTest.class);
+     
     public RegistredUserDAOTest() {
     }
     
@@ -46,4 +41,31 @@ public class RegistredUserDAOTest {
     public void tearDown() {
     }
 
+    /**
+     * Test of loginUser method, of class RegistredUserDAO.
+     */
+    @Test
+    public void testLoginUser() throws Exception{
+        log.info("test Add ");
+        DAO instance = new DAOImpl();
+        RegistredUserDAO userInstance = new RegistredUserDAO();
+        RegistredUser temp = getNewOne();
+        instance.add(temp);
+        RegistredUser result = userInstance.loginUser(temp.getLogin(), temp.getPassword_hash());
+        assertEquals(temp.getId(), result.getId());
+        instance.delete(temp);
+		
+	assertNull(userInstance.loginUser(null, null));
+    }
+    
+    private RegistredUser getNewOne(){
+        RegistredUser obj = new  RegistredUser();
+        Random r = new Random();
+        obj.setLogin( (new Integer(r.nextInt())).toString() );
+        obj.setPassword_hash("98979897");
+        return obj;
+    }
+
+    public class DAOImpl extends DAO {
+    }
 }
