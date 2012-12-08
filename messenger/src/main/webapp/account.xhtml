@@ -31,32 +31,33 @@
 		</h:selectOneMenu>
 	</h:form>
 	<h:form>
-	<h:dataTable value="#{income.incomeList}" var="o">
-		<h:column>
-            <f:facet name="header">
-                <h:outputText value="#{msgs.select}" />
-            </f:facet>
-            <h:selectBooleanCheckbox value="#{income.selectedIds[o.id]}" />
-        </h:column>
-		<h:column>
-			<f:facet name="header">#{msgs.Sender}</f:facet>
-    				#{o.letter.id}
+		<h:dataTable value="#{income.incomeList}" var="o">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="#{msgs.select}" />
+				</f:facet>
+				<h:selectBooleanCheckbox value="#{income.selectedIds[o.id]}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">#{msgs.Sender}</f:facet>
+    				#{o.sender.login}
     			</h:column>
-		<h:column>
-			<f:facet name="header">#{msgs.Title}</f:facet>
+			<h:column>
+				<f:facet name="header">#{msgs.Title}</f:facet>
     				#{o.letter.theme}
     			</h:column>
-		<h:column>
-			<f:facet name="header">#{msgs.Content}</f:facet>
+			<h:column>
+				<f:facet name="header">#{msgs.Content}</f:facet>
     				#{o.letter.content}
     			</h:column>
-            <h:column>
-                <h:commandButton value="#{msgs.letterOpen}" action="#{letterBean.showLetter( o.letter.id ) }" />
-            </h:column>
-	</h:dataTable>
-        <h:commandButton value="#{msgs.toTrash}" action="#{income.toTrash}" />
+			<h:column>
+				<h:commandButton value="#{msgs.letterOpen}"
+					action="#{letterBean.showLetter( o.letter.id ) }" />
+			</h:column>
+		</h:dataTable>
+		<h:commandButton value="#{msgs.toTrash}" action="#{income.toTrash}" />
 	</h:form>
-	
+
 </h:body>
 </html>
 
