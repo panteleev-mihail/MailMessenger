@@ -234,6 +234,20 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
         }
         return true;
     }
+
+
+	@Override
+	public String toString() {
+		return "RegistredUser [id=" + id + ", fIO=" + fIO + ", telephone="
+				+ telephone + ", dateOfBirth=" + dateOfBirth
+				+ ", dateOfREgistration=" + dateOfREgistration
+				+ ", secondMailAdress=" + secondMailAdress + ", login=" + login
+				+ ", password_hash=" + password_hash + ", password_salt="
+				+ password_salt + ", sendedMails=" + sendedMails
+				+ ", receivedMails=" + receivedMails + ", holdedContacts="
+				+ holdedContacts + ", includedInContacts=" + includedInContacts
+				+ "]";
+	}
         
         
 }

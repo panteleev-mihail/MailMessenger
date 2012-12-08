@@ -76,4 +76,10 @@ public class Contact extends Pojo  implements java.io.Serializable{
 		ContactPerson = contactPerson;
 	}
 
+	@Override
+	public String toString() {
+		return "Contact [id=" + id + ", ContactHolder=" + ContactHolder
+				+ ", ContactPerson=" + ContactPerson + "]";
+	}
+
 }

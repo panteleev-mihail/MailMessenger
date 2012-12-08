@@ -131,9 +131,14 @@ public class LetterSenderReceiver extends Pojo implements java.io.Serializable{
     public void setIsRecDel(boolean _isRecDel) {
         this.isRecDel = _isRecDel;
     }
-	
-        
-        
-        
+
+	@Override
+	public String toString() {
+		return "LetterSenderReceiver [id=" + id + ", sender=" + sender
+				+ ", receiver=" + receiver + ", letter=" + letter + ", isRead="
+				+ isRead + ", isSenderTrash=" + isSenderTrash + ", isRecTrash="
+				+ isRecTrash + ", isSenderDel=" + isSenderDel + ", isRecDel="
+				+ isRecDel + "]";
+	}
 	
 }

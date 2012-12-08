@@ -78,5 +78,11 @@ public class Letter extends Pojo  implements java.io.Serializable{
 			Collection<LetterSenderReceiver> letterSenderReceivers) {
 		this.letterSenderReceivers = letterSenderReceivers;
 	}
+
+	@Override
+	public String toString() {
+		return "Letter [id=" + id + ", content=" + content + ", theme=" + theme
+				+ ", letterSenderReceivers=" + letterSenderReceivers + "]";
+	}
 	
 }

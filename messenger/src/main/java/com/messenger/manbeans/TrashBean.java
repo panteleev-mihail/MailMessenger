@@ -26,9 +26,9 @@ import com.messenger.pojo.LetterSenderReceiver;
 import com.messenger.pojo.RegistredUser;
 import com.messenger.service.MailService;
 
-@ManagedBean(name = "income")
+@ManagedBean(name = "trash")
 @ViewScoped
-public class IncomeBean implements Serializable {
+public class TrashBean implements Serializable {
 	private List<LetterSenderReceiver> list;
 	private Map<Integer, Boolean> selectedIds = new HashMap<Integer, Boolean>();
 
@@ -37,13 +37,13 @@ public class IncomeBean implements Serializable {
 		RegistredUser user = ((UserBean) FacesContext.getCurrentInstance()
 				.getExternalContext().getSessionMap().get("userbean"))
 				.getUser();
-		list = getIncome(user);
+		list = getTrash(user);
 
 	}
 
-	public List<LetterSenderReceiver> getIncome(RegistredUser u) {
+	public List<LetterSenderReceiver> getTrash(RegistredUser u) {
 		MailService mc = new MailService();
-		List<LetterSenderReceiver> res = mc.getIncome(u);
+		List<LetterSenderReceiver> res = mc.getOutcome(u);
 		return res;
 	}
 

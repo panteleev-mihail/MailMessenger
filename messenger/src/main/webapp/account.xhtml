@@ -31,7 +31,7 @@
 		</h:selectOneMenu>
 	</h:form>
 	<h:form>
-		<h:dataTable value="#{income.incomeList}" var="o">
+		<h:dataTable value="#{income.list}" var="o">
 			<h:column>
 				<f:facet name="header">
 					<h:outputText value="#{msgs.select}" />
@@ -39,20 +39,20 @@
 				<h:selectBooleanCheckbox value="#{income.selectedIds[o.id]}" />
 			</h:column>
 			<h:column>
-				<f:facet name="header">#{msgs.Sender}</f:facet>
+				<f:facet name="header" value="#{msgs.Sender}"/>
     				#{o.sender.login}
     			</h:column>
 			<h:column>
-				<f:facet name="header">#{msgs.Title}</f:facet>
+				<f:facet name="header" value="#{msgs.Title}"/>
     				#{o.letter.theme}
     			</h:column>
 			<h:column>
-				<f:facet name="header">#{msgs.Content}</f:facet>
+				<f:facet name="header" value="#{msgs.Content}"/>
     				#{o.letter.content}
     			</h:column>
 			<h:column>
 				<h:commandButton value="#{msgs.letterOpen}"
-					action="#{letterBean.showLetter( o.letter.id ) }" />
+					action="#{letterBean.showLetter( o.id ) }" />
 			</h:column>
 		</h:dataTable>
 		<h:commandButton value="#{msgs.toTrash}" action="#{income.toTrash}" />
