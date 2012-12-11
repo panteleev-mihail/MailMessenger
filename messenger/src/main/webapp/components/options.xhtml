@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>#{msgs.accountPageTitle}</title>
+</h:head>
+<h:body>
+    <ui:composition>
+        <h:form>
+		<h:commandButton id="income" value="#{msgs.accountIncome}"
+			action="account" style="width:100%"/>
+		<br />
+		<h:commandButton id="writeLetter" value="#{msgs.letterWriteButton}"
+			action="writeLetter" style="width:100%"/>
+		<br />
+                <h:commandButton id="contacts" value="#{msgs.accountViewContacts}"
+                            action="contacts" style="width:100%"/>
+                <br/>
+            </h:form>
+        <h:form>
+            <h:outputText value="#{msgs.adminUserLoginHeader}"/><br/>
+            <h:inputText value="#{adminBean.login}"/>
+            <h:commandButton value="#{msgs.adminMask}" action="#{adminBean.maskAsUser}" style="width:100%" disabled="#{!userbean.admin}"/>
+            <h:commandButton value="#{msgs.adminUnmask}" action="#{adminBean.unmask}" style="width:100%" disabled="#{!userbean.admin}" /><bt/>
+            <h:messages style="color:red"/>
+        </h:form>
+	
+        </ui:composition>
+</h:body>
+</html>
+

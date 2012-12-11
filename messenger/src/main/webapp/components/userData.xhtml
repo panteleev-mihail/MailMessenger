@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>#{msgs.accountDataModPageTitle}</title>
+</h:head>
+<h:body>
+    <ui:composition>
+	<h1>#{msgs.accountDataModPageHeader}</h1>
+	<h:form>
+		<h:inputHidden value="#{userbean.loginStatus}" />
+		<h:panelGrid columns="3">
+                #{msgs.regPassLabel}
+                <h:inputSecret id="pass" value="#{regbean.password}">
+				<f:validator validatorId="messenger.passwordValidator" />
+			</h:inputSecret>
+			<h:message for="pass" />
+                
+                #{msgs.regPassCheckLabel} 
+                <h:inputSecret id="checkpass"
+				value="#{regbean.passwordCheck}">
+				<f:validator validatorId="messenger.passwordValidator" />
+			</h:inputSecret>
+			<h:message for="checkpass" />
+                
+                #{msgs.regFioLabel} 
+                <h:inputText id="fio" value="#{regbean.fio}">
+				<f:validator validatorId="messenger.fioValidator" />
+			</h:inputText>
+			<h:message for="fio" />
+                
+                #{msgs.regDateOfBirthLabel} 
+                <h:inputText value="#{regbean.dateOfBirth}" id="date">
+				<f:convertDateTime pattern="dd.MM.yyyy" />
+			</h:inputText>
+			<h:message for="date" />
+                
+                #{msgs.regTelephoneLabel} 
+                <h:inputText id="telephone" value="#{regbean.telephone}">
+				<f:validator validatorId="messenger.telephoneValidator" />
+			</h:inputText>
+			<h:message for="telephone" />
+                
+                #{msgs.regEmailLabel}
+                <h:inputText id="email" value="#{regbean.email}"
+				validatorMessage="#{msgs.validatorEmailErrorFormat}">
+				<f:validator validatorId="messenger.emailValidator" />
+			</h:inputText>
+			<h:message for="email" />
+
+			<h:commandButton id="submint" value="#{msgs.regRegAction}"
+				action="#{regbean.update}" />
+			<h:message for="submint" />
+		</h:panelGrid>
+		<h:commandButton id="redirectBack" value="#{msgs.globalBackRedirect}"
+			action="account" immediate="true" />
+		<h:commandButton id="logout" value="#{msgs.loginLogout}"
+			action="#{userbean.logout}" immediate="true" />
+		<br />#{msgs.localeHeader}
+            <h:selectOneMenu value="#{localeBean.localeCode}"
+			onchange="submit()"
+			valueChangeListener="#{localeBean.localeListener}">
+			<f:selectItems value="#{localeBean.locales}" />
+		</h:selectOneMenu>
+	</h:form>
+    </ui:composition>
+</h:body>
+</html>
+

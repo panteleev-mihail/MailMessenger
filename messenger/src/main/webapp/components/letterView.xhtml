@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      >
+    <h:head>
+        <title>#{msgs.headerLetterView}</title>
+    </h:head>
+    <h:body>
+        <ui:composition>
+        <h:form id="letterViewForm">
+            #{msgs.Sender}<h:outputLabel value="#{letterBean.senderEmail}" /> <br />
+            #{msgs.receiver}<h:outputLabel value="#{letterBean.receiverEmail}" /> <br />
+            #{msgs.Title}<h:outputLabel value="#{letterBean.subject}" /> <br />
+            #{msgs.Content}<br/><h:outputLabel value="#{letterBean.content}" /> <br />
+            <h:commandButton value="#{msgs.letterReply}" action="#{letterBean.reply}" id="rBtn" binding="#{letterBean.replyButton}" disabled="#{adminBean.masked}"/>
+            <h:commandButton value="#{msgs.letterDelete}" action="#{letterBean.reply}" id="dBtn" binding="#{letterBean.deleteButton}" disabled="#{adminBean.masked}"/>
+            <c:if test="${letterBean.isInTrash == true}">
+            	<h:commandButton value="#{msgs.letterRestore}" action="#{letterBean.reply}" id="rsBtn" binding="#{letterBean.restoreButton}" disabled="#{adminBean.masked}"/>
+            </c:if>
+        </h:form>
+        </ui:composition>
+    </h:body>
+</html>
+
