@@ -1381,3 +1381,63 @@
 11:40:10,137 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
 11:40:10,140 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
 11:40:10,144 [main] INFO com.pehulja.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
+01:19:27,337 [main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+01:19:27,347 [main] INFO org.hibernate.Version - HHH000412: Hibernate Core {4.1.7.Final}
+01:19:27,357 [main] INFO org.hibernate.cfg.Environment - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.connection.username=root, hibernate.connection.password=****, hibernate.connection.url=jdbc:mysql://localhost:3306/mydb, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.driver_class=com.mysql.jdbc.Driver}
+01:19:27,357 [main] INFO org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+01:19:28,799 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+01:19:28,869 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20
+01:19:28,869 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: true
+01:19:28,869 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/mydb]
+01:19:28,869 [main] INFO org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+01:19:29,571 [main] WARN org.hibernate.engine.jdbc.internal.JdbcServicesImpl - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+01:19:29,601 [main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+01:19:29,631 [main] INFO org.hibernate.engine.jdbc.internal.LobCreatorBuilder - HHH000422: Disabling contextual LOB creation as connection was null
+01:19:29,681 [main] INFO org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+01:19:29,701 [main] INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+01:19:31,654 [main] INFO com.messenger.dao.HibernateUtil - JPA:entityManagerFactory has configurated
+01:19:31,854 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:31,864 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:31,884 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:31,884 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,024 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,024 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,067 [main] INFO com.messenger.dao.beans.DAOTest - test upd 
+01:19:32,113 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,113 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,167 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,167 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,186 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,187 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,187 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+01:19:32,189 [main] INFO com.messenger.dao.beans.DAOTest - test del 
+01:19:32,196 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,196 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,206 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,206 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,216 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,216 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,216 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+01:19:32,216 [main] INFO com.messenger.dao.beans.DAOTest - test getById 
+01:19:32,226 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,226 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,236 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,236 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,236 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+01:19:32,236 [main] INFO com.messenger.dao.beans.DAOTest - test Add 
+01:19:32,246 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,246 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,256 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,256 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,256 [main] INFO org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load command : org.hibernate.exception.GenericJDBCException: Could not open connection
+01:19:32,266 [main] INFO com.messenger.dao.beans.DAOTest - test Add 
+01:19:32,276 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,276 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,364 [main] WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1045, SQLState: 28000
+01:19:32,365 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Access denied for user 'root'@'localhost' (using password: YES)
+01:19:32,371 [main] INFO com.messenger.dao.FactoryTest - Test of getContactDAO method, of class Factory
+01:19:32,375 [main] INFO com.messenger.dao.FactoryTest - Test of getLetterDAO method, of class Factory
+01:19:32,377 [main] INFO com.messenger.dao.FactoryTest - Test of getAdministratorDAO method, of class Factory
+01:19:32,378 [main] INFO com.messenger.dao.FactoryTest - Test of getRegistredUserDAO method, of class Factory
+01:19:32,379 [main] INFO com.messenger.dao.FactoryTest - Test of getInstance method, of class Factory
+01:19:32,380 [main] INFO com.messenger.dao.FactoryTest - Test of getLetter_Sender_ReceiverDAO method, of class Factory
