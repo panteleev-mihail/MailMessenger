@@ -10,20 +10,36 @@
     <h:body>
         <ui:composition>
        <table border="0" width="700px"><tr>
-            <td>
+            <td width="30%">
                 <h:form>
                     <h:commandButton value="#{msgs.globalBackRedirect}" action ="account"/>
                 </h:form>
                 <h:form>
 
-                    #{msgs.receiver}<h:inputText value="#{letterWriteBean.receiverEmail}" /> <br />
-                    #{msgs.Title}<h:inputText value="#{letterWriteBean.subject}" /> <br />
-                    #{msgs.Content}<br/><h:inputTextarea value="#{letterWriteBean.content}" rows="15" cols="40"/> <br />
+                    <h:outputLabel value="#{letterWriteBean.msg}" style="color: red" /><br/>
+                    
+                    #{msgs.receiver}
+                        <h:inputText id="receivers" value="#{letterWriteBean.receiverEmail}">
+				<f:validator validatorId="messenger.receiverValidator" />
+			</h:inputText>
+			<h:message style="color: red" for="receivers" />
+                    <br />
+                    #{msgs.Title}
+                        <h:inputText id="subject" value="#{letterWriteBean.subject}" >
+                            <f:validator validatorId="messenger.emptyFieldValidator" />
+                        </h:inputText>
+                    <h:message style="color: red" for="subject" />
+                    <br />
+                    #{msgs.Content} <h:message style="color: red" for="subject" /><br/>
+                        <h:inputTextarea id="content" value="#{letterWriteBean.content}" rows="15" cols="40"> 
+                            <f:validator validatorId="messenger.emptyFieldValidator" />
+                        </h:inputTextarea><br />
                     <h:commandButton value="#{msgs.letterSend}" action="#{letterWriteBean.send}" id="sendBtn" disabled="#{adminBean.masked}"/>
+
                 </h:form>
                 
             </td>
-            <td>
+               <td width="70%">
                 #{msgs.contactsHeader}
                 <h:form rendered="#{not empty letterWriteBean.listContacts}">
                     <h:dataTable value="#{letterWriteBean.listContacts}" var="item" >

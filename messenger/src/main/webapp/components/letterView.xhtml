@@ -12,12 +12,16 @@
     <h:body>
         <ui:composition>
         <h:form id="letterViewForm">
-            #{msgs.Sender}<h:outputLabel value="#{letterBean.senderEmail}" /> <br />
-            #{msgs.receiver}<h:outputLabel value="#{letterBean.receiverEmail}" /> <br />
-            #{msgs.Title}<h:outputLabel value="#{letterBean.subject}" /> <br />
-            #{msgs.Content}<br/><h:outputLabel value="#{letterBean.content}" /> <br />
+            <h:panelGrid columns="2">
+            #{msgs.Sender}<h:outputLabel value="#{letterBean.senderEmail}" />
+            #{msgs.receiver}<h:outputLabel value="#{letterBean.receiverEmail}" />
+            #{msgs.Title}<h:outputLabel value="#{letterBean.subject}" />
+            </h:panelGrid>
+            <h:panelGrid columns="1">
+            #{msgs.Content}<br/><h:inputTextarea cols="20" rows="15" readonly="true" value="#{letterBean.content}" />
+            </h:panelGrid>
             <h:commandButton value="#{msgs.letterReply}" action="#{letterBean.reply}" id="rBtn" binding="#{letterBean.replyButton}" disabled="#{adminBean.masked}"/>
-            <h:commandButton value="#{msgs.letterDelete}" action="#{letterBean.reply}" id="dBtn" binding="#{letterBean.deleteButton}" disabled="#{adminBean.masked}"/>
+            <h:commandButton value="#{msgs.letterDelete}" action="#{letterBean.delete}" id="dBtn" binding="#{letterBean.deleteButton}" disabled="#{adminBean.masked}"/>
             <c:if test="${letterBean.isInTrash == true}">
             	<h:commandButton value="#{msgs.letterRestore}" action="#{letterBean.reply}" id="rsBtn" binding="#{letterBean.restoreButton}" disabled="#{adminBean.masked}"/>
             </c:if>

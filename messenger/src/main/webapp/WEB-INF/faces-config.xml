@@ -9,19 +9,27 @@
     <!--                       Validators                      -->
     <validator>
         <validator-id>messenger.passwordValidator</validator-id>
-        <validator-class>com.pehulja.jsf.validators.PasswordValidator</validator-class>
+        <validator-class>com.messenger.jsf.validators.PasswordValidator</validator-class>
     </validator>
     <validator>
         <validator-id>messenger.fioValidator</validator-id>
-        <validator-class>com.pehulja.jsf.validators.FIOValidator</validator-class>
+        <validator-class>com.messenger.jsf.validators.FIOValidator</validator-class>
     </validator>
     <validator>
         <validator-id>messenger.telephoneValidator</validator-id>
-        <validator-class>com.pehulja.jsf.validators.TelephoneValidator</validator-class>
+        <validator-class>com.messenger.jsf.validators.TelephoneValidator</validator-class>
     </validator>
     <validator>
         <validator-id>messenger.emailValidator</validator-id>
-        <validator-class>com.pehulja.jsf.validators.EmailValidator</validator-class>
+        <validator-class>com.messenger.jsf.validators.EmailValidator</validator-class>
+    </validator>
+    <validator>
+        <validator-id>messenger.emptyFieldValidator</validator-id>
+        <validator-class>com.messenger.jsf.validators.EmptyFieldValidator</validator-class>
+    </validator>
+    <validator>
+        <validator-id>messenger.receiverValidator</validator-id>
+        <validator-class>com.messenger.jsf.validators.ReceiverValidator</validator-class>
     </validator>
  
   <!--                       Resource-bundles                      --> 
