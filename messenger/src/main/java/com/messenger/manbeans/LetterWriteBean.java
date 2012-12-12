@@ -13,12 +13,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.ResourceBundle;
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 
 /**
  *
@@ -32,6 +35,7 @@ public class LetterWriteBean implements Serializable{
     private String receiverEmail;
     private String subject;
     private String content;
+    private String msg;
 
     private LetterService ls;
     
@@ -77,6 +81,14 @@ public class LetterWriteBean implements Serializable{
         }
         receiverEmail = builder.toString();
         checked.clear(); // If necessary.
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
     
     
@@ -142,6 +154,7 @@ public class LetterWriteBean implements Serializable{
         this.receiverEmail="";
         this.subject="";
         this.content="";
+        this.msg="";
     }
     public String send(){
         
@@ -150,9 +163,23 @@ public class LetterWriteBean implements Serializable{
         temp.setContent(this.content);
      
         ls= new LetterService();
-        ls.addLetter(temp,this.user,this.receiverEmail);
-        clear();
+        
+        boolean result = ls.addLetter(temp,this.user,this.receiverEmail);
+        
+        if (result){
+            clear();
         return "account";
+        }
+        else {
+                      
+            FacesContext context = FacesContext.getCurrentInstance();
+            ResourceBundle bundle = context.getApplication().getResourceBundle(context, "msgs");
+            String msgStr = bundle.getString("LetterError");
+
+            this.msg=msgStr;
+            return "letterWrite";
+        }
+        
     }
     
 }

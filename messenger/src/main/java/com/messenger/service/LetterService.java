@@ -37,7 +37,7 @@ public class LetterService {
         return lsr;
     }
     
-    public void addLetter(Letter letter, RegistredUser sender, String receivers){
+    public boolean addLetter(Letter letter, RegistredUser sender, String receivers){
           try {
             Factory.getInstance().getLetterDAO().add(letter);
         } catch (Exception ex) {
@@ -52,11 +52,23 @@ public class LetterService {
             LetterSenderReceiver lsr = new LetterSenderReceiver();
             lsr.setLetter(letter);
             lsr.setSender(sender);
-            receiver = (RegistredUser) Factory.getInstance().getRegistredUserDAO().getByLogin(st.nextToken());
+            try {
+                receiver = (RegistredUser) Factory.getInstance().getRegistredUserDAO().getByLogin(st.nextToken());
+            }
+            catch (Exception ex){
+                return false;
+            }
             lsr.setReceiver(receiver);
             
-            Factory.getInstance().getLetterSenderReceiverDAO().add(lsr);
+            try {
+                Factory.getInstance().getLetterSenderReceiverDAO().add(lsr);
+            }
+            catch (Exception ex){
+                return false;
+            }
+            
         } 
+        return true;
         
     }
     
@@ -77,6 +89,28 @@ public class LetterService {
         
         return null;    
         
+    }
+    
+    public void delete(LetterSenderReceiver lsr, RegistredUser user){
+        if (lsr.getSender().getId()==user.getId())
+            if (!lsr.isIsSenderTrash())
+                lsr.setIsSenderTrash(true);
+            else lsr.setIsSenderDel(true);
+        else if (lsr.getReceiver().getId()==user.getId())
+            if(!lsr.isIsRecTrash())
+                lsr.setIsRecTrash(true);
+            else lsr.setIsRecDel(true);
+        
+        Factory.getInstance().getLetterSenderReceiverDAO().update(lsr);
+    }
+    
+    public void restore(LetterSenderReceiver lsr, RegistredUser user){
+        if ( lsr.getSender().getId()==user.getId())
+            lsr.setIsSenderTrash(false);
+        else if (lsr.getReceiver().getId()==user.getId())
+            lsr.setIsRecTrash(false);
+        
+        Factory.getInstance().getLetterSenderReceiverDAO().update(lsr);
     }
     
 }

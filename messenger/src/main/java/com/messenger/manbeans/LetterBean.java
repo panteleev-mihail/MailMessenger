@@ -29,6 +29,7 @@ public class LetterBean implements Serializable {
 
 	Letter letter;
 
+        private LetterSenderReceiver lsr;
 	private String receiverEmail = "";
 	private String senderEmail = "";
 	private String content = "";
@@ -84,6 +85,9 @@ public class LetterBean implements Serializable {
 		this.letterWriteBean = letterWriteBean;
 	}
 
+        
+        
+
 	public String showLetter(int id) {
 		LetterSenderReceiver lsr = (LetterSenderReceiver) Factory.getInstance()
 				.getLetterSenderReceiverDAO()
@@ -93,6 +97,9 @@ public class LetterBean implements Serializable {
 				.getUser();
 		ls = new LetterService();
 		List<LetterSenderReceiver> lsrList = ls.showLetter(id);
+                
+                this.lsr = lsr;
+
 		this.letter = lsr.getLetter();
 		this.content = letter.getContent();
 		this.subject = letter.getTheme();
@@ -143,13 +150,23 @@ public class LetterBean implements Serializable {
 	}
 
 	public String delete() {
+                    
+            ls = new LetterService();
+            RegistredUser user = ((MaskUser)FacesContext.getCurrentInstance() 
+			.getExternalContext().getSessionMap().get("maskbean")).getUser();
+            ls.delete(this.lsr, user);
 
-		return "letters";
+		return "account";
 	}
 
 	public String restore() {
 
-		return "letters";
+            ls = new LetterService();
+            RegistredUser user = ((MaskUser)FacesContext.getCurrentInstance() 
+			.getExternalContext().getSessionMap().get("maskbean")).getUser();
+            ls.restore(this.lsr, user);
+            
+		return "account";
 	}
 
 	public Boolean getIsInTrash() {
