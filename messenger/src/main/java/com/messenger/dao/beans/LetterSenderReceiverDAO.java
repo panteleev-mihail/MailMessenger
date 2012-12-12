@@ -13,65 +13,77 @@ import com.messenger.pojo.RegistredUser;
 import javax.persistence.EntityManager;
 
 public class LetterSenderReceiverDAO extends DAO {
-    
-    
-    public List<LetterSenderReceiver> getByLetter(Letter letter) {
-        
-        List<LetterSenderReceiver> result = null;
-		EntityManager manager = HibernateUtil.getEm();
+
+	public List<LetterSenderReceiver> getByLetter(Letter letter) {
+
+		List<LetterSenderReceiver> result = null;
+		EntityManager manager = null;
 		try {
+			manager = HibernateUtil.getEm();
 			result = manager.createNamedQuery("getByLetter")
 					.setParameter("letter", letter).getResultList();
 		} catch (javax.persistence.NoResultException e) {
 
 		} finally {
-			manager.close();
+			if (manager != null)
+				manager.close();
 		}
 		return result;
-        
-    }
+
+	}
+
 	public List<LetterSenderReceiver> getIncome(RegistredUser user) {
 		List<LetterSenderReceiver> result = null;
-		EntityManager manager = HibernateUtil.getEm();
+		EntityManager manager = null;
 		try {
+			manager = HibernateUtil.getEm();
 			result = manager.createNamedQuery("getIncome")
-					.setParameter("id", user)
-					.setParameter("isRecTrash", false).getResultList();
-                        
+					.setParameter("id", user).setParameter("isRecTrash", false)
+					.setParameter("isRecDel", false).getResultList();
+
 		} catch (javax.persistence.NoResultException e) {
 
 		} finally {
-			manager.close();
+			if (manager != null)
+				manager.close();
 		}
 		return result;
 	}
 
 	public List<LetterSenderReceiver> getOutcome(RegistredUser user) {
 		List<LetterSenderReceiver> result = null;
-		EntityManager manager = HibernateUtil.getEm();
+		EntityManager manager = null;
 		try {
+			manager = HibernateUtil.getEm();
 			result = manager.createNamedQuery("getOutcome")
 					.setParameter("id", user)
-					.setParameter("isSenderTrash", false).getResultList();
+					.setParameter("isSenderTrash", false)
+					.setParameter("isSenderDel", false).getResultList();
+
 		} catch (javax.persistence.NoResultException e) {
 
 		} finally {
-			manager.close();
+			if (manager != null)
+				manager.close();
 		}
 		return result;
 	}
 
 	public List<LetterSenderReceiver> getTrash(RegistredUser user) {
 		List<LetterSenderReceiver> result = null;
-		EntityManager manager = HibernateUtil.getEm();
+		EntityManager manager = null;
 		try {
+			manager = HibernateUtil.getEm();
 			result = manager.createNamedQuery("getTrash")
 					.setParameter("id", user).setParameter("isRecTrash", true)
-					.setParameter("isSenderTrash", true).getResultList();
+					.setParameter("isSenderTrash", true)
+					.setParameter("isSenderDel", false)
+					.setParameter("isRecDel", false).getResultList();
 		} catch (javax.persistence.NoResultException e) {
 
 		} finally {
-			manager.close();
+			if (manager != null)
+				manager.close();
 		}
 		return result;
 	}

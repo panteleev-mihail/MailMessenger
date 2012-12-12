@@ -75,5 +75,15 @@
             <to-view-id>/pages/letterView.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>outcome</from-outcome>
+            <to-view-id>/pages/outcome.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>trash</from-outcome>
+            <to-view-id>/pages/trash.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
     </navigation-rule>
 </faces-config>

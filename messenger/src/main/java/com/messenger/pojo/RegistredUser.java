@@ -216,17 +216,6 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
 	public void setIncludedInContacts(Collection<Contact> includedInContacts) {
 		this.includedInContacts = includedInContacts;
 	}
-
-
-	@Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 61 * hash + this.id;
-        hash = 61 * hash + (this.login != null ? this.login.hashCode() : 0);
-        return hash;
-    }
-
-   
     
     public RegistredUser clone()  {
         RegistredUser user = new RegistredUser();
@@ -250,23 +239,117 @@ public class RegistredUser extends Pojo  implements java.io.Serializable{
     public String toString() {
         return "RegistredUser{" + "id=" + id + ", login=" + login + ", password_hash=" + password_hash + '}';
     }
-    	
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final RegistredUser other = (RegistredUser) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        if ((this.login == null) ? (other.login != null) : !this.login.equals(other.login)) {
-            return false;
-        }
-        return true;
-    }
-     
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((dateOfBirth == null) ? 0 : dateOfBirth.hashCode());
+		result = prime
+				* result
+				+ ((dateOfREgistration == null) ? 0 : dateOfREgistration
+						.hashCode());
+		result = prime * result + ((fIO == null) ? 0 : fIO.hashCode());
+		result = prime * result
+				+ ((holdedContacts == null) ? 0 : holdedContacts.hashCode());
+		result = prime * result + id;
+		result = prime
+				* result
+				+ ((includedInContacts == null) ? 0 : includedInContacts
+						.hashCode());
+		result = prime * result + ((login == null) ? 0 : login.hashCode());
+		result = prime * result
+				+ ((password_hash == null) ? 0 : password_hash.hashCode());
+		result = prime * result
+				+ ((password_salt == null) ? 0 : password_salt.hashCode());
+		result = prime * result
+				+ ((receivedMails == null) ? 0 : receivedMails.hashCode());
+		result = prime
+				* result
+				+ ((secondMailAdress == null) ? 0 : secondMailAdress.hashCode());
+		result = prime * result
+				+ ((sendedMails == null) ? 0 : sendedMails.hashCode());
+		result = prime * result
+				+ ((telephone == null) ? 0 : telephone.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		RegistredUser other = (RegistredUser) obj;
+		if (dateOfBirth == null) {
+			if (other.dateOfBirth != null)
+				return false;
+		} else if (!dateOfBirth.equals(other.dateOfBirth))
+			return false;
+		if (dateOfREgistration == null) {
+			if (other.dateOfREgistration != null)
+				return false;
+		} else if (!dateOfREgistration.equals(other.dateOfREgistration))
+			return false;
+		if (fIO == null) {
+			if (other.fIO != null)
+				return false;
+		} else if (!fIO.equals(other.fIO))
+			return false;
+		if (holdedContacts == null) {
+			if (other.holdedContacts != null)
+				return false;
+		} else if (!holdedContacts.equals(other.holdedContacts))
+			return false;
+		if (id != other.id)
+			return false;
+		if (includedInContacts == null) {
+			if (other.includedInContacts != null)
+				return false;
+		} else if (!includedInContacts.equals(other.includedInContacts))
+			return false;
+		if (login == null) {
+			if (other.login != null)
+				return false;
+		} else if (!login.equals(other.login))
+			return false;
+		if (password_hash == null) {
+			if (other.password_hash != null)
+				return false;
+		} else if (!password_hash.equals(other.password_hash))
+			return false;
+		if (password_salt == null) {
+			if (other.password_salt != null)
+				return false;
+		} else if (!password_salt.equals(other.password_salt))
+			return false;
+		if (receivedMails == null) {
+			if (other.receivedMails != null)
+				return false;
+		} else if (!receivedMails.equals(other.receivedMails))
+			return false;
+		if (secondMailAdress == null) {
+			if (other.secondMailAdress != null)
+				return false;
+		} else if (!secondMailAdress.equals(other.secondMailAdress))
+			return false;
+		if (sendedMails == null) {
+			if (other.sendedMails != null)
+				return false;
+		} else if (!sendedMails.equals(other.sendedMails))
+			return false;
+		if (telephone == null) {
+			if (other.telephone != null)
+				return false;
+		} else if (!telephone.equals(other.telephone))
+			return false;
+		return true;
+	}
+
+    	   
 }

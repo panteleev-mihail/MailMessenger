@@ -84,5 +84,48 @@ public class Letter extends Pojo  implements java.io.Serializable{
 		return "Letter [id=" + id + ", content=" + content + ", theme=" + theme
 				+ ", letterSenderReceivers=" + letterSenderReceivers + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((content == null) ? 0 : content.hashCode());
+		result = prime * result + id;
+		result = prime
+				* result
+				+ ((letterSenderReceivers == null) ? 0 : letterSenderReceivers
+						.hashCode());
+		result = prime * result + ((theme == null) ? 0 : theme.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Letter other = (Letter) obj;
+		if (content == null) {
+			if (other.content != null)
+				return false;
+		} else if (!content.equals(other.content))
+			return false;
+		if (id != other.id)
+			return false;
+		if (letterSenderReceivers == null) {
+			if (other.letterSenderReceivers != null)
+				return false;
+		} else if (!letterSenderReceivers.equals(other.letterSenderReceivers))
+			return false;
+		if (theme == null) {
+			if (other.theme != null)
+				return false;
+		} else if (!theme.equals(other.theme))
+			return false;
+		return true;
+	}
 	
 }

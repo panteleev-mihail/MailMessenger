@@ -92,17 +92,14 @@ public class LetterBean implements Serializable {
 				.getExternalContext().getSessionMap().get("maskbean"))
 				.getUser();
 		ls = new LetterService();
-		List<LetterSenderReceiver> lsrList = ls.showLetter(id);
+		List<LetterSenderReceiver> lsrList = ls.showLetter(lsr.getLetter().getId());
 		this.letter = lsr.getLetter();
 		this.content = letter.getContent();
 		this.subject = letter.getTheme();
 		this.senderEmail = lsr.getSender().getLogin();
 		this.receiverEmail = "";
-		for (LetterSenderReceiver temp : lsrList)
-			this.receiverEmail += temp.getReceiver().getLogin()
-					+ ((lsrList.size() > 1)
-							&& (!lsrList.get(lsrList.size() - 1).equals(temp)) ? ", "
-							: "");
+		for(LetterSenderReceiver temp:lsrList)
+			this.receiverEmail+=temp.getReceiver().getLogin()+", ";
 		if((lsr.getSender().equals(user) && lsr.isIsSenderTrash())
 				|| lsr.getReceiver().equals(user) && lsr.isIsRecTrash())
 			isInTrash = true;

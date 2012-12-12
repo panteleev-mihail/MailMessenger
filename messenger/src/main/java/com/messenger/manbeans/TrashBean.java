@@ -43,23 +43,54 @@ public class TrashBean implements Serializable {
 
 	public List<LetterSenderReceiver> getTrash(RegistredUser u) {
 		MailService mc = new MailService();
-		List<LetterSenderReceiver> res = mc.getOutcome(u);
+		List<LetterSenderReceiver> res = mc.getTrash(u);
 		return res;
 	}
 
 	public void toTrash() {
-		List<LetterSenderReceiver>selectedDataList = new ArrayList<LetterSenderReceiver>();
-        for (LetterSenderReceiver dataItem : list) {
-            if (selectedIds.get(dataItem.getId()).booleanValue()) {
-                selectedDataList.add(dataItem);
-                selectedIds.remove(dataItem.getId()); // Reset.
-            }
-        }
-        for (LetterSenderReceiver dataItem : selectedDataList) {
-        	dataItem.setIsRecTrash(true);
-        	Factory.getInstance().getLetterSenderReceiverDAO().update(dataItem);
-        }
-        init();
+		List<LetterSenderReceiver> selectedDataList = new ArrayList<LetterSenderReceiver>();
+		RegistredUser user = ((MaskUser) FacesContext.getCurrentInstance()
+				.getExternalContext().getSessionMap().get("maskbean"))
+				.getUser();
+		for (LetterSenderReceiver dataItem : list) {
+			if (selectedIds.get(dataItem.getId()).booleanValue()) {
+				selectedDataList.add(dataItem);
+				selectedIds.remove(dataItem.getId()); // Reset.
+			}
+		}
+		for (LetterSenderReceiver dataItem : selectedDataList) {
+			if (dataItem.getReceiver().getId() == user.getId()) {
+				dataItem.setIsRecDel(true);
+				dataItem.setIsRecTrash(false);
+			} else {
+				dataItem.setIsSenderDel(true);
+				dataItem.setIsSenderTrash(false);
+			}
+			Factory.getInstance().getLetterSenderReceiverDAO().update(dataItem);
+		}
+		init();
+	}
+
+	public void restore() {
+		List<LetterSenderReceiver> selectedDataList = new ArrayList<LetterSenderReceiver>();
+		RegistredUser user = ((MaskUser) FacesContext.getCurrentInstance()
+				.getExternalContext().getSessionMap().get("maskbean"))
+				.getUser();
+		for (LetterSenderReceiver dataItem : list) {
+			if (selectedIds.get(dataItem.getId()).booleanValue()) {
+				selectedDataList.add(dataItem);
+				selectedIds.remove(dataItem.getId()); // Reset.
+			}
+		}
+		for (LetterSenderReceiver dataItem : selectedDataList) {
+			if (dataItem.getReceiver().getId() == user.getId()) {
+				dataItem.setIsRecTrash(false);
+			} else {
+				dataItem.setIsSenderTrash(false);
+			}
+			Factory.getInstance().getLetterSenderReceiverDAO().update(dataItem);
+		}
+		init();
 	}
 
 	public List<LetterSenderReceiver> getList() {

@@ -56,7 +56,7 @@ public class OutcomeBean implements Serializable {
             }
         }
         for (LetterSenderReceiver dataItem : selectedDataList) {
-        	dataItem.setIsRecTrash(true);
+        	dataItem.setIsSenderTrash(true);
         	Factory.getInstance().getLetterSenderReceiverDAO().update(dataItem);
         }
         init();

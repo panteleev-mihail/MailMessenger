@@ -12,12 +12,13 @@ import javax.persistence.Table;
 
 @NamedQueries({
 		@NamedQuery(name = "getIncome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Receiver=:id " +
-				"AND lsr.isRecTrash =:isRecTrash"),
+				"AND lsr.isRecTrash =:isRecTrash AND lsr.isRecDel =:isRecDel"),
 		@NamedQuery(name = "getOutcome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Sender=:id " +
-				"AND lsr.isSenderTrash =:isSenderTrash"),
+				"AND lsr.isSenderTrash =:isSenderTrash AND lsr.isSenderDel =:isSenderDel"),
 		@NamedQuery(name = "getTrash", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE (lsr.Receiver=:id " +
-				"AND lsr.isRecTrash =:isRecTrash) OR (lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash)"),
-                @NamedQuery(name = "getByLetter", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.letter=:letter ")
+				"AND lsr.isRecTrash =:isRecTrash AND lsr.isRecDel =:isRecDel) OR " +
+				"(lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash AND lsr.isSenderDel =:isSenderDel)"),
+        @NamedQuery(name = "getByLetter", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.letter=:letter ")
 })
 
 @Entity
@@ -131,6 +132,62 @@ public class LetterSenderReceiver extends Pojo implements java.io.Serializable{
     public void setIsRecDel(boolean _isRecDel) {
         this.isRecDel = _isRecDel;
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((Receiver == null) ? 0 : Receiver.hashCode());
+		result = prime * result + ((Sender == null) ? 0 : Sender.hashCode());
+		result = prime * result + id;
+		result = prime * result + (isRead ? 1231 : 1237);
+		result = prime * result + (isRecDel ? 1231 : 1237);
+		result = prime * result + (isRecTrash ? 1231 : 1237);
+		result = prime * result + (isSenderDel ? 1231 : 1237);
+		result = prime * result + (isSenderTrash ? 1231 : 1237);
+		result = prime * result + ((letter == null) ? 0 : letter.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LetterSenderReceiver other = (LetterSenderReceiver) obj;
+		if (Receiver == null) {
+			if (other.Receiver != null)
+				return false;
+		} else if (!Receiver.equals(other.Receiver))
+			return false;
+		if (Sender == null) {
+			if (other.Sender != null)
+				return false;
+		} else if (!Sender.equals(other.Sender))
+			return false;
+		if (id != other.id)
+			return false;
+		if (isRead != other.isRead)
+			return false;
+		if (isRecDel != other.isRecDel)
+			return false;
+		if (isRecTrash != other.isRecTrash)
+			return false;
+		if (isSenderDel != other.isSenderDel)
+			return false;
+		if (isSenderTrash != other.isSenderTrash)
+			return false;
+		if (letter == null) {
+			if (other.letter != null)
+				return false;
+		} else if (!letter.equals(other.letter))
+			return false;
+		return true;
+	}
 	
         
         

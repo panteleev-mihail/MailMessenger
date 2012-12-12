@@ -82,4 +82,40 @@ public class Contact extends Pojo  implements java.io.Serializable{
 				+ ", ContactPerson=" + ContactPerson + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((ContactHolder == null) ? 0 : ContactHolder.hashCode());
+		result = prime * result
+				+ ((ContactPerson == null) ? 0 : ContactPerson.hashCode());
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Contact other = (Contact) obj;
+		if (ContactHolder == null) {
+			if (other.ContactHolder != null)
+				return false;
+		} else if (!ContactHolder.equals(other.ContactHolder))
+			return false;
+		if (ContactPerson == null) {
+			if (other.ContactPerson != null)
+				return false;
+		} else if (!ContactPerson.equals(other.ContactPerson))
+			return false;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
 }
