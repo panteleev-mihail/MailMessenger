@@ -35,6 +35,14 @@ public class LetterBean implements Serializable {
 	private String content = "";
 	private String subject = "";
 	private Boolean isInTrash = false;
+	private Boolean isInOutcome = false;
+	public Boolean getIsInOutcome() {
+		return isInOutcome;
+	}
+
+	public void setIsInOutcome(Boolean isInOutcome) {
+		this.isInOutcome = isInOutcome;
+	}
 
 	private LetterService ls;
 
@@ -96,18 +104,21 @@ public class LetterBean implements Serializable {
 				.getExternalContext().getSessionMap().get("maskbean"))
 				.getUser();
 		ls = new LetterService();
-		List<LetterSenderReceiver> lsrList = ls.showLetter(lsr.getLetter().getId());
+		List<LetterSenderReceiver> lsrList = ls.showLetter(lsr.getLetter()
+				.getId());
 		this.lsr = lsr;
-		this.letter = lsr.getLetter();		
+		this.letter = lsr.getLetter();
 		this.content = letter.getContent();
 		this.subject = letter.getTheme();
 		this.senderEmail = lsr.getSender().getLogin();
 		this.receiverEmail = "";
-		for(LetterSenderReceiver temp:lsrList)
-			this.receiverEmail+=temp.getReceiver().getLogin()+", ";
-		if((lsr.getSender().equals(user) && lsr.isIsSenderTrash())
-				|| lsr.getReceiver().equals(user) && lsr.isIsRecTrash())
+		for (LetterSenderReceiver temp : lsrList)
+			this.receiverEmail += temp.getReceiver().getLogin() + ", ";
+		if ((lsr.getSender().getId() == user.getId() && lsr.isIsSenderTrash())
+				|| lsr.getReceiver().getId() == user.getId()
+				&& lsr.isIsRecTrash()) {
 			isInTrash = true;
+		} 
 		/*
 		 * FacesContext context = FacesContext.getCurrentInstance();
 		 * this.deleteButton
