@@ -30,7 +30,7 @@
                         </h:inputText>
                     <h:message style="color: red" for="subject" />
                     <br />
-                    #{msgs.Content} <h:message style="color: red" for="subject" /><br/>
+                    #{msgs.Content} <h:message style="color: red" for="content" /><br/>
                         <h:inputTextarea id="content" value="#{letterWriteBean.content}" rows="15" cols="40"> 
                             <f:validator validatorId="messenger.emptyFieldValidator" />
                         </h:inputTextarea><br />
