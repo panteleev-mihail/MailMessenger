@@ -102,14 +102,15 @@ public class RegBean implements Serializable {
 	}
 
 	public String register() {
-		RegistrationService service = new RegistrationService(login, password,
-				telephone, dateOfBirth, email, fio, passwordCheck);
 		try {
-			boolean flag = service.register();
-			if (flag)
+			if (password.equals(passwordCheck)) {
+				RegistrationService service = new RegistrationService(login,
+						password, telephone, dateOfBirth, email, fio);
+				service.register();
 				return "login";
-			else
+			} else {
 				return "registration";
+			}
 		} catch (Exception ex) {
 			ex.getMessage();
 			return "registration";
