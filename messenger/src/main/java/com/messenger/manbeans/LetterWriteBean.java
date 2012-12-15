@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
@@ -30,8 +31,8 @@ import javax.faces.validator.ValidatorException;
 @ManagedBean (name = "letterWriteBean")
 @SessionScoped
 public class LetterWriteBean implements Serializable{
-    
-    private RegistredUser user;
+    @ManagedProperty(value = "#{maskbean}")
+    private MaskUser user;
     private String receiverEmail;
     private String subject;
     private String content;
@@ -49,9 +50,7 @@ public class LetterWriteBean implements Serializable{
     
     @PostConstruct
     public void init() {
-        user = ((MaskUser)FacesContext.getCurrentInstance() 
-			.getExternalContext().getSessionMap().get("maskbean")).getUser();
-        confContacts(user);
+        confContacts(user.getUser());
         receivers = new ArrayList<RegistredUser>();
 
     }
@@ -63,7 +62,7 @@ public class LetterWriteBean implements Serializable{
     public void addUsersToReceivers(){
         StringBuilder builder = new StringBuilder();
         if(receiverEmail!=null){
-            builder.append(receiverEmail);
+            builder.append(receiverEmail+", ");
         }
         for (RegistredUser item : listContacts) {
             if (checked.get(item.getId())) {
@@ -92,11 +91,11 @@ public class LetterWriteBean implements Serializable{
     }
     
     
-    public RegistredUser getUser() {
+    public MaskUser getUser() {
         return user;
     }
 
-    public void setUser(RegistredUser user) {
+    public void setUser(MaskUser user) {
         this.user = user;
     }
 
@@ -164,7 +163,7 @@ public class LetterWriteBean implements Serializable{
      
         ls= new LetterService();
         
-        boolean result = ls.addLetter(temp,this.user,this.receiverEmail);
+        boolean result = ls.addLetter(temp,this.user.getUser(),this.receiverEmail);
         
         if (result){
             clear();
