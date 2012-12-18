@@ -4,6 +4,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
+      <f:view locale="#{localeBean.currentLocale}">
     <h:head>
         <title>#{msgs.headerLetterWrite}</title>
     </h:head>
@@ -14,6 +15,6 @@
             </ui:define>
         </ui:composition>
     </h:body>
-        
+        </f:view>
 </html>
 

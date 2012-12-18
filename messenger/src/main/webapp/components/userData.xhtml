@@ -4,6 +4,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
         xmlns:ui="http://java.sun.com/jsf/facelets">
+        <f:view locale="#{localeBean.currentLocale}">
 <h:head>
 	<title>#{msgs.accountDataModPageTitle}</title>
 </h:head>
@@ -68,5 +69,6 @@
 	</h:form>
     </ui:composition>
 </h:body>
+</f:view>
 </html>
 

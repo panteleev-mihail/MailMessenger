@@ -6,6 +6,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:c="http://java.sun.com/jsp/jstl/core"
       >
+      <f:view locale="#{localeBean.currentLocale}">
     <h:head>
         <title>#{msgs.headerLetterView}</title>
     </h:head>
@@ -20,13 +21,16 @@
             <h:panelGrid columns="1">
             #{msgs.Content}<br/><h:inputTextarea cols="20" rows="15" readonly="true" value="#{letterBean.content}" />
             </h:panelGrid>
-            <h:commandButton value="#{msgs.letterReply}" action="#{letterBean.reply}" id="rBtn" binding="#{letterBean.replyButton}" disabled="#{adminBean.masked}"/>
+            <c:if test="${letterBean.isInOutcome == false}">
+            	<h:commandButton value="#{msgs.letterReply}" action="#{letterBean.reply}" id="rBtn" binding="#{letterBean.replyButton}" disabled="#{adminBean.masked}"/>
+            </c:if>
             <h:commandButton value="#{msgs.letterDelete}" action="#{letterBean.delete}" id="dBtn" binding="#{letterBean.deleteButton}" disabled="#{adminBean.masked}"/>
             <c:if test="${letterBean.isInTrash == true}">
-            	<h:commandButton value="#{msgs.letterRestore}" action="#{letterBean.reply}" id="rsBtn" binding="#{letterBean.restoreButton}" disabled="#{adminBean.masked}"/>
+            	<h:commandButton value="#{msgs.letterRestore}" action="#{letterBean.restore}" id="rsBtn" binding="#{letterBean.restoreButton}" disabled="#{adminBean.masked}"/>
             </c:if>
         </h:form>
         </ui:composition>
     </h:body>
+    </f:view>
 </html>
 

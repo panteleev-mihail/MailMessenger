@@ -21,7 +21,16 @@ import javax.faces.event.ValueChangeEvent;
 @SessionScoped
 public class LocaleBean implements Serializable{
     private static Map<String,Locale> locales;
-    private String localeCode;
+    private Locale currentLocale = new Locale("ru");
+    public Locale getCurrentLocale() {
+		return currentLocale;
+	}
+
+	public void setCurrentLocale(Locale currentLocale) {
+		this.currentLocale = currentLocale;
+	}
+
+	private String localeCode;
     static {
         locales = new LinkedHashMap<String, Locale>();
         locales.put("ru", new Locale("ru"));
@@ -47,6 +56,7 @@ public class LocaleBean implements Serializable{
     public void localeListener(ValueChangeEvent ev){
         String newLocaleValue = ev.getNewValue().toString();
         System.out.println(newLocaleValue + " " + locales.get(newLocaleValue));
-        FacesContext.getCurrentInstance().getViewRoot().setLocale(locales.get(newLocaleValue));
+        currentLocale = locales.get(newLocaleValue);
+        FacesContext.getCurrentInstance().getViewRoot().setLocale(currentLocale);
     }
 }

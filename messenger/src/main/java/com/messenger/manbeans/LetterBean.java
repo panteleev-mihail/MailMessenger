@@ -29,13 +29,14 @@ public class LetterBean implements Serializable {
 
 	Letter letter;
 
-        private LetterSenderReceiver lsr;
+	private LetterSenderReceiver lsr;
 	private String receiverEmail = "";
 	private String senderEmail = "";
 	private String content = "";
 	private String subject = "";
 	private Boolean isInTrash = false;
 	private Boolean isInOutcome = false;
+
 	public Boolean getIsInOutcome() {
 		return isInOutcome;
 	}
@@ -93,9 +94,6 @@ public class LetterBean implements Serializable {
 		this.letterWriteBean = letterWriteBean;
 	}
 
-        
-        
-
 	public String showLetter(int id) {
 		LetterSenderReceiver lsr = (LetterSenderReceiver) Factory.getInstance()
 				.getLetterSenderReceiverDAO()
@@ -112,13 +110,25 @@ public class LetterBean implements Serializable {
 		this.subject = letter.getTheme();
 		this.senderEmail = lsr.getSender().getLogin();
 		this.receiverEmail = "";
-		for (LetterSenderReceiver temp : lsrList)
-			this.receiverEmail += temp.getReceiver().getLogin() + ", ";
+		StringBuffer output = new StringBuffer();
+		LetterSenderReceiver last = null;
+		if(lsrList.size() > 0)
+			last = lsrList.get(lsrList.size()-1);
+		for (LetterSenderReceiver temp : lsrList){
+			output.append(temp.getReceiver().getLogin());
+			if(temp.getId()!=last.getId())
+				output.append(", ");
+		}
+		this.receiverEmail = output.toString();
+		//this.receiverEmail += temp.getReceiver().getLogin() + ", ";
 		if ((lsr.getSender().getId() == user.getId() && lsr.isIsSenderTrash())
 				|| lsr.getReceiver().getId() == user.getId()
 				&& lsr.isIsRecTrash()) {
 			isInTrash = true;
-		} 
+		}
+		if (lsr.getSender().getId() == user.getId() && !lsr.isIsSenderTrash()) {
+			isInOutcome = true;
+		}
 		/*
 		 * FacesContext context = FacesContext.getCurrentInstance();
 		 * this.deleteButton
@@ -156,22 +166,24 @@ public class LetterBean implements Serializable {
 	}
 
 	public String delete() {
-                    
-            ls = new LetterService();
-            RegistredUser user = ((MaskUser)FacesContext.getCurrentInstance() 
-			.getExternalContext().getSessionMap().get("maskbean")).getUser();
-            ls.delete(this.lsr, user);
+
+		ls = new LetterService();
+		RegistredUser user = ((MaskUser) FacesContext.getCurrentInstance()
+				.getExternalContext().getSessionMap().get("maskbean"))
+				.getUser();
+		ls.delete(this.lsr, user);
 
 		return "account";
 	}
 
 	public String restore() {
 
-            ls = new LetterService();
-            RegistredUser user = ((MaskUser)FacesContext.getCurrentInstance() 
-			.getExternalContext().getSessionMap().get("maskbean")).getUser();
-            ls.restore(this.lsr, user);
-            
+		ls = new LetterService();
+		RegistredUser user = ((MaskUser) FacesContext.getCurrentInstance()
+				.getExternalContext().getSessionMap().get("maskbean"))
+				.getUser();
+		ls.restore(this.lsr, user);
+
 		return "account";
 	}
 

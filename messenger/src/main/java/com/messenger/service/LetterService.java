@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  */
 public class LetterService {
  
-    public List<LetterSenderReceiver> showLetter(int id)
+	public List<LetterSenderReceiver> showLetter(int id)
     {
         Letter letter = new Letter();
         List<LetterSenderReceiver> lsr = null;
@@ -95,11 +95,17 @@ public class LetterService {
         if (lsr.getSender().getId()==user.getId())
             if (!lsr.isIsSenderTrash())
                 lsr.setIsSenderTrash(true);
-            else lsr.setIsSenderDel(true);
+            else {
+            	lsr.setIsSenderDel(true);
+            	lsr.setIsSenderTrash(false);
+            }
         else if (lsr.getReceiver().getId()==user.getId())
             if(!lsr.isIsRecTrash())
                 lsr.setIsRecTrash(true);
-            else lsr.setIsRecDel(true);
+            else{
+            	lsr.setIsRecDel(true);
+            	lsr.setIsRecTrash(false);
+            }
         
         Factory.getInstance().getLetterSenderReceiverDAO().update(lsr);
     }

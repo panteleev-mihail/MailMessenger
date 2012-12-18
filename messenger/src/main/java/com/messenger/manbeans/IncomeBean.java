@@ -24,58 +24,20 @@ import com.messenger.dao.Factory;
 import com.messenger.dao.beans.DAO;
 import com.messenger.pojo.LetterSenderReceiver;
 import com.messenger.pojo.RegistredUser;
+import com.messenger.service.LetterService;
 import com.messenger.service.MailService;
 
 @ManagedBean(name = "income")
 @ViewScoped
-public class IncomeBean implements Serializable {
-	private List<LetterSenderReceiver> list;
-	private Map<Integer, Boolean> selectedIds = new HashMap<Integer, Boolean>();
+public class IncomeBean extends AbstractLetterBean implements Serializable {
 
 	@PostConstruct
 	public void init() {
 		RegistredUser user = ((MaskUser) FacesContext.getCurrentInstance()
 				.getExternalContext().getSessionMap().get("maskbean"))
 				.getUser();
-		list = getIncome(user);
-
-	}
-
-	public List<LetterSenderReceiver> getIncome(RegistredUser u) {
 		MailService mc = new MailService();
-		List<LetterSenderReceiver> res = mc.getIncome(u);
-		return res;
-	}
+		list = mc.getIncome(user);
 
-	public void toTrash() {
-		List<LetterSenderReceiver>selectedDataList = new ArrayList<LetterSenderReceiver>();
-        for (LetterSenderReceiver dataItem : list) {
-            if (selectedIds.get(dataItem.getId()).booleanValue()) {
-                selectedDataList.add(dataItem);
-                selectedIds.remove(dataItem.getId()); // Reset.
-            }
-        }
-        for (LetterSenderReceiver dataItem : selectedDataList) {
-        	dataItem.setIsRecTrash(true);
-        	Factory.getInstance().getLetterSenderReceiverDAO().update(dataItem);
-        }
-        init();
 	}
-
-	public List<LetterSenderReceiver> getList() {
-		return list;
-	}
-
-	public void setList(List<LetterSenderReceiver> list) {
-		this.list = list;
-	}
-
-	public Map<Integer, Boolean> getSelectedIds() {
-		return selectedIds;
-	}
-
-	public void setSelectedIds(Map<Integer, Boolean> selectedIds) {
-		this.selectedIds = selectedIds;
-	}
-
 }
