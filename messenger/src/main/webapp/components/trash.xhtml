@@ -18,16 +18,16 @@
 				<h:selectBooleanCheckbox value="#{trash.selectedIds[o.id]}" />
 			</h:column>
 			<h:column>
-				<f:facet name="header"> #{msgs.Sender}" </f:facet>
+				<f:facet name="header"> #{msgs.Sender} </f:facet>
     				#{o.sender.login}
     			</h:column>
 			<h:column>
 				<f:facet name="header"> #{msgs.Title} </f:facet>
-    				#{o.letter.theme}
+    				#{o.letter.shortTheme}
     			</h:column>
 			<h:column>
 				<f:facet name="header">#{msgs.Content}</f:facet>
-    				#{o.letter.content}
+    				#{o.letter.shortContent}
     			</h:column>
 			<h:column>
 				<h:commandButton value="#{msgs.letterOpen}"

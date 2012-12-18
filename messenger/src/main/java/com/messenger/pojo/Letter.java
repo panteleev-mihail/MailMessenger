@@ -12,35 +12,42 @@ import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@NamedNativeQueries({
-	@NamedNativeQuery(
-            name="getLettersSenderReceiver",
-            query="SELECT *,1 as clazz_ " +
-            		"FROM letter_sender_receiver WHERE idLetter = :id)",
-            resultClass=RegistredUser.class
-            )
-    })
-
+@NamedNativeQueries({ @NamedNativeQuery(name = "getLettersSenderReceiver", query = "SELECT *,1 as clazz_ "
+		+ "FROM letter_sender_receiver WHERE idLetter = :id)", resultClass = RegistredUser.class) })
 @Entity
-@Table(name="letter")
-public class Letter extends Pojo  implements java.io.Serializable{
-	
+@Table(name = "letter")
+public class Letter extends Pojo implements java.io.Serializable {
+
 	@Id
 	@GeneratedValue
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
-		
-	@Column(name="content")
+
+	@Column(name = "content")
 	private String content;
-	
-	@Column(name="theme")
+
+	@Column(name = "theme")
 	private String theme;
-	
-		
-	
-	@OneToMany(mappedBy="letter" /*,fetch=FetchType.EAGER*/ )
-	Collection<LetterSenderReceiver> letterSenderReceivers =new ArrayList<LetterSenderReceiver>();
-	
+	private static final int SHORT_CONTENT_LENGTH = 10;
+	private static final int SHORT_THEME_LENGTH = 10;
+
+	public String getShortContent() {
+		if (content.length() < SHORT_CONTENT_LENGTH)
+			return content;
+		else
+			return content.substring(0, SHORT_CONTENT_LENGTH) + "...";
+	}
+
+	public String getShortTheme() {
+		if (theme.length() < SHORT_THEME_LENGTH)
+			return theme;
+		else
+			return theme.substring(0, SHORT_THEME_LENGTH) + "...";
+	}
+
+	@OneToMany(mappedBy = "letter" /* ,fetch=FetchType.EAGER */)
+	Collection<LetterSenderReceiver> letterSenderReceivers = new ArrayList<LetterSenderReceiver>();
+
 	public Letter() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -127,5 +134,5 @@ public class Letter extends Pojo  implements java.io.Serializable{
 			return false;
 		return true;
 	}
-	
+
 }

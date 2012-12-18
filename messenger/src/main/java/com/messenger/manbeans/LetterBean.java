@@ -10,6 +10,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.component.UICommand;
 import javax.faces.context.FacesContext;
 
@@ -24,7 +25,7 @@ import com.messenger.service.LetterService;
  * @author I
  */
 @ManagedBean(name = "letterBean")
-@SessionScoped
+@ViewScoped
 public class LetterBean implements Serializable {
 
 	Letter letter;
@@ -122,8 +123,8 @@ public class LetterBean implements Serializable {
 		this.receiverEmail = output.toString();
 		//this.receiverEmail += temp.getReceiver().getLogin() + ", ";
 		if ((lsr.getSender().getId() == user.getId() && lsr.isIsSenderTrash())
-				|| lsr.getReceiver().getId() == user.getId()
-				&& lsr.isIsRecTrash()) {
+				|| (lsr.getReceiver().getId() == user.getId()
+				&& lsr.isIsRecTrash())) {
 			isInTrash = true;
 		}
 		if (lsr.getSender().getId() == user.getId() && !lsr.isIsSenderTrash()) {

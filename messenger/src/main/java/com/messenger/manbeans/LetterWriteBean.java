@@ -11,9 +11,12 @@ import com.messenger.service.LetterService;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Set;
+
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -29,11 +32,11 @@ import javax.faces.validator.ValidatorException;
  * @author I
  */
 @ManagedBean (name = "letterWriteBean")
-@SessionScoped
+@ViewScoped
 public class LetterWriteBean implements Serializable{
     @ManagedProperty(value = "#{maskbean}")
     private MaskUser user;
-    private String receiverEmail;
+    private String receiverEmail = "";
     private String subject;
     private String content;
     private String msg;
@@ -43,7 +46,7 @@ public class LetterWriteBean implements Serializable{
     
     //////
     private List<RegistredUser> listContacts;
-    private List<RegistredUser> receivers;
+    private Set<RegistredUser> receivers;
     private ContactService mc;
     private Map<Integer, Boolean> checked = new HashMap<Integer, Boolean>();
     //////
@@ -51,7 +54,7 @@ public class LetterWriteBean implements Serializable{
     @PostConstruct
     public void init() {
         confContacts(user.getUser());
-        receivers = new ArrayList<RegistredUser>();
+        receivers = new HashSet<RegistredUser>();
 
     }
     public void confContacts(RegistredUser u) {
@@ -61,22 +64,27 @@ public class LetterWriteBean implements Serializable{
     
     public void addUsersToReceivers(){
         StringBuilder builder = new StringBuilder();
-        if(receiverEmail!=null){
-            builder.append(receiverEmail+", ");
+        if(!receiverEmail.trim().isEmpty()){
+            builder.append(receiverEmail);
         }
+        List<RegistredUser> contactsToAdd = new ArrayList<RegistredUser>();
         for (RegistredUser item : listContacts) {
             if (checked.get(item.getId())) {
-                boolean contains = false;
-                for(RegistredUser item2 : receivers){
-                    if(item.equals(item2)){
-                        contains = true;
-                    }
-                }
-                if(!contains){
+                if(!receivers.contains(item)){
                     receivers.add(item);
-                    builder.append(item.getLogin()+", ");
+                	contactsToAdd.add(item);
                 }
             }
+        }
+        if(!contactsToAdd.isEmpty()){
+        	if(!receiverEmail.trim().isEmpty())
+        		builder.append(", ");
+        	RegistredUser last = contactsToAdd.get(contactsToAdd.size()-1);
+        	for(RegistredUser item:contactsToAdd){
+        		builder.append(item.getLogin());
+        		if(!item.equals(last))
+        			builder.append(", ");
+        	}
         }
         receiverEmail = builder.toString();
         checked.clear(); // If necessary.
@@ -132,11 +140,11 @@ public class LetterWriteBean implements Serializable{
         this.listContacts = list;
     }
 
-    public List<RegistredUser> getReceivers() {
+    public Set<RegistredUser> getReceivers() {
         return receivers;
     }
 
-    public void setReceivers(List<RegistredUser> receivers) {
+    public void setReceivers(Set<RegistredUser> receivers) {
         this.receivers = receivers;
     }
 
