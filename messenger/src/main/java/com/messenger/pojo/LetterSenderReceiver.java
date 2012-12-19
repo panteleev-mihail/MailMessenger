@@ -12,12 +12,12 @@ import javax.persistence.Table;
 
 @NamedQueries({
 		@NamedQuery(name = "getIncome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Receiver=:id " +
-				"AND lsr.isRecTrash =:isRecTrash AND lsr.isRecDel =:isRecDel"),
+				"AND lsr.isRecTrash =:isRecTrash AND lsr.isRecDel =:isRecDel ORDER BY id"),
 		@NamedQuery(name = "getOutcome", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.Sender=:id " +
-				"AND lsr.isSenderTrash =:isSenderTrash AND lsr.isSenderDel =:isSenderDel"),
+				"AND lsr.isSenderTrash =:isSenderTrash AND lsr.isSenderDel =:isSenderDel ORDER BY id"),
 		@NamedQuery(name = "getTrash", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE (lsr.Receiver=:id " +
 				"AND lsr.isRecTrash =:isRecTrash AND lsr.isRecDel =:isRecDel) OR " +
-				"(lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash AND lsr.isSenderDel =:isSenderDel)"),
+				"(lsr.Sender=:id AND lsr.isSenderTrash =:isSenderTrash AND lsr.isSenderDel =:isSenderDel) ORDER BY id"),
         @NamedQuery(name = "getByLetter", query = "SELECT lsr FROM LetterSenderReceiver lsr WHERE lsr.letter=:letter ")
 })
 
